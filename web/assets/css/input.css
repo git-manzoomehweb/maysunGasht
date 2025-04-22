@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "DanaFaNum";
+  }
+}
+:root {
+  --primary: #3f4782;
+  --primary-50: #e8e9f0;
+  --primary-100: #c4c8dc;
+  --primary-200: #9ea5c4;
+  --primary-300: #7a82ab;
+  --primary-400: #5f679b;
+  --primary-500: #464e8b;
+  --primary-600: #3f4782;
+  --primary-700: #373d77;
+  --primary-800: #30346a;
+  --primary-900: #242453;
+  --primary-950: #191939;
+
+  --secondary: #8E7430;
+  --secondary-50: #f2ecdb;
+  --secondary-100: #e0cfa5;
+  --secondary-200: #cbb06b;
+  --secondary-300: #BDA35F;
+  --secondary-400: #AD924C;
+  --secondary-500: #9F833A;
+  --secondary-600: #8E7430;
+  --secondary-700: #816723;
+  --secondary-800: #745A17;
+  --secondary-900: #674F0F;
+  --secondary-950: #553F04;
+
+  --special-1: #00000066;
+  --special-2: #ffffff33;
+
+
+  ---bg: url("");
+  --default-bg: url("../images/default-back.png");
+  --tourlist-bg: url("../images/tour-list-back.jpg");
+  --articlelist-bg: url("../images/article-list-back.jpg");
+  --footer-bg: url("../images/footer-back.jpg");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DanaFaNum-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/DanaFaNum-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/DanaFaNum-Bold.ttf") format("truetype");
+}
+
+.mask-shape {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 15.72%, #FFF4EA 100%);
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .mask-image{
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
+  .footer-shadow{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%);
+
+  }
