@@ -34,12 +34,12 @@
   --secondary-900: #674F0F;
   --secondary-950: #553F04;
 
-  --special-1: #00000066;
+  --special-1: #FF5050CC;
   --special-2: #ffffff33;
 
 
   ---bg: url("");
-  --default-bg: url("../images/default-back.png");
+  --default-bg: url("../images/default-back.jpg");
   --tourlist-bg: url("../images/tour-list-back.jpg");
   --articlelist-bg: url("../images/article-list-back.jpg");
   --footer-bg: url("../images/footer-back.jpg");
@@ -78,6 +78,17 @@
     width: 100%;
     display: block;
   }
+  .mask-gray-shape {
+    background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
 
   .mask-image{
     -webkit-mask-image: url(../images/mask-svg.svg);
@@ -91,5 +102,10 @@
   }
   .footer-shadow{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%);
-
+  }
+  /* main */
+  .text-shadow{
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 172.64%);
+      -webkit-background-clip: text;
+      color: transparent;
   }

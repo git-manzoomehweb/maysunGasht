@@ -7,6 +7,8 @@ module.exports = {
       extend: {
         backgroundImage: {
           'fade-white': 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%)',
+          'white-shadow': 'linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);',
+          'fade-black': 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);',
           defaultBg: "var(--default-bg)",
           tourListBg: "var(--tourlist-bg)",
           articleListBg: "var(--articlelist-bg)",
