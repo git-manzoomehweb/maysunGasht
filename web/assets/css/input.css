@@ -35,14 +35,15 @@
   --secondary-950: #553F04;
 
   --special-1: #FF5050CC;
-  --special-2: #ffffff33;
+  --special-2: #DB934B33;
 
 
   ---bg: url("");
   --default-bg: url("../images/default-back.jpg");
   --tourlist-bg: url("../images/tour-list-back.jpg");
-  --articlelist-bg: url("../images/article-list-back.jpg");
+  --articlelist-bg: url("../images/article-list-back.png");
   --footer-bg: url("../images/footer-back.jpg");
+  --contact-bg: url("../images/contact-back.jpg");
 }
 
 @font-face {
@@ -56,8 +57,8 @@
   font-display: swap;
   font-family: "DanaFaNum";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/DanaFaNum-Regular.ttf") format("truetype");
+  font-weight: 500;
+  src: url("../fonts/DanaFaNum-Medium.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
@@ -69,17 +70,6 @@
 
 .mask-shape {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 15.72%, #FFF4EA 100%);
-    -webkit-mask-image: url(../images/mask-svg.svg);
-    mask-image: url(../images/mask-svg.svg);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    width: 100%;
-    display: block;
-  }
-  .mask-gray-shape {
-    background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
     -webkit-mask-image: url(../images/mask-svg.svg);
     mask-image: url(../images/mask-svg.svg);
     -webkit-mask-repeat: no-repeat;
@@ -109,3 +99,16 @@
       -webkit-background-clip: text;
       color: transparent;
   }
+
+  .mask-gray-shape {
+    background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
+

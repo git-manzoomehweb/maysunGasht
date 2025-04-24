@@ -8,21 +8,214 @@
 </head>
 <body>
     <main>
-        <section class="relative bg-tourListBg bg-cover bg-center pt-28 h-[573px]">
+        <section class="relative bg-tourListBg bg-cover bg-center pt-24 h-[573px]">
             <img src="../assets/images/tour-list-person.png" class="absolute z-10 bottom-0 left-0 right-0 mx-auto h-[419px] object-cover" alt="person" width="300" height="419" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
                 <h1 class="text-shadow text-[12rem] leading-[12rem] font-bold text-center opacity-50">Istanbul</h1>
-                <h2></h2>
-                <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto bg-specialcolor-2 p-2 rounded-xl mt-10">
-                    <div class="bg-white p-2 rounded-xl flex items-center gap-3">
-                        <input type="text" class="w-[632px] h-14 pr-3 bg-zinc-100 rounded-lg text-zinc-500 placeholder-zinc-500" name="" id=""
-                        placeholder="جستجوی مقاله">
+                <div class="relative z-20 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto rounded-xl mt-10">
+                    <h2 class="text-white text-center mb-5 font-bold text-3xl">تور ها</h2>
+                    <div class="p-2 rounded-xl flex justify-center items-center gap-1">
+                        <div class="relative">
+                            <input aria-label="جستجوی مقصد" type="text" class="w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg text-zinc-500 placeholder-zinc-500" name="" id=""
+                            placeholder="جستجوی مقصد">
+                            <svg width="30" height="30" class="absolute right-4 top-4">
+                                <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                            </svg>
+                        </div>
                     <button
-                        class="flex items-center text-sm justify-center w-[117px] h-14 text-white rounded-lg bg-primary-600 transition-all duration-300 hover:bg-secondary-900">جستحو</button>
+                        class="flex items-center text-sm justify-center w-24 h-14 text-white rounded-lg bg-primary-600 transition-all duration-300 hover:bg-secondary-900">جستحو</button>
                     </div>
                 </div>
             </div>
-            <div class="absolute w-full bg-white-shadow bottom-0 h-56"></div>
+            <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-56"></div>
+        </section>
+        <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl -mt-28">
+            <div class="text-zinc-900 transition-all duration-300 hover:text-primary-600">صفحه اصلی / تور ها / تور استانبول</div>
+            <h2 class="text-zinc-900 mt-8 font-bold text-2xl">تور های استانبول</h2>
+            <div class="grid grid-cols-3 gap-x-2 gap-y-3 mt-8">
+                <!-- items -->
+                <a href=""
+                class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
+                <div class="relative">
+                    <img src="../assets/images/tour-card.jpg"
+                        class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                        alt="" width="100%" height="240" loading="lazy">
+                    <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                        تخفیف تابستانه</div>
+                </div>
+                <div class="flex flex-col gap-2 mt-4">
+                    <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                    <div
+                        class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                        <span class="flex items-center gap-2 text-xs">
+                            <svg width="20" height="20" class="flex-shrink-0">
+                                <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                            </svg>
+                            14 فروردین
+                        </span>
+                        <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                            <svg width="20" height="20" class="flex-shrink-0">
+                                <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                            </svg>
+                            4 روز 5 شب
+                        </span>
+                        <span class="flex items-center gap-2 text-xs pr-7">
+                            <svg width="20" height="20" class="flex-shrink-0">
+                                <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                            </svg>
+                            ماهان ایرلاین
+                        </span>
+                    </div>
+                    <div>
+                        <span class="text-primary-300 text-xs font-medium">قیمت از:</span>
+                        <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
+                    </div>
+                    <span
+                        class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                        تور
+                        <svg width="20" height="20"
+                            class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                        </svg>
+                        <svg width="20" height="20"
+                            class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                        </svg>
+                        <span
+                            class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                    </span>
+                </div>
+            </a>
+            <a href=""
+            class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
+            <div class="relative">
+                <img src="../assets/images/tour-card.jpg"
+                    class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                    alt="" width="100%" height="240" loading="lazy">
+                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                    تخفیف تابستانه</div>
+            </div>
+            <div class="flex flex-col gap-2 mt-4">
+                <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                <div
+                    class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                    <span class="flex items-center gap-2 text-xs">
+                        <svg width="20" height="20">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                        </svg>
+                        14 فروردین
+                    </span>
+                    <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                        <svg width="20" height="20">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                        </svg>
+                        4 روز 5 شب
+                    </span>
+                    <span class="flex items-center gap-2 text-xs pr-7">
+                        <svg width="20" height="20">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                        </svg>
+                        ماهان ایرلاین
+                    </span>
+                </div>
+                <div>
+                    <span class="text-primary-300 text-xs font-medium">قیمت از:</span>
+                    <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
+                </div>
+                <span
+                    class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                    تور
+                    <svg width="20" height="20"
+                        class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
+                        <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                    </svg>
+                    <svg width="20" height="20"
+                        class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
+                        <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                    </svg>
+                    <span
+                        class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                </span>
+            </div>
+        </a>
+        <a href=""
+        class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
+        <div class="relative">
+            <img src="../assets/images/tour-card.jpg"
+                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                alt="" width="100%" height="240" loading="lazy">
+            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                تخفیف تابستانه</div>
+        </div>
+        <div class="flex flex-col gap-2 mt-4">
+            <h2 class="font-bold">تور 10 روزه استانبول</h2>
+            <div
+                class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                <span class="flex items-center gap-2 text-xs">
+                    <svg width="20" height="20">
+                        <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                    </svg>
+                    14 فروردین
+                </span>
+                <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                    <svg width="20" height="20">
+                        <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                    </svg>
+                    4 روز 5 شب
+                </span>
+                <span class="flex items-center gap-2 text-xs pr-7">
+                    <svg width="20" height="20">
+                        <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                    </svg>
+                    ماهان ایرلاین
+                </span>
+            </div>
+            <div>
+                <span class="text-primary-300 text-xs font-medium">قیمت از:</span>
+                <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
+            </div>
+            <span
+                class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                تور
+                <svg width="20" height="20"
+                    class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
+                    <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                </svg>
+                <svg width="20" height="20"
+                    class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
+                    <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                </svg>
+                <span
+                    class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+            </span>
+        </div>
+    </a>
+            </div>
+            <ul class="flex items-center justify-center gap-1 mt-20">
+                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-zinc-100 ml-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.96967 19.5303C7.7034 19.2641 7.6792 18.8474 7.89705 18.5538L7.96967 18.4697L14.439 12L7.96967 5.53033C7.7034 5.26406 7.6792 4.8474 7.89705 4.55379L7.96967 4.46967C8.23594 4.2034 8.6526 4.1792 8.94621 4.39705L9.03033 4.46967L16.0303 11.4697C16.2966 11.7359 16.3208 12.1526 16.1029 12.4462L16.0303 12.5303L9.03033 19.5303C8.73744 19.8232 8.26256 19.8232 7.96967 19.5303Z" fill="#F18316"/>
+                        </svg>
+                </li>
+                <li class="flex items-center justify-center w-12 h-12 p-2 text-zinc-600 rounded-lg bg-zinc-200">
+                    1
+                </li>
+                <li class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-lg bg-secondary-700">
+                    1
+                </li>
+                <li class="flex items-center justify-center w-12 h-12 p-2 text-zinc-600 rounded-lg bg-zinc-200">
+                    1
+                </li>
+                <li class="flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-zinc-100 mr-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0303 4.46967C16.2966 4.73594 16.3208 5.1526 16.1029 5.44621L16.0303 5.53033L9.561 12L16.0303 18.4697C16.2966 18.7359 16.3208 19.1526 16.1029 19.4462L16.0303 19.5303C15.7641 19.7966 15.3474 19.8208 15.0538 19.6029L14.9697 19.5303L7.96967 12.5303C7.7034 12.2641 7.6792 11.8474 7.89705 11.5538L7.96967 11.4697L14.9697 4.46967C15.2626 4.17678 15.7374 4.17678 16.0303 4.46967Z" fill="#F18316"/>
+                        </svg>                                                                                                                                
+                </li>
+            </ul>
+        </section>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-36">
+            <h2 class="text-2xl font-bold text-zinc-900 mb-5">استانبول برای توریست ها</h2>
+            <div class="text-zinc-700 text-sm text-justify">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</div>
         </section>
     </main>
 </body>

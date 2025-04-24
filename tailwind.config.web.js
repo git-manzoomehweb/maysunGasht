@@ -13,6 +13,7 @@ module.exports = {
           tourListBg: "var(--tourlist-bg)",
           articleListBg: "var(--articlelist-bg)",
           footerBg: "var(--footer-bg)",
+          contactBg: "var(--contact-bg)"
         },
         colors: {
           primary: {
