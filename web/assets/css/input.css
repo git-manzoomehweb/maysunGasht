@@ -93,6 +93,24 @@
   .footer-shadow{
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%);
   }
+  .blinking {
+    width: auto;
+    height: auto;
+    background-color: orange;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      background-color: #3C3C3C; 
+    }
+    50% {
+      background-color: orange;
+    }
+  }
+  .shadow-inner-custom{
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.7);
+  }
   /* main */
   .text-shadow{
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 172.64%);

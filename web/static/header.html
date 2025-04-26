@@ -9,23 +9,44 @@
 </head>
 
 <body>
-    <header class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-        <section class="relative z-30 px-4 bg-white rounded-2xl lg:rounded-3xl">
+    <header>
+        <section class="relative z-30 bg-white mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2 h-20  w-full justify-between">
 
                     <div class="flex items-center w-full h-full justify-between">
-                        <div class="flex items-center gap-1">
+                        <div class="flex items-center gap-2">
                             <a href="/">
-                                <img src="../assets/images/logo.png" alt="logo-header" width="33" height="38" loading="lazy"
-                                    class="transition-all duration-300 hover:scale-90" />
+                                <img src="../assets/images/logo.png" alt="logo-header" width="33" height="38"
+                                    loading="lazy" class="transition-all duration-300 hover:scale-90" />
                             </a>
-                            <svg width="48" height="48">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-search-zinc"></use>
-                            </svg>
-                            <svg width="48" height="48">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-instagram"></use>
-                            </svg>
+                            <div class="relative">
+                                <svg width="48" height="48" class="search-header cursor-pointer z-40">
+                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-search-zinc"></use>
+                                </svg>
+                            
+                                <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30"></div>
+                            
+                                <div class="form-header hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 bg-zinc-400 rounded-xl z-40">
+                                        <div class="shadow-inner-custom p-8 flex items-center gap-3">
+                                        <div class="relative">
+                                            <input aria-label="جستجو" type="text" class="w-[600px] h-[60px] pr-12 shadow-lg bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500" placeholder="مطلب مورد نظر خود را جستجو کنید">
+                                            <svg width="30" height="30" class="absolute right-4 top-4">
+                                                <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                                            </svg>
+                                        </div>
+                                        <button
+                                            class="flex items-center text-sm justify-center w-24 h-14 text-white rounded-lg bg-primary-600 transition-all duration-300 hover:bg-secondary-900">
+                                            جستجو
+                                        </button>
+                                    </div>
+                                    </div>
+                            </div>
+                            <a href="">
+                                <svg width="48" height="48">
+                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
                         </div>
                         <nav class="flex h-full">
                             <ul class="flex items-center gap-6">
@@ -37,12 +58,17 @@
                                 <li class="relative flex items-center h-full group">
                                     <div class="border-l border-solid pl-6">
                                         <a href="Hotels"
-                                        class="flex items-center gap-4 transition-all duration-300 h-full group text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">
-                                        تور ها
-                                        <svg width="25" height="24" class="transition-all duration-300 group-hover:rotate-180" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" class="group-hover:fill-primary-600" clip-rule="evenodd" d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z" fill="#222222"/>
+                                            class="flex items-center gap-4 transition-all duration-300 h-full group text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">
+                                            تور ها
+                                            <svg width="25" height="24"
+                                                class="transition-all duration-300 group-hover:rotate-180"
+                                                viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" class="group-hover:fill-primary-600"
+                                                    clip-rule="evenodd"
+                                                    d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                    fill="#222222" />
                                             </svg>
-                                    </a>
+                                        </a>
                                     </div>
                                     <!-- submenu -->
                                     <ul
@@ -61,13 +87,19 @@
                                 <li class="relative flex items-center h-full group">
                                     <div class="border-l border-solid pl-6">
                                         <a href=""
-                                        class="flex items-center gap-4 transition-all duration-300 h-full group text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">خدمات سفارت
-                                        <svg width="25" height="24" class="transition-all duration-300 group-hover:rotate-180" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" class="group-hover:fill-primary-600" clip-rule="evenodd" d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z" fill="#222222"/>
+                                            class="flex items-center gap-4 transition-all duration-300 h-full group text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">خدمات
+                                            سفارت
+                                            <svg width="25" height="24"
+                                                class="transition-all duration-300 group-hover:rotate-180"
+                                                viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" class="group-hover:fill-primary-600"
+                                                    clip-rule="evenodd"
+                                                    d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                    fill="#222222" />
                                             </svg>
-                                            
 
-                                    </a>
+
+                                        </a>
                                     </div>
                                     <!-- submenu -->
                                     <ul
@@ -86,13 +118,15 @@
                                 <li class="flex items-center h-full">
                                     <div class="border-l border-solid pl-6">
                                         <a href=""
-                                        class="flex items-center transition-all duration-300 text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">اخبار گردشگری</a>
+                                            class="flex items-center transition-all duration-300 text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">اخبار
+                                            گردشگری</a>
                                     </div>
                                 </li>
                                 <li class="flex items-center h-full">
                                     <a href=""
-                                        class="flex items-center transition-all duration-300 text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">ارتباط با ما
-                                        ما</a>
+                                        class="flex items-center transition-all duration-300 text-zinc-900 hover:text-primary-600 xl:flex-shrink-0">ارتباط
+                                        با ما
+                                    </a>
                                 </li>
 
 
@@ -100,8 +134,7 @@
                             </ul>
                         </nav>
                         <div class="flex items-center gap-7">
-                            <div
-                                class="Login_Information cursor-pointer flex items-center">
+                            <div class="Login_Information cursor-pointer flex items-center">
                                 <!-- <basis core="call" file="authentication/modal" lid="1"></basis> -->
                                 <div class="w-12 h-12 flex items-center justify-center">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -115,9 +148,10 @@
                                     </svg>
                                 </div>
                                 <span>ورود/ثبت نام</span>
-    
+
                             </div>
-                            <div class="overflow-hidden relative z-10 flex items-center gap-1 text-white text-sm text-center transition-all cursor-pointer duration-300 bg-secondary-700 hover:bg-primary-600 rounded-[50px] p-3">
+                            <div
+                                class="blinking overflow-hidden relative z-10 flex items-center gap-1 text-white text-sm text-center transition-all cursor-pointer duration-300 bg-secondary-700 hover:bg-primary-600 rounded-[50px] p-3">
                                 021-55882233
                                 <svg width="24" height="24">
                                     <use xlink:href="../assets/images/sprite-icons.svg#icon-white-phone"></use>

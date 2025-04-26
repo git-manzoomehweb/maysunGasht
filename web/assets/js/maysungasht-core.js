@@ -48,6 +48,62 @@
 //   });
 // });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('header');
+  let placeholder = null; 
+  const headerHeight = header.offsetHeight;
+
+  window.addEventListener('scroll', function () {
+      if (window.scrollY > 100) {
+          header.classList.add('fixed', 'top-0', 'left-0', 'w-full', 'z-50', 'bg-white');
+          header.classList.add('shadow-lg');
+
+          if (!placeholder) {
+              placeholder = document.createElement('div');
+              placeholder.style.height = headerHeight + 'px';
+              header.parentNode.insertBefore(placeholder, header.nextSibling);
+          }
+      } else {
+          header.classList.remove('fixed', 'top-0', 'left-0', 'w-full', 'z-50', 'bg-white');
+          header.classList.remove('shadow-lg');
+
+          if (placeholder) {
+              placeholder.remove();
+              placeholder = null;
+          }
+      }
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchIcon = document.querySelector('.search-header');
+    const formHeader = document.querySelector('.form-header');
+    const overlay = document.getElementById('overlay');
+
+    searchIcon.addEventListener('click', function (event) {
+        event.stopPropagation();
+        formHeader.classList.remove('hidden');
+        formHeader.classList.add('flex'); 
+        overlay.classList.remove('hidden');
+    });
+
+    function closePopup() {
+        formHeader.classList.add('hidden');
+        formHeader.classList.remove('flex'); 
+        overlay.classList.add('hidden');
+    }
+
+    overlay.addEventListener('click', closePopup);
+
+    formHeader.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', closePopup);
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const faqBoxes = document.querySelectorAll(".faq-box");
   
