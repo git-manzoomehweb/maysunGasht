@@ -8,31 +8,19 @@
   }
 }
 :root {
-  --primary: #3f4782;
-  --primary-50: #e8e9f0;
-  --primary-100: #c4c8dc;
-  --primary-200: #9ea5c4;
-  --primary-300: #7a82ab;
-  --primary-400: #5f679b;
-  --primary-500: #464e8b;
-  --primary-600: #3f4782;
-  --primary-700: #373d77;
-  --primary-800: #30346a;
-  --primary-900: #242453;
-  --primary-950: #191939;
+  --primary: #ffb52a;
+  --primary-50: #fff8e3;
+  --primary-100: #ffecb7;
+  --primary-200: #ffe189;
+  --primary-300: #ffd65c;
+  --primary-400: #ffcb3d;
+  --primary-500: #ffc32f;
+  --primary-600: #ffb52a;
+  --primary-700: #ffa328;
+  --primary-800: #ff9326;
+  --primary-900: #fd7523;
+  --primary-950: #F46007;
 
-  --secondary: #8E7430;
-  --secondary-50: #f2ecdb;
-  --secondary-100: #e0cfa5;
-  --secondary-200: #cbb06b;
-  --secondary-300: #BDA35F;
-  --secondary-400: #AD924C;
-  --secondary-500: #9F833A;
-  --secondary-600: #8E7430;
-  --secondary-700: #816723;
-  --secondary-800: #745A17;
-  --secondary-900: #674F0F;
-  --secondary-950: #553F04;
 
   --special-1: #FF5050CC;
   --special-2: #DB934B33;
@@ -102,15 +90,16 @@
 
   @keyframes blink {
     0%, 100% {
-      background-color: #3C3C3C; 
+      background-color: #18181B; 
     }
     50% {
-      background-color: orange;
+      background-color: #ffb52a;
     }
   }
   .shadow-inner-custom{
     box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.7);
   }
+
   /* main */
   .text-shadow{
       background: linear-gradient(180deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 172.64%);

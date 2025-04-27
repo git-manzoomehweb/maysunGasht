@@ -131,8 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           answer.classList.remove("opacity-0", "scale-y-0", "max-h-0");
           answer.classList.add("opacity-100", "scale-y-100", "max-h-96");
-          box.style.backgroundColor = "#FFF4EA";
-          box.style.border = "2px solid #FFE9D4";
+          box.style.backgroundColor = "#FFF8E3";
+          box.style.border = "2px solid #FFE189";
         }
       });
     });

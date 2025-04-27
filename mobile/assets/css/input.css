@@ -4,66 +4,118 @@
 
 @layer base {
   body {
-    font-family: "YekanBakh";
+    font-family: "DanaFaNum";
   }
 }
 :root {
-  --primary: #3f4782;
-  --primary-50: #e8e9f0;
-  --primary-100: #c4c8dc;
-  --primary-200: #9ea5c4;
-  --primary-300: #7a82ab;
-  --primary-400: #5f679b;
-  --primary-500: #464e8b;
-  --primary-600: #3f4782;
-  --primary-700: #373d77;
-  --primary-800: #30346a;
-  --primary-900: #242453;
-  --primary-950: #191939;
+  --primary: #ffb52a;
+  --primary-50: #fff8e3;
+  --primary-100: #ffecb7;
+  --primary-200: #ffe189;
+  --primary-300: #ffd65c;
+  --primary-400: #ffcb3d;
+  --primary-500: #ffc32f;
+  --primary-600: #ffb52a;
+  --primary-700: #ffa328;
+  --primary-800: #ff9326;
+  --primary-900: #fd7523;
+  --primary-950: #F46007;
 
-  --secondary: #8E7430;
-  --secondary-50: #f2ecdb;
-  --secondary-100: #e0cfa5;
-  --secondary-200: #cbb06b;
-  --secondary-300: #BDA35F;
-  --secondary-400: #AD924C;
-  --secondary-500: #9F833A;
-  --secondary-600: #8E7430;
-  --secondary-700: #816723;
-  --secondary-800: #745A17;
-  --secondary-900: #674F0F;
-  --secondary-950: #553F04;
 
-  --special-1: #00000066;
-  --special-2: #ffffff33;
+  --special-1: #FF5050CC;
+  --special-2: #DB934B33;
 
 
   ---bg: url("");
-  --default-bg: url("../images/default-back.png");
+  --default-bg: url("../images/default-back.jpg");
   --tourlist-bg: url("../images/tour-list-back.jpg");
-  --articlelist-bg: url("../images/article-list-back.jpg");
+  --articlelist-bg: url("../images/article-list-back.png");
   --footer-bg: url("../images/footer-back.jpg");
+  --contact-bg: url("../images/contact-back.jpg");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "YekanBakh";
+  font-family: "DanaFaNum";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/YekanBakh-Regular.ttf") format("truetype");
+  src: url("../fonts/DanaFaNum-Regular.ttf") format("truetype");
 }
 @font-face {
   font-display: swap;
-  font-family: "YekanBakh";
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/DanaFaNum-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/YekanBakh-Bold.ttf") format("truetype");
+  src: url("../fonts/DanaFaNum-Bold.ttf") format("truetype");
 }
 
 .mask-shape {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 15.72%, #FFF4EA 100%);
-    mask-image: url('wave.svg'); 
-    mask-size: cover;
-    -webkit-mask-image: url('wave.svg');
-    -webkit-mask-size: cover;
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
   }
+
+  .mask-image{
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
+  .footer-shadow{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%);
+  }
+  .blinking {
+    width: auto;
+    height: auto;
+    background-color: orange;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      background-color: #18181B; 
+    }
+    50% {
+      background-color: #ffb52a;
+    }
+  }
+  .shadow-inner-custom{
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2), inset -2px -2px 5px rgba(255,255,255,0.7);
+  }
+
+  /* main */
+  .text-shadow{
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(153, 153, 153, 0) 172.64%);
+    -webkit-background-clip: text;
+      color: transparent;
+  }
+
+  .mask-gray-shape {
+    background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
+    -webkit-mask-image: url(../images/mask-svg.svg);
+    mask-image: url(../images/mask-svg.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    width: 100%;
+    display: block;
+  }
+

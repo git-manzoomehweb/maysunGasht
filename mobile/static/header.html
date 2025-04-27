@@ -42,17 +42,41 @@
                             </div>
 
                         </div>
+                        <svg width="48" height="48" class="search-header">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-search-zinc"></use>
+                        </svg>
+                        <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30"></div>
+
+                        <div
+                            class="form-header w-[90%] hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 bg-zinc-400 rounded-xl z-40">
+                            <div class="shadow-inner-custom p-4 flex flex-col items-center gap-3">
+                                <div class="relative w-full">
+                                    <input aria-label="جستجو" type="text"
+                                        class="w-full h-[60px] pr-10 shadow-lg bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
+                                        placeholder="مطلب مورد نظر خود را جستجو کنید">
+                                    <svg width="30" height="30" class="absolute right-2 top-4">
+                                        <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                                    </svg>
+                                </div>
+                                <button
+                                    class="group relative z-10 overflow-hidden flex items-center text-sm justify-center w-24 h-14 text-white rounded-lg bg-primary-900 border border-solid border-primary-900 transition-all duration-300 hover:text-primary-900">
+                                    جستجو
+                                    <span
+                                        class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a href="/"><img src="../assets/images/logo.png" alt="logo-header" width="67" height="11"
-                        loading="lazy" class="transition-all duration-300 hover:scale-90"/></a>
+                <a href="/"><img src="../assets/images/logo.png" alt="logo-header" width="33" height="38" loading="lazy"
+                        class="transition-all duration-300 hover:scale-90" /></a>
             </div>
             <!-- header menu -->
             <div
                 class="header-menu bg-white fixed z-30 translate-x-[1024px] inset-0 w-full transition-all duration-300 overflow-scroll">
                 <div>
                     <div class="flex items-center justify-between py-3 mx-auto w-[90%]">
-                        <a href="/"><img src="../assets/images/logo.png" alt="logo-header" width="94" height="34"
+                        <a href="/"><img src="../assets/images/logo.png" alt="logo-header" width="57" height="34"
                                 loading="lazy" class="transition-all duration-300 hover:scale-105" /></a>
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                             class="cursor-pointer header-menu-close" xmlns="http://www.w3.org/2000/svg">
