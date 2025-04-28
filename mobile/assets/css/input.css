@@ -30,6 +30,8 @@
   --default-bg: url("../images/default-back.jpg");
   --tourlist-bg: url("../images/tour-list-back.jpg");
   --articlelist-bg: url("../images/article-list-back.png");
+  --hotellist-bg: url("../images/hotel-list-back.jpg");
+  --article-bg: url("../images/article-back.jpg");
   --footer-bg: url("../images/footer-back.jpg");
   --contact-bg: url("../images/contact-back.jpg");
 }
@@ -106,7 +108,11 @@
     -webkit-background-clip: text;
       color: transparent;
   }
-
+  .text-white-shadow{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
   .mask-gray-shape {
     background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
     -webkit-mask-image: url(../images/mask-svg.svg);

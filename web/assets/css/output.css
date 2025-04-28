@@ -558,6 +558,40 @@ body {
   font-family: "DanaFaNum";
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -667,14 +701,14 @@ body {
   margin-right: auto;
 }
 
+.my-14 {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
 }
 
 .my-56 {
@@ -700,10 +734,6 @@ body {
 
 .mb-3 {
   margin-bottom: 0.75rem;
-}
-
-.mb-32 {
-  margin-bottom: 8rem;
 }
 
 .mb-4 {
@@ -740,6 +770,10 @@ body {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .mt-10 {
@@ -792,6 +826,30 @@ body {
 
 .mt-9 {
   margin-top: 2.25rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-14 {
+  margin-bottom: 3.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
 }
 
 .line-clamp-2 {
@@ -852,12 +910,12 @@ body {
   height: 11rem;
 }
 
-.h-48 {
-  height: 12rem;
-}
-
 .h-56 {
   height: 14rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-60 {
@@ -886,6 +944,10 @@ body {
 
 .h-\[248px\] {
   height: 248px;
+}
+
+.h-\[341px\] {
+  height: 341px;
 }
 
 .h-\[350px\] {
@@ -948,16 +1010,36 @@ body {
   height: 1px;
 }
 
-.h-8 {
-  height: 2rem;
+.h-\[303px\] {
+  height: 303px;
 }
 
-.h-\[341p\] {
-  height: 341p;
+.h-\[427px\] {
+  height: 427px;
 }
 
-.h-\[341px\] {
-  height: 341px;
+.h-48 {
+  height: 12rem;
+}
+
+.h-\[358px\] {
+  height: 358px;
+}
+
+.h-\[444px\] {
+  height: 444px;
+}
+
+.h-\[744px\] {
+  height: 744px;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-\[152px\] {
+  height: 152px;
 }
 
 .max-h-0 {
@@ -996,6 +1078,10 @@ body {
   width: 8rem;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-52 {
   width: 13rem;
 }
@@ -1004,8 +1090,8 @@ body {
   width: 16rem;
 }
 
-.w-72 {
-  width: 18rem;
+.w-80 {
+  width: 20rem;
 }
 
 .w-\[10px\] {
@@ -1028,12 +1114,24 @@ body {
   width: 100%;
 }
 
-.w-4 {
-  width: 1rem;
+.w-px {
+  width: 1px;
 }
 
-.w-40 {
-  width: 10rem;
+.w-\[413px\] {
+  width: 413px;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-\[855px\] {
+  width: 855px;
+}
+
+.min-w-0 {
+  min-width: 0px;
 }
 
 .flex-1 {
@@ -1054,6 +1152,14 @@ body {
 
 .flex-\[2\.20\] {
   flex: 2.20;
+}
+
+.flex-\[\] {
+  flex: ;
+}
+
+.flex-\[1\.5\] {
+  flex: 1.5;
 }
 
 .flex-shrink-0 {
@@ -1117,6 +1223,10 @@ body {
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1185,6 +1295,10 @@ body {
 
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-0\.5 {
+  gap: 0.125rem;
 }
 
 .gap-x-2 {
@@ -1392,6 +1506,11 @@ body {
   background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1416,12 +1535,24 @@ body {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 84.28%);
 }
 
+.bg-hotelListBg {
+  background-image: var(--hotellist-bg);
+}
+
 .bg-tourListBg {
   background-image: var(--tourlist-bg);
 }
 
 .bg-white-shadow {
   background-image: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);;
+}
+
+.bg-soft-black-bottom {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 54.62%, rgba(0, 0, 0, 0.8) 100%);;
+}
+
+.bg-articleBg {
+  background-image: var(--article-bg);
 }
 
 .bg-cover {
@@ -1501,6 +1632,21 @@ body {
   padding-bottom: 0.75rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1527,6 +1673,10 @@ body {
 
 .pr-12 {
   padding-right: 3rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .pr-7 {
@@ -1559,6 +1709,38 @@ body {
 
 .pt-9 {
   padding-top: 2.25rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pb-7 {
+  padding-bottom: 1.75rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-44 {
+  padding-top: 11rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
 }
 
 .text-center {
@@ -1686,6 +1868,16 @@ body {
   color: rgb(24 24 27 / var(--tw-text-opacity, 1));
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity, 1));
+}
+
+.text-zinc-400 {
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity, 1));
+}
+
 .placeholder-zinc-500::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(113 113 122 / var(--tw-placeholder-opacity, 1));
@@ -1786,6 +1978,8 @@ body {
   --default-bg: url("../images/default-back.jpg");
   --tourlist-bg: url("../images/tour-list-back.jpg");
   --articlelist-bg: url("../images/article-list-back.png");
+  --hotellist-bg: url("../images/hotel-list-back.jpg");
+  --article-bg: url("../images/article-back.jpg");
   --footer-bg: url("../images/footer-back.jpg");
   --contact-bg: url("../images/contact-back.jpg");
 }
@@ -1882,6 +2076,12 @@ body {
   color: transparent;
 }
 
+.text-white-shadow{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .mask-gray-shape {
   background: linear-gradient(180deg, #F6F6F6 15.52%, #FFFFFF 100%);
   -webkit-mask-image: url(../images/mask-svg.svg);
@@ -1892,6 +2092,18 @@ body {
   mask-size: 100% 100%;
   width: 100%;
   display: block;
+}
+
+.h1-tag{
+  position: absolute;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
 }
 
 .hover\:scale-105:hover {
@@ -1940,10 +2152,6 @@ body {
 
 .hover\:bg-primary-900:hover {
   background-color: var(--primary-900);
-}
-
-.hover\:bg-secondary-700:hover {
-  background-color: var(--secondary-700);
 }
 
 .hover\:bg-secondary-900:hover {
@@ -2116,4 +2324,3 @@ body {
     flex-shrink: 0;
   }
 }
-
