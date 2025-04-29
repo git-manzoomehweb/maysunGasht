@@ -1623,6 +1623,9 @@ body {
 .reservation-item li:hover span {
   color: #ffffff;
 }
+.reservation-item li span:hover {
+  color: #ffffff !important;
+}
 
 .reserve-btn {
   margin: 0 !important;
@@ -1642,13 +1645,68 @@ body {
   color: #fff !important;
 }
 
-.r-flight.module-form,
-.r-hotel.module-form,
-.r-flighthotel.module-form,
-.r-tour.module-form,
-.r-service.module-form,
-.r-insurance.module-form {
+#search-box{
   background-color: #fff;
   border-radius: 12px;
   padding: 12px;
+}
+
+.flight-routes,
+.Basis_Date_Box,
+.Flightclass-Passenger{
+  background-color: #F4F4F5;
+  flex-direction: column;
+}
+
+.search-box-container label{
+  display: flex;
+  align-items: center;
+}
+
+.search-box-container label svg{
+  transform: translateY(15px);
+}
+.click-content  label span{
+  color: #71717A;
+}
+.search-box-container input{
+  font-weight: 500;
+  padding-right: 49px !important;
+}
+
+.search-box-container svg {
+  width: 48px;
+  height: 48px;
+}
+
+.search-box-container .module-icon svg,
+.exchangeRoute svg {
+  width: 24px;
+  height: 24px;
+}
+
+.flighttype-field.flighttype-dropDown {
+  width: 181px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: white;
+}
+
+.click-content p,
+.reserve-field.departure-date p,
+.reserve-field.return-date p{
+  display: none;
+}
+
+.departure,
+.destination{
+  padding-right: 49px;
+}
+
+.search-box-container input, .search-box-container select, .search-box-container button {
+  font-family: "DanaFaNum" !important;
 }
