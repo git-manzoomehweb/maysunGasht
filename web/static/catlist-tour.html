@@ -11,13 +11,26 @@
         <div class="relative mt-24">
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
                 <h1 class="text-zinc-900 font-bold text-[36px] mb-4 text-center">مقاصد گردشگری</h1>
-                <div class="text-zinc-800 font-sm text-center">صفحه اصلی /مقاصد گردشگری </div>
+                <div class="text-zinc-800 font-sm text-center mb-4">صفحه اصلی /مقاصد گردشگری </div>
+                <div class="rounded-xl flex justify-center items-center gap-1">
+                    <div class="relative">
+                        <input aria-label="جستجوی مقصد" type="text"
+                            class="w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
+                            name="" id="" placeholder="جستجوی مقصد">
+                        <svg width="30" height="30" class="absolute right-4 top-4">
+                            <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                        </svg>
+                    </div>
+                    <button class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-24 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
+                        <span class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                    </button>
+                </div>
             </section>
-            <div class="mask-shape w-full h-[773px] absolute top-0"></div>
-            <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-20">
+            <div class="mask-shape w-full h-[773px] absolute top-0 mt-32"></div>
+            <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32">
                 <div class="grid grid-cols-4 gap-3">
                     <!-- item -->
-                    <a href="" class="relative flex items-end justify-center rounded-xl overflow-hidden">
+                    <a href="" class="relative flex items-end justify-center rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:translate-x-px">
                         <div class="bg-soft-black-bottom absolute inset-0 w-full"></div>
                         <img src="../assets/images/italy.jpg" class="h-[303px] object-cover" alt="" width="100%" height="303" loading="lazy">
                         <div class="absolute pb-7">

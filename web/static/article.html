@@ -73,23 +73,21 @@
                             <div class="flex items-center gap-2">
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev-custom">
-                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="48" height="48" rx="12" fill="#E4E4E7" />
-                                        <path
-                                            d="M31.7071 24.7071C32.0976 24.3166 32.0976 23.6834 31.7071 23.2929L25.3431 16.9289C24.9526 16.5384 24.3195 16.5384 23.9289 16.9289C23.5384 17.3195 23.5384 17.9526 23.9289 18.3431L29.5858 24L23.9289 29.6569C23.5384 30.0474 23.5384 30.6805 23.9289 31.0711C24.3195 31.4616 24.9526 31.4616 25.3431 31.0711L31.7071 24.7071ZM16 24V25H31V24V23H16V24Z"
-                                            fill="#71717A" />
-                                    </svg>
+                                    <div class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                        <svg width="48" height="48" class="-scale-x-100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M16.25 24.2744L31.25 24.2744" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                    </div>
         
                                 </div>
                                 <div class="swiper-button-next-custom">
-                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="48" height="48" rx="12" fill="#E4E4E7" />
-                                        <path
-                                            d="M31.7071 24.7071C32.0976 24.3166 32.0976 23.6834 31.7071 23.2929L25.3431 16.9289C24.9526 16.5384 24.3195 16.5384 23.9289 16.9289C23.5384 17.3195 23.5384 17.9526 23.9289 18.3431L29.5858 24L23.9289 29.6569C23.5384 30.0474 23.5384 30.6805 23.9289 31.0711C24.3195 31.4616 24.9526 31.4616 25.3431 31.0711L31.7071 24.7071ZM16 24V25H31V24V23H16V24Z"
-                                            fill="#71717A" />
-                                    </svg>
+                                    <div class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M16.25 24.2739L31.25 24.2739" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                    </div>
         
                                 </div>
                             </div>
@@ -252,7 +250,7 @@
             <div class="w-[413px]">
                 <section>
                     <div class="flex flex-col gap-3 border border-primary-200 rounded-xl px-4 py-6 bg-primary-50">
-                        <span class="flex items-center gap-3 text-sm text-zinc-900">
+                        <span class="flex items-center gap-3 text-sm text-zinc-900 transition-all duration-300 hover:text-primary-900">
                             <svg width="20" height="20">
                                 <use xlink:href="../assets/images/sprite-icons.svg#icon-article-star"></use>
                             </svg>
@@ -274,19 +272,19 @@
                 </section>
                 <section class="mt-6">
                     <div class="flex flex-col gap-3">
-                        <div class="flex items-center gap-3">
+                        <a href="" class="flex items-center gap-3 group">
                             <div class="flex-shrink-0">
-                                <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
+                                <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia" alt=""
                                     width="89" height="89" loading="lazy">
                             </div>
                             <div>
-                                <h3 class="font-medium text-zinc-900 mb-2">سفر به رم برای تفریح</h3>
-                                <div class="text-sm text-justify text-zinc-900 line-clamp-3">
+                                <h3 class="font-medium text-zinc-900 mb-2 transition-all duration-300 group-hover:text-primary-900">سفر به رم برای تفریح</h3>
+                                <div class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
                                     رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰ ساله خود تاثیر بسیار
                                     عمیقی بر جهان گذاشته است. از این رو
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         <div class="flex items-center gap-3">
                             <div class="flex-shrink-0">
                                 <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
@@ -307,36 +305,32 @@
         <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl my-14">
             <div class="flex items-center justify-between">
                 <h2 class="text-zinc-900 font-bold text-2xl">تور های مرتبط</h2>
-                <a href="" class="text-blue-600 font-bold text-lg">مشاهده همه</a>
+                <a href="" class="text-blue-600 font-bold text-lg transition-all duration-300 hover:text-primary-900">مشاهده همه</a>
             </div>
             <div class="grid grid-cols-3 gap-3 mt-8">
                 <!-- items -->
-                <a href=""
-                    class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                <a href="" class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                     <div class="relative">
-                        <img src="../assets/images/tour-card.jpg" class="h-60 object-cover rounded-t-[40px]" alt=""
-                            width="100%" height="240" loading="lazy">
+                        <img src="../assets/images/tour-card.jpg" class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale" alt="" width="100%" height="240" loading="lazy">
                         <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                             تخفیف تابستانه</div>
                     </div>
                     <div class="flex flex-col gap-2 mt-4">
                         <h2 class="font-bold">تور 10 روزه استانبول</h2>
-                        <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                            <span class="flex flex-1 items-center justify-center gap-2 text-xs">
+                        <div class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                            <span class="flex items-center gap-2 text-xs">
                                 <svg width="20" height="20" class="flex-shrink-0">
                                     <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
                                 </svg>
                                 14 فروردین
                             </span>
-                            <span class="h-6 w-px border border-zinc-200"></span>
-                            <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
+                            <span class="flex items-center font-medium gap-2 text-xs pr-7">
                                 <svg width="20" height="20" class="flex-shrink-0">
                                     <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
                                 </svg>
                                 4 روز 5 شب
                             </span>
-                            <span class="h-6 w-px border border-zinc-200"></span>
-                            <span class="flex flex-1 items-center justify-center gap-2 text-xs">
+                            <span class="flex items-center gap-2 text-xs pr-7">
                                 <svg width="20" height="20" class="flex-shrink-0">
                                     <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
                                 </svg>
@@ -347,19 +341,13 @@
                             <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
                             <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
                         </div>
-                        <span
-                            class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                        <span class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
                             تور
-                            <svg width="20" height="20"
-                                class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
-                            </svg>
-                            <svg width="20" height="20"
-                                class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
-                            </svg>
-                            <span
-                                class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900" d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z" fill="#fff"></path>
+                                </svg>
+                                
+                            <span class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                         </span>
                     </div>
                 </a>

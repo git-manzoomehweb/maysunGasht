@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/output.css">
+    <basis core="call" file="style.inc" />
     <title>Document</title>
 </head>
 
 <body>
+    <basis core="call" file="header.inc" />
     <main>
         <section class="relative bg-defaultBg bg-cover pt-24 pb-[410px]">
-            <div class="h-[248px] mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">dfdf</div>
+            <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
+                <div class="search-banner">
+                    <div class="search-box-container">
+                        <div id="search-box" class="dir-rtl">
+                            <div class="flex justify-center"><span class="loader"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="absolute w-full bg-white-shadow bottom-0 h-80"></div>
         </section>
         <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-2">
@@ -23,7 +32,7 @@
                             <span
                                 class="flex items-center justify-center w-12 h-12 border border-primary-100 bg-primary-50 rounded-lg ">
                                 <svg width="30" height="30">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-house"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-house"></use>
                                 </svg>
                             </span>
                             پیگیری خرید
@@ -46,14 +55,14 @@
                             <span
                                 class="flex items-center justify-center w-12 h-12 border border-primary-100 bg-primary-50 rounded-lg">
                                 <svg width="30" height="30">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-house"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-house"></use>
                                 </svg>
                             </span>
                             کد تخفیف
                         </span>
                         <a href="" class="flex items-center justify-center bg-primary-600 rounded-xl">
                             <svg width="48" height="48">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-left-arrow"></use>
                             </svg>
                         </a>
                     </div>
@@ -66,14 +75,14 @@
                             <span
                                 class="flex items-center justify-center w-12 h-12 border border-primary-100 bg-primary-50 rounded-lg">
                                 <svg width="30" height="30">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-house"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-house"></use>
                                 </svg>
                             </span>
                             نمایشگاه ها
                         </span>
                         <a href="" class="flex items-center justify-center bg-primary-600 rounded-xl">
                             <svg width="48" height="48">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-left-arrow"></use>
                             </svg>
                         </a>
                     </div>
@@ -92,7 +101,7 @@
                 <a href=""
                     class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
                     <div class="relative">
-                        <img src="../assets/images/tour-card.jpg"
+                        <img src="[##cms.cms.cdn##]/images/tour-card.jpg"
                             class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                             alt="" width="100%" height="240" loading="lazy">
                         <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -104,19 +113,19 @@
                             class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
                             <span class="flex items-center gap-2 text-xs">
                                 <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
                                 </svg>
                                 14 فروردین
                             </span>
                             <span class="flex items-center font-medium gap-2 text-xs pr-7">
                                 <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
                                 </svg>
                                 4 روز 5 شب
                             </span>
                             <span class="flex items-center gap-2 text-xs pr-7">
                                 <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
                                 </svg>
                                 ماهان ایرلاین
                             </span>
@@ -130,11 +139,11 @@
                             تور
                             <svg width="20" height="20"
                                 class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-white-left-arrow"></use>
                             </svg>
                             <svg width="20" height="20"
                                 class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                             <span
                                 class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
@@ -144,7 +153,7 @@
                 <a href=""
                     class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
                     <div class="relative">
-                        <img src="../assets/images/tour-card.jpg"
+                        <img src="[##cms.cms.cdn##]/images/tour-card.jpg"
                             class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                             alt="" width="100%" height="240" loading="lazy">
                         <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -156,19 +165,19 @@
                             class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
                             <span class="flex items-center gap-2 text-xs">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
                                 </svg>
                                 14 فروردین
                             </span>
                             <span class="flex items-center font-medium gap-2 text-xs pr-7">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
                                 </svg>
                                 4 روز 5 شب
                             </span>
                             <span class="flex items-center gap-2 text-xs pr-7">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
                                 </svg>
                                 ماهان ایرلاین
                             </span>
@@ -182,11 +191,11 @@
                             تور
                             <svg width="20" height="20"
                                 class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-white-left-arrow"></use>
                             </svg>
                             <svg width="20" height="20"
                                 class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                             <span
                                 class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
@@ -196,7 +205,7 @@
                 <a href=""
                     class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
                     <div class="relative">
-                        <img src="../assets/images/tour-card.jpg"
+                        <img src="[##cms.cms.cdn##]/images/tour-card.jpg"
                             class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                             alt="" width="100%" height="240" loading="lazy">
                         <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -208,19 +217,19 @@
                             class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
                             <span class="flex items-center gap-2 text-xs">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-calender"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
                                 </svg>
                                 14 فروردین
                             </span>
                             <span class="flex items-center font-medium gap-2 text-xs pr-7">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-clock"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
                                 </svg>
                                 4 روز 5 شب
                             </span>
                             <span class="flex items-center gap-2 text-xs pr-7">
                                 <svg width="20" height="20">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#icon-airline"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
                                 </svg>
                                 ماهان ایرلاین
                             </span>
@@ -234,11 +243,11 @@
                             تور
                             <svg width="20" height="20"
                                 class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-white-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-white-left-arrow"></use>
                             </svg>
                             <svg width="20" height="20"
                                 class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                             <span
                                 class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
@@ -253,7 +262,7 @@
                     <span
                         class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
                         <svg width="37" height="37">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-internal-hotel"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-internal-hotel"></use>
                         </svg>
                     </span>
                     <div>
@@ -268,7 +277,7 @@
                     <span
                         class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
                         <svg width="37" height="37">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-foreign-hotel"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-foreign-hotel"></use>
                         </svg>
                     </span>
                     <div>
@@ -276,7 +285,7 @@
                         <a href="" class="flex items-center gap-1 text-sm">
                             مشاهده
                             <svg width="20" height="20">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                         </a>
                     </div>
@@ -285,7 +294,7 @@
                     <span
                         class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
                         <svg width="37" height="37">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-big-house"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-big-house"></use>
                         </svg>
                     </span>
                     <div>
@@ -293,7 +302,7 @@
                         <a href="" class="flex items-center gap-1 text-sm">
                             مشاهده
                             <svg width="20" height="20">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                         </a>
                     </div>
@@ -302,7 +311,7 @@
                     <span
                         class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
                         <svg width="37" height="37">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-visa"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-visa"></use>
                         </svg>
                     </span>
                     <div>
@@ -310,7 +319,7 @@
                         <a href="" class="flex items-center gap-1 text-sm">
                             مشاهده
                             <svg width="20" height="20">
-                                <use xlink:href="../assets/images/sprite-icons.svg#icon-orange-left-arrow"></use>
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
                             </svg>
                         </a>
                     </div>
@@ -363,9 +372,9 @@
                     </span>
                 </div>
                 <div class="relative flex-[2.20]">
-                    <img src="../assets/images/tours.jpg" class="h-[365px] object-cover rounded-xl transition-all duration-300 group-hover:invert" alt="" width="648"
+                    <img src="[##cms.cms.cdn##]/images/tours.jpg" class="h-[365px] object-cover rounded-xl transition-all duration-300 group-hover:invert" alt="" width="648"
                         height="365" loading="lazy">
-                    <img src="../assets/images/person.png" class="absolute -right-10 top-2 h-[355px] object-cover"
+                    <img src="[##cms.cms.cdn##]/images/person.png" class="absolute -right-10 top-2 h-[355px] object-cover"
                         alt="" width="254" height="355" loading="lazy">
                 </div>
             </div>
@@ -374,7 +383,7 @@
             <div class="mask-shape w-full h-[742px] absolute top-0"></div>
             <div class="flex justify-between mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
                 <div class="relative z-10 pt-9 w-1/2">
-                    <img src="../assets/images/mobile.png" class="h-[624px] object-cover scale-x-[-1] soft-bounce" alt="mobile" width="896"
+                    <img src="[##cms.cms.cdn##]/images/mobile.png" class="h-[624px] object-cover scale-x-[-1] soft-bounce" alt="mobile" width="896"
                         height="624" loading="lazy">
                 </div>
                 <div class="relative self-center">
@@ -384,11 +393,11 @@
                     <h3 class="text-xl text-primary-600">تجربه ای ساده‌تر با وب اپلیکیشن میسان</h3>
                     <div class="flex items-center gap-16 mt-12">
                         <div>
-                            <img src="../assets/images/qrcode.png" alt="" width="144" height="138" loading="lazy">
+                            <img src="[##cms.cms.cdn##]/images/qrcode.png" alt="" width="144" height="138" loading="lazy">
                             <h3 class="text-xl text-center mt-2">وب اپلیکشین</h3>
                         </div>
                         <div>
-                            <img src="../assets/images/qrcode.png" alt="" width="144" height="138" loading="lazy">
+                            <img src="[##cms.cms.cdn##]/images/qrcode.png" alt="" width="144" height="138" loading="lazy">
                             <h3 class="text-xl text-center mt-2">اینستاگرام ما</h3>
                         </div>
                     </div>
@@ -397,7 +406,7 @@
         </section>
         <section class="relative mt-12">
             <div class="mask-gray-shape w-full h-[742px] absolute top-0"></div>
-            <img src="../assets/images/orange-pattern.png" class="absolute top-20 opacity-30 h-[600px] object-cover" alt="" width="100%" height="576" loading="lazy">
+            <img src="[##cms.cms.cdn##]/images/orange-pattern.png" class="absolute top-20 opacity-30 h-[600px] object-cover" alt="" width="100%" height="576" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-40">
                 <div class="relative flex gap-6">
                     <div>
@@ -406,7 +415,7 @@
                             <li
                                 class="flex items-center justify-center gap-2 cursor-pointer rounded-lg font-medium bg-primary-600 w-52 h-14 text-white">
                                 <svg width="24" height="24">
-                                    <use xlink:href="../assets/images/sprite-icons.svg#flight-search-icon-active"></use>
+                                    <use xlink:href="./images/sprite-icons.svg#flight-search-icon-active"></use>
                                 </svg>
                                 پرواز
                             </li>
@@ -502,7 +511,7 @@
                     <!-- items -->
                     <article>
                         <a href="" class="group relative flex flex-col justify-end overflow-hidden rounded-xl ">
-                            <img src="../assets/images/article-card.jpg" width="100%" height="292" alt="" loading="lazy" class="h-72 object-cover">
+                            <img src="[##cms.cms.cdn##]/images/article-card.jpg" width="100%" height="292" alt="" loading="lazy" class="h-72 object-cover">
                             <div class="absolute inset-0 w-full h-full bg-fade-black transition-all duration-300 group-hover:opacity-0"></div>
                             <div class="absolute flex flex-col gap-3 z-10 px-6 pb-4">
                                 <div class="flex items-center justify-between">
@@ -520,7 +529,7 @@
                         </a>
                     </article>
                     <a href="" class="relative flex flex-col justify-end overflow-hidden rounded-xl">
-                        <img src="../assets/images/article-card.jpg" width="100%" height="292" alt="" loading="lazy"
+                        <img src="[##cms.cms.cdn##]/images/article-card.jpg" width="100%" height="292" alt="" loading="lazy"
                             class="h-72 object-cover">
                         <div class="absolute inset-0 w-full h-full bg-fade-black"></div>
                         <div class="absolute z-10 px-6 pb-4">
@@ -544,7 +553,7 @@
                     <!-- items -->
                     <a href="" class="flex items-center gap-3 group">
                         <div class="flex-shrink-0">
-                            <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia" alt=""
+                            <img src="[##cms.cms.cdn##]/images/news-card.jpg" class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia" alt=""
                                 width="89" height="89" loading="lazy">
                         </div>
                         <div>
@@ -557,7 +566,7 @@
                     </a>
                     <div class="flex items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
+                            <img src="[##cms.cms.cdn##]/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
                                 width="89" height="89" loading="lazy">
                         </div>
                         <div>
@@ -570,7 +579,7 @@
                     </div>
                     <div class="flex items-center gap-3">
                         <div class="flex-shrink-0">
-                            <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
+                            <img src="[##cms.cms.cdn##]/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
                                 width="89" height="89" loading="lazy">
                         </div>
                         <div>
@@ -586,7 +595,7 @@
         </section>
     </main>
 
-    <script src="../assets/js/maysungasht-core.js"></script>
+    <basis core="call" file="footer.inc" />
 </body>
 
 </html>
