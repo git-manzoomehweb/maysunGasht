@@ -293,7 +293,7 @@
     /* 1 */
     border-color: inherit;
     /* 2 */
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     /* 3 */
   }
   
@@ -533,7 +533,7 @@
   iframe,
   embed,
   object {
-    display: block;
+    /* display: block; */
     /* 1 */
     vertical-align: middle;
     /* 2 */
@@ -543,11 +543,11 @@
   Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
   */
   
-  img,
+  /* img,
   video {
     max-width: 100%;
     height: auto;
-  }
+  } */
   
   /* Make elements with the HTML hidden attribute stay hidden by default */
   

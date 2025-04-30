@@ -1,4 +1,10 @@
 <basis core="group" if="'[##cms.cms.page_index##]' = 'نمایه پیش فرض'">
+    <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+        <member name="infofooter" type="view" postsql="select * from [db.infofooter] where TypeID in(240)" />
+    </basis>
+    <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+        <member name="info-footer" type="view" />
+    </basis>
     <footer>
         <div class="relative">
             <div class="mask-shape w-full h-[773px] absolute top-0"></div>
@@ -13,21 +19,13 @@
             </div>
             <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
                 <h2 class="text-center tracking-[20px] text-[40px] font-bold text-primary-900">MAYSUNGASHT</h2>
-                <div class="text-justify text-zinc-900 text-sm leading-7">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                    مورد
-                    نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
-                    گذشته
-                    حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-                    طراحان
-                    رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
-                    امید
-                    داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
-                    شامل
-                    حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
-                    گیرد.
-                </div>
+                <basis core="print" datamembername="db.info-footer">
+                    <face filter="TypeID IN(144)">
+                        <div class="text-justify text-zinc-900 text-sm leading-7">
+                            @largetext
+                        </div>
+                    </face>
+                </basis>
             </section>
             <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-3">
                 <h2 class="text-2xl font-bold mb-7">دسترسی سریع</h2>
@@ -127,66 +125,92 @@
             </section>
             <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-12">
                 <div class="flex items-center gap-2 lg:flex-wrap xl:justify-between">
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                            <svg width="37" height="37">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
-                            </svg>
-                        </span>
-                        <div>
-                            <a href="" class="text-sm text-blinking">
-                                مشاهده لوکیشن
-                            </a>
-                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">تهران-شهرک اکباتان-فاز1-بلوار
-                                نفیسی-نبش
-                                کوچه باریکانی-پلاک43-طبقه اول - واحد 2</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                            <svg width="37" height="37">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
-                            </svg>
-                        </span>
-                        <div>
-                            <a href="" class="text-sm text-primary-900">
-                                تماس
-                            </a>
-                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">021-22222222</div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                            <svg width="37" height="37">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
-                            </svg>
-                        </span>
-                        <div>
-                            <a href="" class="text-sm text-primary-900">
-                                پشتیبانی در ساعات غیر اداری و روزهای تعطیل
-                            </a>
-                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">09190022879</div>
-
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span
-                            class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                            <svg width="37" height="37">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-mail"></use>
-                            </svg>
-                        </span>
-                        <div>
-                            <a href="mailto:" class="text-sm text-primary-900">
-                                ارسال ایمیل
-                            </a>
-                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">info@maysungasht.ir</div>
-
-                        </div>
-                    </div>
+                    <basis core="print" datamembername="db.info-footer">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="TypeID in(244)">
+                            <div>
+                                <a href="" class="text-sm text-blinking">
+                                    مشاهده لوکیشن
+                                </a>
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.info-footer">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="valueID in(14991918)">
+                            <div>
+                                <a href="tel:@text" class="text-sm text-primary-900">
+                                    تماس
+                                </a>
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.info-footer">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="valueID in(333683232)">
+                            <div>
+                                <a href="tel:@text" class="text-sm text-primary-900">
+                                    پشتیبانی در ساعات غیر اداری و روزهای تعطیل
+                                </a>
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+    
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.info-footer">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-mail"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="TypeID in(242)">
+                            <div>
+                                <a href="mailto:@text" class="text-sm text-primary-900">
+                                    ارسال ایمیل
+                                </a>
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+    
+                            </div>
+                        </face>
+                    </basis>
                 </div>
             </section>
             <section class="relative flex justify-between mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8">
