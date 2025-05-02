@@ -1,0 +1,33 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+    <member name="article-list" type="list" link="article.bc" propertyid="7227" perpage="1" size="648x365" order="ord" />
+</basis>
+
+
+<basis core="list" datamembername="db.article-list">
+    <face filter="link is null">
+        <div class="flex gap-16 mt-11 group">
+            <div class="flex-[1.82] flex flex-col justify-between">
+                <div>
+                    <h2 class="text-[36px] font-bold text-zinc-900 mb-2">@title</h2>
+                    <div class="text-sm text-zinc-900 text-justify leading-7">
+                        @prp_7227
+                    </div>
+                </div>
+                <a href="/article.bc?id=@id" class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                    تور
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900" d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z" fill="#fff"></path>
+                        </svg>
+                        
+                    <span class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                </a>
+            </div>
+            <div class="relative flex-[2.20]">
+                <img src="[##cms.cms.cdn##]/images/tours.jpg" class="h-[365px] object-cover rounded-xl transition-all duration-300 group-hover:invert" alt="" width="648"
+                    height="365" loading="lazy">
+                <img src="[##cms.cms.cdn##]/images/person.png" class="absolute -right-10 top-2 h-[355px] object-cover"
+                    alt="" width="254" height="355" loading="lazy">
+            </div>
+        </div>
+    </face>
+</basis>

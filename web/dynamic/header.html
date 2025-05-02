@@ -48,8 +48,8 @@
                                     </div>
                             </div>
                             <basis core="print" datamembername="db.info">
-                                <face filter="TypeID in(245) and text in('اینستاگرام')">
-                                    <a href="">
+                                <face filter="TypeID in('245') and text in('اینستاگرام')">
+                                    <a href="@largetext">
                                         <svg width="49" height="48" class="group border border-white rounded-full transition-all duration-300 hover:border-primary-600" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" class="transition-all duration-300 group-hover:fill-primary-600" clip-rule="evenodd" d="M16.2402 15.8974C17.2247 14.8412 18.6267 14.25 20.2822 14.25H28.7169C30.3762 14.25 31.7788 14.8408 32.7629 15.8977C33.7413 16.9484 34.25 18.3989 34.25 20.0264V27.9736C34.25 29.6011 33.7413 31.0516 32.7627 32.1024C31.7785 33.1592 30.3756 33.75 28.7159 33.75H20.2822C18.6228 33.75 17.2204 33.1591 16.2366 32.1023C15.2584 31.0515 14.75 29.601 14.75 27.9736V20.0264C14.75 18.3981 15.2612 16.9477 16.2402 15.8974ZM17.3375 16.9201C16.6602 17.6467 16.25 18.7095 16.25 20.0264V27.9736C16.25 29.2914 16.6586 30.3541 17.3345 31.0802C18.0047 31.8003 18.9934 32.25 20.2822 32.25H28.7159C30.0052 32.25 30.9944 31.8002 31.665 31.0801C32.3412 30.354 32.75 29.2913 32.75 27.9736V20.0264C32.75 18.7087 32.3412 17.646 31.6651 16.9198C30.9946 16.1997 30.0056 15.75 28.7169 15.75H20.2822C18.9983 15.75 18.0092 16.1994 17.3375 16.9201Z" fill="#18181B"/>
                                             <path fill-rule="evenodd" class="transition-all duration-300 group-hover:fill-primary-600" clip-rule="evenodd" d="M24.3464 21.5781C22.8263 21.5781 21.5937 22.8108 21.5937 24.3308C21.5937 25.8509 22.8263 27.0835 24.3464 27.0835C25.8665 27.0835 27.0992 25.8509 27.0992 24.3308C27.0992 22.8108 25.8665 21.5781 24.3464 21.5781ZM20.0938 24.3308C20.0938 21.9823 21.998 20.0781 24.3464 20.0781C26.6949 20.0781 28.5991 21.9823 28.5991 24.3308C28.5991 26.6793 26.6949 28.5835 24.3464 28.5835C21.998 28.5835 20.0938 26.6793 20.0938 24.3308Z" fill="#18181B"/>
@@ -95,16 +95,16 @@
                                 </layout>
                                 <face level="end" filter="link is null">
                                     <li
-                                        class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+                                        class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelfour">
                                         <a href="/tour-list.bc?catid=@catid"
-                                            class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                            class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelfour:text-white">@title</a>
                                     </li>
                                 </face>
                                 <face level="end">
                                     <li
-                                        class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+                                        class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelfour">
                                         <a href="@link"
-                                            class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                            class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelfour:text-white">@title</a>
                                     </li>
                                 </face>
                                 <face level="1" filter="link is null">
@@ -146,6 +146,49 @@
                                         </div>
                                         <ul
                                             class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                                            @child
+                                        </ul>
+                                    </li>
+                                </face>
+                                <face level="2" filter="link is null">
+                                    <li
+                                        class="relative py-1 transition-all duration-300 rounded-md group/levelthree hover:bg-primary-800">
+                                        <div
+                                            class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/levelthree:text-white">
+                                            <a href="/tour-list.bc?catid=@catid"
+                                                class="transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                class="transition-all duration-300 group-hover/levelthree:rotate-90"
+                                                viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" class="group-hover/levelthree:fill-white"
+                                                    clip-rule="evenodd"
+                                                    d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                    fill="#222222" />
+                                            </svg>
+                                        </div>
+                                        <ul
+                                            class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/levelthree:visible group-hover/levelthree:opacity-100">
+                                            @child
+                                        </ul>
+                                    </li>
+                                </face>
+                                <face level="2">
+                                    <li
+                                        class="relative py-1 transition-all duration-300 rounded-md group/levelthree hover:bg-primary-800">
+                                        <div class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/levelthree:text-white">
+                                            <a href="@link"
+                                                class="transition-all duration-300 text-zinc-900 group-hover/levelfour:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                class="transition-all duration-300 group-hover/levelthree:rotate-90"
+                                                viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" class="group-hover/levelthree:fill-white"
+                                                    clip-rule="evenodd"
+                                                    d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                    fill="#222222" />
+                                            </svg>
+                                        </div>
+                                        <ul
+                                            class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/levelthree:visible group-hover/levelthree:opacity-100">
                                             @child
                                         </ul>
                                     </li>

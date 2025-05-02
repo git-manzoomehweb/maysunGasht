@@ -316,6 +316,10 @@ body {
   height: 3.5rem;
 }
 
+.h-15 {
+  height: 3.75rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -1461,18 +1465,8 @@ body {
   display: none;
 }
 
-.group\/levelthree:hover .group-hover\/levelthree\:text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) /* #ffffff */;
-}
-
 .group:hover .group-hover\:w-full {
   width: 100%;
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:translate-x-4 {
@@ -1506,10 +1500,6 @@ body {
 
 .group\/leveltwo:hover .group-hover\/leveltwo\:fill-primary-900 {
   fill: var(--primary-900);
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:fill-white {
-  fill: #fff;
 }
 
 .group:hover .group-hover\:fill-white {
