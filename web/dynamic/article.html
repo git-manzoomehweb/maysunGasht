@@ -3,9 +3,18 @@
 </basis>
 <basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]">
     <member name="view" type="view" propertyid="7249" />
+    <member name="related-tour" type="list" blgid="221" link="tour.bc" propertyid="8077,8076,8181,10000504,3087727" perpage="3"
+    typeid="159" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="userbehavior" name="db" usedforid="[##cms.query.id##]">
+    <member name="comment" type="list" order="ord" request="listcomment" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid##]">
+    <member name="news" type="list" link="article.bc" propertyid="" perpage="4"
+        size="89x89" order="ord" />
 </basis>
 
 <!DOCTYPE html>
@@ -17,7 +26,8 @@
     <!-- Title & Description -->
     <title>[##cms.seo.title|(خرید بلیط هواپیما - رزرو آنلاین پرواز داخلی و خارجی - میسان گشت)##]
     </title>
-    <meta name="description" content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
+    <meta name="description"
+        content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
     <!-- Title & Description -->
     <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
         <member type="list" name="list" request="taglist" preview=""></member>
@@ -66,10 +76,10 @@
                         </layout>
                         <face filter="TypeID in(159)">
                             <img src="[##cms.cms.cdn##]/@text" alt="@text"
-                            class="h-[444px] object-cover rounded-xl mb-6" width="100%" height="444"
-                            loading="lazy" />
+                                class="h-[444px] object-cover rounded-xl mb-6" width="100%" height="444"
+                                loading="lazy" />
                         </face>
-                      </basis>
+                    </basis>
 
                     <basis core="print" datamembername="db.view">
                         <layout>
@@ -78,18 +88,15 @@
                             </div>
                         </layout>
                         <face filter="TypeID in(129)">
-                        <div class="text-zinc-900 text-sm mb-4">
-                             @largetext
-                    </div>
+                            <div class="text-zinc-900 text-sm mb-4">
+                                @largetext
+                            </div>
                         </face>
                         <face filter="TypeID in(250)">
                             <h2 id="@valueID" class="font-medium text-zinc-900 mb-2">@text</h2>
                             <div class="text-zinc-900 text-sm leading-7">@largetext</div>
                         </face>
                     </basis>
-                    
-
-
 
 
                 </section>
@@ -105,177 +112,70 @@
                             <div class="flex items-center gap-2">
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev-custom">
-                                    <div class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
-                                        <svg width="48" height="48" class="-scale-x-100" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M16.25 24.2744L31.25 24.2744" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
+                                    <div
+                                        class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                        <svg width="48" height="48" class="-scale-x-100" viewBox="0 0 48 48" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="transition-all duration-300 group-hover:stroke-white"
+                                                d="M16.25 24.2744L31.25 24.2744" stroke="#71717A" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path class="transition-all duration-300 group-hover:stroke-white"
+                                                d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#71717A"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
                                     </div>
-        
+
                                 </div>
                                 <div class="swiper-button-next-custom">
-                                    <div class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
-                                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M16.25 24.2739L31.25 24.2739" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path class="transition-all duration-300 group-hover:stroke-white" d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="#71717A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
+                                    <div
+                                        class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class="transition-all duration-300 group-hover:stroke-white"
+                                                d="M16.25 24.2739L31.25 24.2739" stroke="#71717A" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path class="transition-all duration-300 group-hover:stroke-white"
+                                                d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="#71717A"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
                                     </div>
-        
+
                                 </div>
                             </div>
                         </div>
                         <!-- Slider main container -->
                         <div class="swiper swiper-suggestion">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
+                            <basis core="tree" datamembername="db.comment" idcol="id" parentidcol="parentid" nullvalue="0">
+                                <layout>
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        @child
+                                    </div>
+                                </layout>
+                                <face level="1">
+                                    <div class="swiper-slide">
+                                        <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
+                                            <div class="user-opinion-txt flex items-center gap-2">
                                                 <svg width="36" height="36">
                                                     <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
                                                 </svg>
                                                 <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
+                                                    <h3 class="text-zinc-800 text-xs">کاربر : @username</h3>
+                                                    <span class="text-xs text-zinc-500">@createdate</span>
                                                 </div>
                                             </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
-                                                <svg width="36" height="36">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
-                                                </svg>
-                                                <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
-                                                </div>
+                                            <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
+                                                @comment
                                             </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
                                         </div>
                                     </div>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
-                                                <svg width="36" height="36">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
-                                                </svg>
-                                                <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
-                                                </div>
-                                            </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
-                                                <svg width="36" height="36">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
-                                                </svg>
-                                                <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
-                                                </div>
-                                            </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
-                                                <svg width="36" height="36">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
-                                                </svg>
-                                                <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
-                                                </div>
-                                            </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide ">
-                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                        <div class="flex items-center justify-between">
-                                            <div class="flex items-center gap-2">
-                                                <svg width="36" height="36">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
-                                                </svg>
-                                                <div class="flex flex-col gap-0.5">
-                                                    <h3 class="text-zinc-800 text-xs">محسن حیدری</h3>
-                                                    <span class="text-xs text-zinc-500">1403/2/2</span>
-                                                </div>
-                                            </div>
-                                            <span class="flex itemc gap-1 text-zinc-400 text-xs">
-                                                4.8
-                                                <svg width="15" height="14">
-                                                    <use xlink:href="./images/sprite-icons.svg#icon-golden-star"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                            متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
+                                </face>
+                            </basis>
+
+
                         </div>
+
                     </div>
                 </section>
             </div>
@@ -283,7 +183,8 @@
                 <section>
                     <basis core="print" datamembername="db.view">
                         <layout>
-                            <div class="flex flex-col gap-3 border border-primary-200 rounded-xl px-4 py-6 bg-primary-50">
+                            <div
+                                class="flex flex-col gap-3 border border-primary-200 rounded-xl px-4 py-6 bg-primary-50">
                                 @child
                             </div>
                         </layout>
@@ -299,188 +200,278 @@
                     </basis>
                 </section>
                 <section class="mt-6">
-                    <div class="flex flex-col gap-3">
-                        <a href="" class="flex items-center gap-3 group">
-                            <div class="flex-shrink-0">
-                                <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia" alt=""
-                                    width="89" height="89" loading="lazy">
+                    <basis core="list" datamembername="db.news">
+                        <layout>
+                            <div class="flex flex-col gap-3">
+                                @child
                             </div>
-                            <div>
-                                <h3 class="font-medium text-zinc-900 mb-2 transition-all duration-300 group-hover:text-primary-900">سفر به رم برای تفریح</h3>
-                                <div class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
-                                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰ ساله خود تاثیر بسیار
-                                    عمیقی بر جهان گذاشته است. از این رو
+                        </layout>
+                        <face filter="link is null">
+                            <a href="/article.bc?id=@id" class="flex items-center gap-3 group">
+                                <div class="flex-shrink-0">
+                                    <img src="@00089X00089prp"
+                                        class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia"
+                                        alt="@title" width="89" height="89" loading="lazy">
                                 </div>
-                            </div>
-                        </a>
-                        <div class="flex items-center gap-3">
-                            <div class="flex-shrink-0">
-                                <img src="../assets/images/news-card.jpg" class="h-[89px] object-cover rounded-xl" alt=""
-                                    width="89" height="89" loading="lazy">
-                            </div>
-                            <div>
-                                <h3 class="font-medium text-zinc-900 mb-2">سفر به رم برای تفریح</h3>
-                                <div class="text-sm text-justify text-zinc-900 line-clamp-3">
-                                    رم هزاران سال مرکز قدرت، فرهنگ و مذهب بود و در طول تاریخ ۲۸۰۰ ساله خود تاثیر بسیار
-                                    عمیقی بر جهان گذاشته است. از این رو
+                                <div>
+                                    <h3
+                                        class="font-medium text-zinc-900 mb-2 transition-all duration-300 group-hover:text-primary-900">
+                                        @title</h3>
+                                    <div
+                                        class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
+                                    @prp_7244
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </a>
+                        </face>
+                        <face>
+                            <a href="/article.bc?id=@id" class="flex items-center gap-3 group">
+                                <div class="flex-shrink-0">
+                                    <img src="@00089X00089prp"
+                                        class="h-[89px] object-cover rounded-xl transition-all duration-300 group-hover:sepia"
+                                        alt="@title" width="89" height="89" loading="lazy">
+                                </div>
+                                <div>
+                                    <h3
+                                        class="font-medium text-zinc-900 mb-2 transition-all duration-300 group-hover:text-primary-900">
+                                        @title</h3>
+                                    <div
+                                        class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
+                                    @prp_7244
+                                    </div>
+                                </div>
+                            </a>
+                        </face>
+                    </basis>
+
                 </section>
             </aside>
         </div>
         <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl my-14">
-            <div class="flex items-center justify-between">
-                <h2 class="text-zinc-900 font-bold text-2xl">تور های مرتبط</h2>
-                <a href="" class="text-blue-600 font-bold text-lg transition-all duration-300 hover:text-primary-900">مشاهده همه</a>
-            </div>
-            <div class="grid grid-cols-3 gap-3 mt-8">
-                <!-- items -->
-                <a href="" class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
-                    <div class="relative">
-                        <img src="../assets/images/tour-card.jpg" class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale" alt="" width="100%" height="240" loading="lazy">
-                        <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                            تخفیف تابستانه</div>
+
+            <basis core="list" datamembername="db.related-tour">
+                <layout>
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-zinc-900 font-bold text-2xl">تور های مرتبط</h2>
+                        <a href=""
+                            class="text-blue-600 font-bold text-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                            همه</a>
                     </div>
-                    <div class="flex flex-col gap-2 mt-4">
-                        <h2 class="font-bold">تور 10 روزه استانبول</h2>
-                        <div class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
-                            <span class="flex items-center gap-2 text-xs">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
-                                </svg>
-                                14 فروردین
-                            </span>
-                            <span class="flex items-center font-medium gap-2 text-xs pr-7">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
-                                </svg>
-                                4 روز 5 شب
-                            </span>
-                            <span class="flex items-center gap-2 text-xs pr-7">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
-                                </svg>
-                                ماهان ایرلاین
-                            </span>
-                        </div>
-                        <div>
-                            <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
-                            <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
-                        </div>
-                        <span class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
-                            تور
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900" d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z" fill="#fff"></path>
-                                </svg>
-                                
-                            <span class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
-                        </span>
+                    <div class="grid grid-cols-3 gap-3 mt-8">
+                        <!-- items -->
+                        @child
                     </div>
-                </a>
-                <a href="" class="flex flex-col border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
-                    <div class="relative">
-                        <img src="../assets/images/tour-card.jpg" class="h-60 object-cover rounded-t-[40px]" alt=""
-                            width="100%" height="240" loading="lazy">
-                        <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                            تخفیف تابستانه</div>
-                    </div>
-                    <div class="flex flex-col gap-2 mt-4">
-                        <h2 class="font-bold">تور 10 روزه استانبول</h2>
-                        <div
-                            class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
-                            <span class="flex items-center gap-2 text-xs">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
-                                </svg>
-                                14 فروردین
-                            </span>
-                            <span class="flex items-center font-medium gap-2 text-xs pr-7">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
-                                </svg>
-                                4 روز 5 شب
-                            </span>
-                            <span class="flex items-center gap-2 text-xs pr-7">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
-                                </svg>
-                                ماهان ایرلاین
-                            </span>
+                </layout>
+                <face filter="link is null and prp_3087727">
+                    <a href="/tour.bc?id=@id"
+                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                تخفیف تابستانه</div>
                         </div>
-                        <div>
-                            <span class="text-primary-300 text-xs font-medium">قیمت از:</span>
-                            <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
-                        </div>
-                        <span
-                            class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900">مشاهده
-                            تور
-                            <svg width="20" height="20"
-                                class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="./images/sprite-icons.svg#icon-white-left-arrow"></use>
-                            </svg>
-                            <svg width="20" height="20"
-                                class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
-                            </svg>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-bold">@title</h2>
+                            <div
+                                class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                                <span class="flex items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
+                                    </svg>
+                                    @prp_8077
+                                </span>
+                                <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
+                                    </svg>
+                                    @prp_8076
+                                </span>
+                                <span class="flex items-center gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
+                                    </svg>
+                                    @prp_10000504
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
+                                <div class="text-zinc-900 text-lg font-medium">@prp_8181</div>
+                            </div>
                             <span
-                                class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
-                        </span>
-                    </div>
-                </a>
-                <a href=""
-                    class="flex flex-col group border-2 border-solid border-primary-100 bg-white rounded-t-[50px] p-3">
-                    <div class="relative">
-                        <img src="../assets/images/tour-card.jpg" class="h-60 object-cover rounded-t-[40px]" alt=""
-                            width="100%" height="240" loading="lazy">
-                        <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                            تخفیف تابستانه</div>
-                    </div>
-                    <div class="flex flex-col gap-2 mt-4">
-                        <h2 class="font-bold">تور 10 روزه استانبول</h2>
-                        <div
-                            class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
-                            <span class="flex items-center gap-2 text-xs">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
+                                class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                                تور
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                        d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
+                                        fill="#fff" />
                                 </svg>
-                                14 فروردین
-                            </span>
-                            <span class="flex items-center font-medium gap-2 text-xs pr-7">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
-                                </svg>
-                                4 روز 5 شب
-                            </span>
-                            <span class="flex items-center gap-2 text-xs pr-7">
-                                <svg width="20" height="20">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
-                                </svg>
-                                ماهان ایرلاین
+
+                                <span
+                                    class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                             </span>
                         </div>
-                        <div>
-                            <span class="text-primary-300 text-xs font-medium">قیمت از:</span>
-                            <div class="text-zinc-900 text-lg font-medium">160/000/000 ریال + 1200 دلار</div>
+                    </a>
+                </face>
+                <face filter="prp_3087727">
+                    <a href="@link"
+                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                تخفیف تابستانه</div>
                         </div>
-                        <span
-                            class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg">مشاهده
-                            تور
-                            <svg width="20" height="20"
-                                class="transition-all duration-300 group-hover/leveltwo:hidden group-hover/leveltwo:invisible group-hover/leveltwo:opacity-0">
-                                <use xlink:href="./images/sprite-icons.svg#icon-white-left-arrow"></use>
-                            </svg>
-                            <svg width="20" height="20"
-                                class="hidden transition-all duration-300 invisible opacity-0 group-hover/leveltwo:visible group-hover/leveltwo:opacity-100 group-hover/leveltwo:block">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-left-arrow"></use>
-                            </svg>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-bold">@title</h2>
+                            <div
+                                class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                                <span class="flex items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
+                                    </svg>
+                                    @prp_8077
+                                </span>
+                                <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
+                                    </svg>
+                                    @prp_8076
+                                </span>
+                                <span class="flex items-center gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
+                                    </svg>
+                                    @prp_10000504
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
+                                <div class="text-zinc-900 text-lg font-medium">@prp_8181</div>
+                            </div>
                             <span
-                                class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
-                        </span>
-                    </div>
-                </a>
-            </div>
+                                class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                                تور
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                        d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
+                                        fill="#fff" />
+                                </svg>
+
+                                <span
+                                    class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                            </span>
+                        </div>
+                    </a>
+                </face>
+                <face filter="link is null">
+                    <a href="/tour.bc?id=@id"
+                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-bold">@title</h2>
+                            <div
+                                class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                                <span class="flex items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
+                                    </svg>
+                                    @prp_8077
+                                </span>
+                                <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
+                                    </svg>
+                                    @prp_8076
+                                </span>
+                                <span class="flex items-center gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
+                                    </svg>
+                                    @prp_10000504
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
+                                <div class="text-zinc-900 text-lg font-medium">@prp_8181</div>
+                            </div>
+                            <span
+                                class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                                تور
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                        d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
+                                        fill="#fff" />
+                                </svg>
+
+                                <span
+                                    class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                            </span>
+                        </div>
+                    </a>
+                </face>
+                <face>
+                    <a href="@link"
+                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-bold">@title</h2>
+                            <div
+                                class="flex items-center justify-between divide-x divide-x-reverse border border-solid rounded-xl px-3 py-2">
+                                <span class="flex items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-calender"></use>
+                                    </svg>
+                                    @prp_8077
+                                </span>
+                                <span class="flex items-center font-medium gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-clock"></use>
+                                    </svg>
+                                    @prp_8076
+                                </span>
+                                <span class="flex items-center gap-2 text-xs pr-7">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-airline"></use>
+                                    </svg>
+                                    @prp_10000504
+                                </span>
+                            </div>
+                            <div>
+                                <span class="text-zinc-500 text-xs font-medium">قیمت از:</span>
+                                <div class="text-zinc-900 text-lg font-medium">@prp_8181</div>
+                            </div>
+                            <span
+                                class="relative group/leveltwo w-32 z-10 overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
+                                تور
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                        d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
+                                        fill="#fff" />
+                                </svg>
+
+                                <span
+                                    class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
+                            </span>
+                        </div>
+                    </a>
+                </face>
+            </basis>
+
         </section>
     </main>
     <basis core="call" file="footer.inc" />

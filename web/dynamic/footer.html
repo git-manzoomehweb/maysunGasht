@@ -1,9 +1,9 @@
 <basis core="group" if="'[##cms.cms.page_index##]' = 'نمایه پیش فرض'">
     <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
-        <member name="infofooter" type="view" postsql="select * from [db.infofooter] where TypeID in(240)" />
+        <member name="infofootersql" type="view" postsql="select * from [db.infofootersql] where TypeID in(240)" />
     </basis>
     <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
-        <member name="info-footer" type="view" />
+        <member name="infofooter" type="view" />
     </basis>
     <basis core="dbsource" source="basiscore" lid="1" mid="1" name="easy-way">
         <member name="cat" type="tree" request="cat" parentid="214545" order="ord"></member>
@@ -22,7 +22,7 @@
             </div>
             <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
                 <h2 class="text-center tracking-[20px] text-[40px] font-bold text-primary-900">MAYSUNGASHT</h2>
-                <basis core="print" datamembername="db.info-footer">
+                <basis core="print" datamembername="db.infofooter">
                     <face filter="TypeID IN(144)">
                         <div class="text-justify text-zinc-900 text-sm leading-7">
                             @largetext
@@ -42,7 +42,7 @@
                     <face>
                         <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
                         data-id="@catid">
-                        اروپا</li>
+                        @title</li>
                     </face>
                 </basis>
  
@@ -53,7 +53,7 @@
             </section>
             <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-12">
                 <div class="flex items-center gap-2 lg:flex-wrap xl:justify-between">
-                    <basis core="print" datamembername="db.info-footer">
+                    <basis core="print" datamembername="db.infofooter">
                         <layout>
                             <div class="flex items-center gap-2">
                                 <span
@@ -74,7 +74,7 @@
                             </div>
                         </face>
                     </basis>
-                    <basis core="print" datamembername="db.info-footer">
+                    <basis core="print" datamembername="db.infofooter">
                         <layout>
                             <div class="flex items-center gap-2">
                                 <span
@@ -95,7 +95,7 @@
                             </div>
                         </face>
                     </basis>
-                    <basis core="print" datamembername="db.info-footer">
+                    <basis core="print" datamembername="db.infofooter">
                         <layout>
                             <div class="flex items-center gap-2">
                                 <span
@@ -117,7 +117,7 @@
                             </div>
                         </face>
                     </basis>
-                    <basis core="print" datamembername="db.info-footer">
+                    <basis core="print" datamembername="db.infofooter">
                         <layout>
                             <div class="flex items-center gap-2">
                                 <span
@@ -176,7 +176,7 @@
                 </div>
                 <div class="flex items-center gap-24">
                     <h2 class="text-xl">شبکه های اجتماعی ما</h2>
-                    <basis core="print" datamembername="db.info-footer">
+                    <basis core="print" datamembername="db.infofooter">
                         <layout>
                             <div class="flex items-center">
                                 @child

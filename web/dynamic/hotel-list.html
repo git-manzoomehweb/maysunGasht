@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="hotel-list" type="list" link="article.bc" propertyid="3087597,3087598" perpage="3" size="395x237"
+    <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="3" size="395x237"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
 </basis>
@@ -17,9 +17,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
     <!-- Title & Description -->
-    <title>[##cms.seo.title|(هتل متل)##]
+    <title>[##cms.seo.title|(خرید بلیط هواپیما - رزرو آنلاین پرواز داخلی و خارجی - میسان گشت)##]
     </title>
-    <meta name="description" content="[##cms.seo.description|(هتل متل)##]">
+    <meta name="description"
+        content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
     <!-- Title & Description -->
     <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
         <member type="list" name="list" request="taglist" preview=""></member>
@@ -49,22 +50,30 @@
                 <h1 class="text-shadow text-[12rem] leading-[12rem] font-bold text-center opacity-50">Dubai</h1>
                 <div class="relative z-20 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto rounded-xl mt-16">
                     <h2 class="text-white text-center mb-5 font-bold text-3xl">هتل ها</h2>
-                    <div class="flex justify-center items-center gap-2 bg-zinc-200 p-4 rounded-xl ">
-                        <input aria-label="نام هتل" type="text"
+                    <form class="search-content flex justify-center items-center gap-2 bg-zinc-200 p-4 rounded-xl" method="get" action="/search-content.bc">
+                        <input type="text" name="q"
                             class="w-full h-[60px] pr-4 bg-white rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
-                            name="" id="" placeholder="نام هتل">
-                        <input aria-label="شهر" type="text"
+                            placeholder="نام هتل" />
+                        <input type="text" name="q2"
                             class="w-full h-[60px] pr-4 bg-white rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
-                            name="" id="" placeholder="شهر">
-                        <input aria-label="درجه هتل" type="text"
-                            class="w-full h-[60px] pr-4 bg-white rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
-                            name="" id="" placeholder="درجه هتل">
-                        <button
+                            placeholder="شهر" />
+                        <input type="hidden" name="catid" value="[##cms.query.catid##]" />
+                        <select name="q3" class="w-full h-[60px] pr-4 bg-white rounded-lg outline-none text-zinc-500 placeholder-zinc-500">
+                            <option value="">درجه هتل</option>
+                            <option value="1">1 ستاره</option>
+                            <option value="2">2 ستاره</option>
+                            <option value="3">3 ستاره</option>
+                            <option value="4">4 ستاره</option>
+                            <option value="5">5 ستاره</option>
+                        </select>
+                        <input type="hidden" name="t" value="hotel">
+                        <button type="submit"
                             class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-80 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
                             <span
                                 class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
                         </button>
-                    </div>
+                        <div class="clr"></div>
+                    </form>
                 </div>
             </div>
             <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-56"></div>
@@ -73,21 +82,21 @@
             <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center text-sm gap-1 mt-2">
                 <li class="inline-block font-normal" itemprop="itemListElement" itemscope
                     itemtype="https://schema.org/ListItem">
-                    <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item" href="/" aria-label="home"><span
-                            itemprop="name">صفحه اصلی</span>
+                    <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item" href="/"
+                        aria-label="home"><span itemprop="name">صفحه اصلی</span>
                         <meta itemprop="position" content="1" />
                     </a>
                 </li>
                 <span class="text-zinc-900"> > </span>
                 <basis core="print" datamembername="db.navigation">
-                    <face filter="RowNumber=max(RowNumber) and parentcatid<>151135">
+                    <face filter="RowNumber=max(RowNumber) and parentcatid<>151136">
                         <li class="inline-block font-normal" itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <span itemprop="name">@title</span>
                             <meta itemprop="position" content="@rownumber" />
                         </li>
                     </face>
-                    <face filter="link is null and parentcatid<>151135">
+                    <face filter="link is null and parentcatid<>151136">
                         <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item"
@@ -98,11 +107,12 @@
                             <span class="text-zinc-900"> > </span>
                         </li>
                     </face>
-                    <face filter="parentcatid<>151135">
+                    <face filter="parentcatid<>151136">
                         <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
-                            <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item" href="@link"
-                                aria-label="@title"><span class="text-zinc-900  transition-all duration-300 hover:text-primary-600"
+                            <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item"
+                                href="@link" aria-label="@title"><span
+                                    class="text-zinc-900  transition-all duration-300 hover:text-primary-600"
                                     itemprop="name">@title</span>
                                 <meta itemprop="position" content="@rownumber" />
                             </a>
@@ -123,49 +133,94 @@
                     </div>
                 </layout>
                 <face filter="link is null">
-                    <a href="/article.bc?id=@id"
-                    class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
-                    <div class="relative">
-                        <img src="[##cms.cms.cdn##]/images/tour-card.jpg"
-                            class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
-                            alt="" width="100%" height="240" loading="lazy">
-                    </div>
-                    <div class="flex flex-col gap-2 mt-4">
-                        <h2 class="font-medium">@title</h2>
-                        <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                            <span class="flex flex-1 items-center gap-2 text-xs">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
+                    <a href="/hotel.bc?id=@id"
+                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-medium title-hotel">@title</h2>
+                            <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
+                                <span class="flex flex-1 items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
+                                    </svg>
+                                    امتیاز @prp_177441
+                                </span>
+                                <span class="h-6 w-px border border-zinc-200"></span>
+                                <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
+                                    </svg>
+                                    @prp_177442 ستاره
+                                </span>
+                                <span class="h-6 w-px border border-zinc-200"></span>
+                                <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
+                                    </svg>
+                                    <span class="city-hotel">@prp_3087720</span>
+                                </span>
+                            </div>
+                            <span
+                                class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                                تور
+                                <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
+                                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
+                                        fill="#FD7523" />
                                 </svg>
-                                امتیاز 4.8
-                            </span>
-                            <span class="h-6 w-px border border-zinc-200"></span>
-                            <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
-                                </svg>
-                                4 ستاره
-                            </span>
-                            <span class="h-6 w-px border border-zinc-200"></span>
-                            <span class="flex flex-1 items-center justify-end gap-2 text-xs">
-                                <svg width="20" height="20" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
-                                </svg>
-                                مشاهده نقشه
                             </span>
                         </div>
-                        <span
-                            class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
-                            تور
-                            <svg class="transition-all duration-300 group-hover:translate-x-4" width="48" height="48"
-                                viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
-                                    fill="#FD7523" />
-                            </svg>
-                        </span>
-                    </div>
-                </a>
+                    </a>
+                </face>
+                <face>
+                    <a href="@link"
+                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        <div class="relative">
+                            <img src="@00395X00237prp"
+                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                alt="@title" width="100%" height="240" loading="lazy">
+                        </div>
+                        <div class="flex flex-col gap-2 mt-4">
+                            <h2 class="font-medium title-hotel">@title</h2>
+                            <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
+                                <span class="flex flex-1 items-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
+                                    </svg>
+                                    امتیاز @prp_177441
+                                </span>
+                                <span class="h-6 w-px border border-zinc-200"></span>
+                                <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
+                                    </svg>
+                                    @prp_177442 ستاره
+                                </span>
+                                <span class="h-6 w-px border border-zinc-200"></span>
+                                <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
+                                    </svg>
+                                    <span class="city-hotel">@prp_3087720</span>
+                                </span>
+                            </div>
+                            <span
+                                class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                                تور
+                                <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
+                                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
+                                        fill="#FD7523" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
                 </face>
             </basis>
 
@@ -177,7 +232,8 @@
                                 class="group flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-primary-50 ml-2 border border-primary-200 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 page-no prev-page">
                                 <a class="flex items-center justify-center w-full cursor-pointer text-zinc-900"
                                     aria-label="angle-left" href="/[##cms.cms.link_page##]&pagenum=@page">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path class="transition-all duration-300 group-hover:fill-white"
                                             d="M16.0303 4.46967C16.2966 4.73594 16.3208 5.1526 16.1029 5.44621L16.0303 5.53033L9.561 12L16.0303 18.4697C16.2966 18.7359 16.3208 19.1526 16.1029 19.4462L16.0303 19.5303C15.7641 19.7966 15.3474 19.8208 15.0538 19.6029L14.9697 19.5303L7.96967 12.5303C7.7034 12.2641 7.6792 11.8474 7.89705 11.5538L7.96967 11.4697L14.9697 4.46967C15.2626 4.17678 15.7374 4.17678 16.0303 4.46967Z"
                                             fill="#F18316" />
@@ -190,7 +246,8 @@
                                 class="group flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-primary-50 ml-2 border border-primary-200 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 page-no prev-page">
                                 <a class="flex items-center justify-center w-full cursor-pointer text-zinc-900"
                                     aria-label="angle-left" href="/[##cms.cms.pageurl##]?pagenum=@page">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path class="transition-all duration-300 group-hover:fill-white"
                                             d="M16.0303 4.46967C16.2966 4.73594 16.3208 5.1526 16.1029 5.44621L16.0303 5.53033L9.561 12L16.0303 18.4697C16.2966 18.7359 16.3208 19.1526 16.1029 19.4462L16.0303 19.5303C15.7641 19.7966 15.3474 19.8208 15.0538 19.6029L14.9697 19.5303L7.96967 12.5303C7.7034 12.2641 7.6792 11.8474 7.89705 11.5538L7.96967 11.4697L14.9697 4.46967C15.2626 4.17678 15.7374 4.17678 16.0303 4.46967Z"
                                             fill="#F18316" />
@@ -237,7 +294,8 @@
                                 class="group flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-primary-50 mr-2 border border-primary-200 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 page-no next-page">
                                 <a class="flex items-center justify-center w-full h-full cursor-pointer text-zinc-900"
                                     aria-label="angle-right" href="/[##cms.cms.link_page##]&pagenum=@page">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path class="transition-all duration-300 group-hover:fill-white"
                                             d="M7.96967 19.5303C7.7034 19.2641 7.6792 18.8474 7.89705 18.5538L7.96967 18.4697L14.439 12L7.96967 5.53033C7.7034 5.26406 7.6792 4.8474 7.89705 4.55379L7.96967 4.46967C8.23594 4.2034 8.6526 4.1792 8.94621 4.39705L9.03033 4.46967L16.0303 11.4697C16.2966 11.7359 16.3208 12.1526 16.1029 12.4462L16.0303 12.5303L9.03033 19.5303C8.73744 19.8232 8.26256 19.8232 7.96967 19.5303Z"
                                             fill="#F18316" />
@@ -250,7 +308,8 @@
                                 class="group flex items-center justify-center w-12 h-12 p-2 rounded-lg bg-primary-50 mr-2 border border-primary-200 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 page-no next-page">
                                 <a class="flex items-center justify-center w-full h-full cursor-pointer text-zinc-900"
                                     aria-label="angle-right" href="/[##cms.cms.pageurl##]?pagenum=@page">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path class="transition-all duration-300 group-hover:fill-white"
                                             d="M7.96967 19.5303C7.7034 19.2641 7.6792 18.8474 7.89705 18.5538L7.96967 18.4697L14.439 12L7.96967 5.53033C7.7034 5.26406 7.6792 4.8474 7.89705 4.55379L7.96967 4.46967C8.23594 4.2034 8.6526 4.1792 8.94621 4.39705L9.03033 4.46967L16.0303 11.4697C16.2966 11.7359 16.3208 12.1526 16.1029 12.4462L16.0303 12.5303L9.03033 19.5303C8.73744 19.8232 8.26256 19.8232 7.96967 19.5303Z"
                                             fill="#F18316" />

@@ -1,4 +1,4 @@
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.id##]">
     <member name="faq-list" type="view" size="" propertyid="" />
 </basis>
 
@@ -10,7 +10,7 @@
             @child
         </div>
     </layout>
-    <face>
+    <face filter="TypeID not in(150)">
         <div
         class="faq-box transition-all duration-300 cursor-pointer rounded-xl border border-zinc-200 bg-white p-6">
         <h2 class="font-bold text-zinc-900">@text</h2>
