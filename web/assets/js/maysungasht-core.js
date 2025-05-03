@@ -46,6 +46,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 .appendChild(scriptTag)
                 .parentNode.removeChild(scriptTag);
             }
+            if (document.querySelector(".landing-flight")) {
+              let departure1 = document.querySelector(".departure");
+              let destination1 = document.getElementById("destination1");
+              let depLocationId = document.querySelector(".locationId.from");
+              let desLocationId = document.querySelector(".locationId.to");
+              let depTitleSearched = document.querySelector(
+                ".dep-title-searched"
+              );
+              let desTitleSearched = document.querySelector(
+                ".des-title-searched"
+              );
+              let FCDid1 = document.querySelector(".co-id.FCDid1");
+              let FCDid2 = document.querySelector(".co-id.FCDid1");
+  
+              departure1.value = depTitleSearched.value;
+              destination1.value = desTitleSearched.value;
+              depLocationId.value = FCDid1.value;
+              desLocationId.value = FCDid2.value;
+            }
           }
         };
       } catch (error) {
