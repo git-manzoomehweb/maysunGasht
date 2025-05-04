@@ -1,0 +1,265 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="214532">
+    <member name="faq" type="list" link="article.bc" propertyid="7244" perpage="2" size="364x292"
+        order="ord" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="2316047">
+    <member name="p-under" type="view" size="" propertyid="" />
+  </basis>
+  <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+    <member name="infoabout" type="view" />
+</basis>
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <!-- Title & Description -->
+    <title>[##cms.seo.title|(خرید بلیط هواپیما - رزرو آنلاین پرواز داخلی و خارجی - میسان گشت)##]
+    </title>
+    <meta name="description"
+        content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
+    <!-- Title & Description -->
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" />
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" />
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <main>
+        <section class="relative bg-contactBg bg-cover bg-center pt-52">
+            <div class="absolute z-10 inset-0 w-full bg-specialcolor-2"></div>
+            <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-96"></div>
+            <div class="relative flex flex-col items-center z-10 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
+                <img src="[##cms.cms.cdn##]/images/180.png" class="h-[180px] object-cover" alt="logo" width="180" height="180"
+                    loading="lazy">
+                <h2 class="text-center tracking-[16px] text-3xl font-bold mt-16 text-primary-900">MAYSUNGASHT</h2>
+                <basis core="print" datamembername="db.p-under">
+                    <face filter="TypeID not in(150)">
+                        <div class="text-sm text-zinc-800 text-center mt-4">
+                            @largetext
+                        </div>
+                    </face>
+                </basis>
+
+            </div>
+        </section>
+        <section class="flex gap-5 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-16 flex-wrap justify-center">
+            <div class="flex-[1.94]">
+                <h1 class="font-bold text-2xl text-zinc-900 mb-8">ارتباط با ما</h1>
+
+                <basis core="print" datamembername="db.infoabout">
+                    <layout>
+                        <div class="flex items-center gap-2">
+                            <span
+                            class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
+                            <svg width="37" height="37">
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
+                            </svg>
+                        </span>
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="TypeID in(244)">
+                        <div class="flex-1">
+                            <a href="" class="text-sm text-blinking">
+                                مشاهده لوکیشن
+                            </a>
+                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
+                    </div>
+                    </face>
+                </basis>
+                <div class="flex items-center justify-between mt-9 mb-8 border-b border-zinc-300 pb-8">
+                    
+                    <basis core="print" datamembername="db.infoabout">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-mail"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="TypeID in(242)">
+                            <div>
+                                <a href="mailto:@text" class="text-sm text-primary-900">
+                                    ارسال ایمیل
+                                </a>
+                                <div class="border-t border-solid pt-2 mt-2 text-sm">@text</div>
+    
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.infoabout">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="valueID in(333683232)">
+                            <div>
+                                <a href="tel:@text" class="text-sm text-primary-900">
+                                    پشتیبانی در ساعات غیر اداری و روزهای تعطیل
+                                </a>
+                                <div class="border-t border-solid pt-2 mt-2 text-sm">@text</div>
+    
+                            </div>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.infoabout">
+                        <layout>
+                            <div class="flex items-center gap-2">
+                                <span
+                                    class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                    <svg width="37" height="37">
+                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                    </svg>
+                                </span>
+                                @child
+                            </div>
+                        </layout>
+                        <face filter="valueID in(14991918)">
+                            <div>
+                                <a href="tel:@text" class="text-sm text-primary-900">
+                                    تماس
+                                </a>
+                                <div class="border-t border-solid pt-2 mt-2 text-sm">@text</div>
+                            </div>
+                        </face>
+                    </basis>
+                </div>
+                <div class="flex flex-col mx-auto contact-form" id="contact-form-resize">
+
+                    <basis core="schema" run="atclient"
+                        schemaurl="/schema/domainform/A8748549-3E85-48AF-BEE9-7B343F5FCCF0/BCD303D6-1730-4668-B77E-FDA4C20720DF/fa/درباره-ما"
+                        displaymode="new" button="[data-btn-uploadContact]" resultsourceid="upload.dataContact"
+                        OnRendered="RenderFormContact"></basis>
+                    <basis core="api" if="{##cms.uploadContact.run|(false)##}" run="atclient"
+                        url="/schema/domainform/A8748549-3E85-48AF-BEE9-7B343F5FCCF0/fa/editobject" method="post"
+                        body="object_edit={##cms.uploadContact.value##}&captcha={##cms.uploadContact.captcha##}&captchaid={##cms.uploadContact.captchaid##}"
+                        content-type="application/x-www-form-urlencoded" triggers='cms.uploadContact'
+                        OnProcessed="OnProcessedEditObjectContact"></basis>
+                    <basis core="callback" run="atclient" method="uploadDocumentContact" triggers="upload.dataContact">
+                    </basis>
+    
+                    <div class="captcha-button flex items-center justify-center">
+                        <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
+                            data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                            data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                            <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                                triggers="captcha.refreshContact">
+                                <member name="code" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha.code" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template"><div class="d-inline-block"><div class="flex gap-6">
+                    
+                                        <div class="float-right w-[323px]"><input type="text" class="!w-[185px] contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                        <div class="flex items-center gap-6">
+                                            <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16 h-auto" />
+                                            <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaContact()" width="24" height="24" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#52525B"/></svg>
+                                        </div>
+                                        
+                                    </div></div></script>
+                                </face>
+                            </basis>
+                        </div>
+                        <button
+                            class="group relative z-10 overflow-hidden w-20 px-4 text-sm border border-primary-900 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-lg hover:text-primary-900"
+                            type="button" data-btn-uploadContact><span class="">ارسال</span>
+                            <span
+                            class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                        </button>
+
+                    </div>
+                    <div
+                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                        <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                        <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                    </div>
+                </div>
+                    <div class="mt-4 text-center text-primary-600 message-api"></div>
+                </div>
+            </div>
+            <div class="flex items-center gap-5 w-[600px]">
+                <basis core="print" datamembername="db.infoabout">
+                    <layout>    
+                        <div class="w-1/2">
+                            @child
+                        </div>
+                    </layout>
+                        <face filter="prpID=91462"><iframe defer title="pegasys-location"
+                            class="h-[430px] object-cover rounded-xl" width="290" height="430"
+                              loading="lazy" target="_blank" allowfullscreen
+                              src="https://maps.google.com/maps?q=@largetext,@text&z=14&output=embed"></iframe></face>
+                </basis>
+                <img src="[##cms.cms.cdn##]/images/person-contact.jpg" class="h-[430px] object-cover rounded-xl"
+                    alt="person-contact" width="290" height="430" loading="lazy">
+            </div>
+        </section>
+        <section class="relative mt-4 mb-52">
+            <div class="mask-gray-shape w-full h-[773px] absolute top-0"></div>
+            <img src="[##cms.cms.cdn##]/images/orange-pattern.png" class="absolute top-20 h-[600px] object-cover opacity-40"
+                alt="" width="100%" height="576" loading="lazy">
+            <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-56">
+                <div class="relative flex gap-6">
+                    <div>
+                        <h2 class="text-2xl text-zinc-900 font-bold mb-6">سوالات متداول</h2>
+                        <basis core="list" datamembername="db.faq">
+                            <layout>
+                                <ul class="flex flex-col gap-2">
+                                    @child
+                                </ul>
+                            </layout>
+                            <face>
+                                <li data-id="@id"
+                                class="faq-li group flex items-center justify-center cursor-pointer text-zinc-500 border-4 border-solid border-zinc-100 gap-2 rounded-xl font-medium bg-white w-52 h-14 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 hover:text-white">                                 
+                                @title
+                            </li>
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="fetch-content-faq">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <basis core="call" file="footer.inc" />
+</body>
+
+</html>
