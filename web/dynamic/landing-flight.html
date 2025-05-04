@@ -29,7 +29,7 @@
         <member name="comment" type="list" order="ord" request="listcomment" />
     </basis>
     <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid##]">
-        <member name="news" type="list" link="article.bc" propertyid="" perpage="4"
+        <member name="news" type="list" link="article.bc" propertyid="7244" perpage="4"
             size="89x89" order="ord" />
     </basis>
     <!DOCTYPE html>
@@ -101,27 +101,7 @@
                                 <h1 class="text-zinc-900 text-lg font-bold mb-10">@text</h1>
                             </face>
                         </basis>
-                        <basis core="print" datamembername="db.view">
-                            <face filter="prpID in(7249)">
-                                <div class="text-zinc-900 text-sm mb-4 leading-7">
-                                    @text
-                                </div>
-                            </face>
-                        </basis>
-    
-                        <basis core="print" datamembername="db.view">
-                            <layout>
-                                <div class="mb-10">
-                                    @child
-                                </div>
-                            </layout>
-                            <face filter="TypeID in(159)">
-                                <img src="[##cms.cms.cdn##]/@text" alt="@text"
-                                    class="h-[444px] object-cover rounded-xl mb-6" width="100%" height="444"
-                                    loading="lazy" />
-                            </face>
-                        </basis>
-    
+                        
                         <basis core="print" datamembername="db.view">
                             <layout>
                                 <div class="mb-10">
@@ -138,6 +118,7 @@
                                 <div class="text-zinc-900 text-sm leading-7">@largetext</div>
                             </face>
                         </basis>
+    
     
     
                     </section>

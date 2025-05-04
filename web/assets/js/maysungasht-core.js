@@ -27,12 +27,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let r = document.querySelector(".flighttype-field");
             r.classList.add("flighttype-dropDown");
-            ['.Basis_Date.end_date', '.Basis_Date.start_date'].forEach(selector => {
-              const dateInputs = document.querySelectorAll(selector);
-              dateInputs.forEach(input => {
-                input.placeholder = '';
-              });
-            });
+            [".Basis_Date.end_date", ".Basis_Date.start_date"].forEach(
+              (selector) => {
+                const dateInputs = document.querySelectorAll(selector);
+                dateInputs.forEach((input) => {
+                  input.placeholder = "";
+                });
+              }
+            );
             const scripts = container.getElementsByTagName("script");
             for (let i = 0; i < scripts.length; i++) {
               const scriptTag = document.createElement("script");
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
               );
               let FCDid1 = document.querySelector(".co-id.FCDid1");
               let FCDid2 = document.querySelector(".co-id.FCDid1");
-  
+
               departure1.value = depTitleSearched.value;
               destination1.value = desTitleSearched.value;
               depLocationId.value = FCDid1.value;
@@ -82,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     waitForFiles();
   }
 });
- 
 
 const headerMenu = document.querySelector(".header-menu");
 const headerMenuClose = document.querySelector(".header-menu-close");
@@ -201,7 +202,9 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchContentTour.innerHTML =
         '<div class="flex justify-center"><span class="tour-loader"></span></div>';
       try {
-        const firstResponse = await fetch(`/tour-load-items.bc?catid=${firstDataId}`);
+        const firstResponse = await fetch(
+          `/tour-load-items.bc?catid=${firstDataId}`
+        );
         if (!firstResponse.ok) {
           throw new Error(`HTTP error! Status: ${firstResponse.status}`);
         }
@@ -225,11 +228,12 @@ document.addEventListener("DOMContentLoaded", function () {
         tourLi.forEach((li) => {
           li.style.backgroundColor = "";
           li.style.color = "";
+          li.style.border = "";
         });
 
-        tourLi[0].style.backgroundColor = "#FFF8E3";
-        tourLi[0].style.color = "#FD7523";
-        tourLi[0].style.border = "1px solid #FFE189";
+        item.style.backgroundColor = "#FFF8E3";
+        item.style.color = "#FD7523";
+        item.style.border = "1px solid #FFE189";
 
         let cmsQuery = item.getAttribute("data-id");
 
@@ -265,14 +269,18 @@ document.addEventListener("DOMContentLoaded", function () {
     async function firstContent() {
       const firstDataId = faqLi[0].getAttribute("data-id");
 
-      fetchContentFaq.innerHTML = '<div class="flex justify-center"><span class="faq-loader"></span></div>';
+      fetchContentFaq.innerHTML =
+        '<div class="flex justify-center"><span class="faq-loader"></span></div>';
 
       try {
-        const firstResponse = await fetch(`/faq-load-items.bc?id=${firstDataId}`);
+        const firstResponse = await fetch(
+          `/faq-load-items.bc?id=${firstDataId}`
+        );
         const firstData = await firstResponse.text();
         fetchContentFaq.innerHTML = firstData;
       } catch (error) {
-        fetchContentFaq.innerHTML = "<p>خطا در دریافت اطلاعات: " + error.message + "</p>";
+        fetchContentFaq.innerHTML =
+          "<p>خطا در دریافت اطلاعات: " + error.message + "</p>";
       }
 
       if (faqLi.length > 0) {
@@ -299,13 +307,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const cmsQuery = item.getAttribute("data-id");
 
         async function secondContent() {
-          fetchContentFaq.innerHTML = '<div class="flex justify-center"><span class="faq-loader"></span></div>';
+          fetchContentFaq.innerHTML =
+            '<div class="flex justify-center"><span class="faq-loader"></span></div>';
           try {
-            const firstResponse = await fetch(`/faq-load-items.bc?id=${cmsQuery}`);
+            const firstResponse = await fetch(
+              `/faq-load-items.bc?id=${cmsQuery}`
+            );
             const firstData = await firstResponse.text();
             fetchContentFaq.innerHTML = firstData;
           } catch (error) {
-            fetchContentFaq.innerHTML = "<p>خطا در دریافت اطلاعات: " + error.message + "</p>";
+            fetchContentFaq.innerHTML =
+              "<p>خطا در دریافت اطلاعات: " + error.message + "</p>";
           }
         }
 
@@ -316,30 +328,35 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchContentFaq.addEventListener("click", function (event) {
       const box = event.target.closest(".faq-box");
       if (!box) return;
-
+    
       const answer = box.querySelector(".faq-answer");
-
+    
       document.querySelectorAll(".faq-box").forEach((otherBox) => {
         if (otherBox !== box) {
           const otherAnswer = otherBox.querySelector(".faq-answer");
           if (!otherAnswer) return;
-
-          otherAnswer.classList.remove("opacity-100", "scale-y-100", "max-h-96");
+    
+          otherAnswer.classList.remove(
+            "opacity-100",
+            "scale-y-100",
+            "max-h-96",
+            "mt-2"
+          );
           otherAnswer.classList.add("opacity-0", "scale-y-0", "max-h-0");
           otherBox.style.backgroundColor = "";
           otherBox.style.border = "";
         }
       });
-
+    
       const isOpen = answer.classList.contains("scale-y-100");
-
+    
       if (!isOpen) {
         answer.classList.remove("opacity-0", "scale-y-0", "max-h-0");
-        answer.classList.add("opacity-100", "scale-y-100", "max-h-96");
+        answer.classList.add("opacity-100", "scale-y-100", "max-h-96", "mt-2");
         box.style.backgroundColor = "#FFF8E3";
         box.style.border = "2px solid #FFE189";
       } else {
-        answer.classList.remove("opacity-100", "scale-y-100", "max-h-96");
+        answer.classList.remove("opacity-100", "scale-y-100", "max-h-96", "mt-2");
         answer.classList.add("opacity-0", "scale-y-0", "max-h-0");
         box.style.backgroundColor = "";
         box.style.border = "";
@@ -359,7 +376,9 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchContentFlight.innerHTML =
         '<div class="flex justify-center"><span class="flight-loader"></span></div>';
       try {
-        const firstResponse = await fetch(`/flight-load-items.bc?catid=${firstDataId}`);
+        const firstResponse = await fetch(
+          `/flight-load-items.bc?catid=${firstDataId}`
+        );
         if (!firstResponse.ok) {
           throw new Error(`HTTP error! Status: ${firstResponse.status}`);
         }
@@ -412,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// search hotel list 
+// search hotel list
 document.querySelectorAll(".hotel-list-search").forEach(function (hotelItem) {
   const checkCity = hotelItem.querySelector(".city-hotel")?.textContent || "";
   const checkCityInput = document.querySelector(".hotelcity")?.value || "";
@@ -420,7 +439,8 @@ document.querySelectorAll(".hotel-list-search").forEach(function (hotelItem) {
   const checkName = hotelItem.querySelector(".title-hotel")?.textContent || "";
   const checkNameInput = document.querySelector(".hotelname")?.value || "";
 
-  const checkStar = hotelItem.querySelector(".star-hotel")?.getAttribute("data-star") || "";
+  const checkStar =
+    hotelItem.querySelector(".star-hotel")?.getAttribute("data-star") || "";
   const checkStarInput = document.querySelector(".hotelstar")?.value || "";
 
   let shouldHide = false;
@@ -440,10 +460,148 @@ document.querySelectorAll(".hotel-list-search").forEach(function (hotelItem) {
   hotelItem.style.display = shouldHide ? "none" : "";
 });
 
-const anyHidden = Array.from(document.querySelectorAll(".hotel-list-search")).some(item => item.style.display === "none");
+const anyHidden = Array.from(
+  document.querySelectorAll(".hotel-list-search")
+).some((item) => item.style.display === "none");
 if (anyHidden) {
   const hotelsListSearch = document.querySelector(".hotels-list-search");
   if (hotelsListSearch) {
     hotelsListSearch.style.display = "block";
   }
 }
+
+// search hotel,tour,article catlist
+document.addEventListener("DOMContentLoaded", function () {
+  function setupFilter(
+    inputSelector,
+    itemSelector,
+    titleSelector,
+    containerSelector
+  ) {
+    const input = document.querySelector(inputSelector);
+    const allItems = Array.from(document.querySelectorAll(itemSelector));
+    const container = document.querySelector(containerSelector);
+
+    if (!input || !container || allItems.length === 0) return;
+
+    input.addEventListener("input", function () {
+      const searchText = input.value.trim().toLowerCase();
+      container.innerHTML = "";
+
+      allItems.forEach((item) => {
+        const titleEl = item.querySelector(titleSelector);
+        const titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
+
+        if (titleText.includes(searchText)) {
+          const clone = item.cloneNode(true);
+          container.appendChild(clone);
+        }
+      });
+    });
+  }
+
+  setupFilter(
+    ".hotel-cat-search",
+    ".hotel-cat-item",
+    ".hotel-cat-title",
+    ".hotel-cat-container"
+  );
+
+  setupFilter(
+    ".tour-cat-search",
+    ".tour-cat-item",
+    ".tour-cat-title",
+    ".tour-cat-container"
+  );
+
+  setupFilter(
+    ".article-cat-search",
+    ".article-cat-item",
+    ".article-cat-title",
+    ".article-cat-container"
+  );
+});
+
+// search hotel,tour,article catlist with header
+function handleSearch(inputSelector, redirectUrl) {
+  const headerInput = document.querySelector(inputSelector);
+  
+  headerInput.addEventListener("input", function () {
+    const searchText = headerInput.value.trim();
+    
+    if (searchText.length > 0) {
+      const url = new URL(window.location.href);
+      url.pathname = redirectUrl;
+      url.searchParams.set('t', 'all');
+      url.searchParams.set('search-content-name', searchText); 
+      window.location.href = url.toString(); 
+    }
+  });
+}
+function filterItemsOnSearch() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchText = urlParams.get('search-content-name');
+  const tParam = urlParams.get('t'); 
+
+  if (tParam === 'all' && searchText) {
+    const allItems = Array.from(document.querySelectorAll(".hotel-cat-item, .tour-cat-item, .article-cat-item"));
+    const container = document.querySelector(".all-cat-item");
+    container.innerHTML = ""; 
+
+    allItems.forEach(item => {
+      const titleEl = item.querySelector(".hotel-cat-title, .tour-cat-title, .article-cat-title");
+      const titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
+
+      if (titleText.includes(searchText.toLowerCase())) {
+        const clone = item.cloneNode(true);
+        container.appendChild(clone);
+      }
+    });
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (document.querySelector(".header-input")) {
+    handleSearch(".header-input", "/search-content.bc"); 
+  }
+
+  if (window.location.pathname === "/search-content.bc") {
+    filterItemsOnSearch();
+  }
+});
+
+//hotel with hotel word
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tParam = urlParams.get('t');
+
+  if (tParam === 'all') {
+    const allItems = Array.from(document.querySelectorAll(".hotel-list-search"));
+    const container = document.querySelector(".hotel-list-container");
+    const section = document.querySelector(".hotel-list-section");
+
+    if (!container || allItems.length === 0) {
+      if (section) section.style.display = "none";
+      return;
+    }
+
+    container.innerHTML = "";
+
+    let hasMatch = false;
+
+    allItems.forEach(item => {
+      const titleEl = item.querySelector(".title-hotel");
+      const titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
+
+      if (titleText.includes("hotel") || titleText.includes("هتل")) {
+        const clone = item.cloneNode(true);
+        container.appendChild(clone);
+        hasMatch = true;
+      }
+    });
+
+    if (!hasMatch && section) {
+      section.style.display = "none";
+    }
+  }
+});
