@@ -68,8 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
               desLocationId.value = FCDid2.value;
             }
             if (document.querySelector(".landing-hotel")) {
-              let departure2Hotel = document.querySelector(".formhotel .reserve-field.departure-route #departure2");
-              let depLocationIdHotel = document.querySelector(".locationId.from");
+              let departure2Hotel = document.querySelector(
+                ".formhotel .reserve-field.departure-route #departure2"
+              );
+              let depLocationIdHotel =
+                document.querySelector(".locationId.from");
               let depTitleSearchedHotel = document.querySelector(
                 ".dep-title-searched"
               );
@@ -339,14 +342,14 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchContentFaq.addEventListener("click", function (event) {
       const box = event.target.closest(".faq-box");
       if (!box) return;
-    
+
       const answer = box.querySelector(".faq-answer");
-    
+
       document.querySelectorAll(".faq-box").forEach((otherBox) => {
         if (otherBox !== box) {
           const otherAnswer = otherBox.querySelector(".faq-answer");
           if (!otherAnswer) return;
-    
+
           otherAnswer.classList.remove(
             "opacity-100",
             "scale-y-100",
@@ -358,16 +361,21 @@ document.addEventListener("DOMContentLoaded", function () {
           otherBox.style.border = "";
         }
       });
-    
+
       const isOpen = answer.classList.contains("scale-y-100");
-    
+
       if (!isOpen) {
         answer.classList.remove("opacity-0", "scale-y-0", "max-h-0");
         answer.classList.add("opacity-100", "scale-y-100", "max-h-96", "mt-2");
         box.style.backgroundColor = "#FFF8E3";
         box.style.border = "2px solid #FFE189";
       } else {
-        answer.classList.remove("opacity-100", "scale-y-100", "max-h-96", "mt-2");
+        answer.classList.remove(
+          "opacity-100",
+          "scale-y-100",
+          "max-h-96",
+          "mt-2"
+        );
         answer.classList.add("opacity-0", "scale-y-0", "max-h-0");
         box.style.backgroundColor = "";
         box.style.border = "";
@@ -536,31 +544,37 @@ document.addEventListener("DOMContentLoaded", function () {
 // search hotel,tour,article catlist with header
 function handleSearch(inputSelector, redirectUrl) {
   const headerInput = document.querySelector(inputSelector);
-  
+
   headerInput.addEventListener("input", function () {
     const searchText = headerInput.value.trim();
-    
+
     if (searchText.length > 0) {
       const url = new URL(window.location.href);
       url.pathname = redirectUrl;
-      url.searchParams.set('t', 'all');
-      url.searchParams.set('search-content-name', searchText); 
-      window.location.href = url.toString(); 
+      url.searchParams.set("t", "all");
+      url.searchParams.set("search-content-name", searchText);
+      window.location.href = url.toString();
     }
   });
 }
 function filterItemsOnSearch() {
   const urlParams = new URLSearchParams(window.location.search);
-  const searchText = urlParams.get('search-content-name');
-  const tParam = urlParams.get('t'); 
+  const searchText = urlParams.get("search-content-name");
+  const tParam = urlParams.get("t");
 
-  if (tParam === 'all' && searchText) {
-    const allItems = Array.from(document.querySelectorAll(".hotel-cat-item, .tour-cat-item, .article-cat-item"));
+  if (tParam === "all" && searchText) {
+    const allItems = Array.from(
+      document.querySelectorAll(
+        ".hotel-cat-item, .tour-cat-item, .article-cat-item"
+      )
+    );
     const container = document.querySelector(".all-cat-item");
-    container.innerHTML = ""; 
+    container.innerHTML = "";
 
-    allItems.forEach(item => {
-      const titleEl = item.querySelector(".hotel-cat-title, .tour-cat-title, .article-cat-title");
+    allItems.forEach((item) => {
+      const titleEl = item.querySelector(
+        ".hotel-cat-title, .tour-cat-title, .article-cat-title"
+      );
       const titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
 
       if (titleText.includes(searchText.toLowerCase())) {
@@ -571,9 +585,8 @@ function filterItemsOnSearch() {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
-
   if (document.querySelector(".header-input")) {
-    handleSearch(".header-input", "/search-content.bc"); 
+    handleSearch(".header-input", "/search-content.bc");
   }
 
   if (window.location.pathname === "/search-content.bc") {
@@ -584,10 +597,12 @@ document.addEventListener("DOMContentLoaded", function () {
 //hotel with hotel word
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const tParam = urlParams.get('t');
+  const tParam = urlParams.get("t");
 
-  if (tParam === 'all') {
-    const allItems = Array.from(document.querySelectorAll(".hotel-list-search"));
+  if (tParam === "all") {
+    const allItems = Array.from(
+      document.querySelectorAll(".hotel-list-search")
+    );
     const container = document.querySelector(".hotel-list-container");
     const section = document.querySelector(".hotel-list-section");
 
@@ -600,7 +615,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let hasMatch = false;
 
-    allItems.forEach(item => {
+    allItems.forEach((item) => {
       const titleEl = item.querySelector(".title-hotel");
       const titleText = titleEl ? titleEl.textContent.toLowerCase() : "";
 
@@ -672,7 +687,6 @@ async function RenderFormContact() {
   inputElementVisa7.setAttribute("placeholder", "ایمیل");
 }
 
-
 //pov form
 
 function uploadDocumentPov(args) {
@@ -709,9 +723,8 @@ async function OnProcessedEditObjectPov(args) {
   } else {
     refreshCaptchaPov();
     setTimeout(() => {
-      document.querySelector(
-        "#pov-form-resize .Loading_Form"
-      ).style.display = "none";
+      document.querySelector("#pov-form-resize .Loading_Form").style.display =
+        "none";
       document.querySelector("#pov-form-resize .message-api").innerHTML =
         "خطایی رخ داده, لطفا مجدد اقدام کنید.";
     }, 2000);
@@ -733,4 +746,82 @@ async function RenderFormPov() {
     " .pov-form-message textarea[data-bc-text-input]"
   );
   inputElementVisa7.setAttribute("placeholder", "توضیحات");
+}
+
+if (document.querySelector(".swiper-suggestion-landing-mobile")) {
+  var swiperSuggestionLandingMobile = new Swiper(
+    ".swiper-suggestion-landing-mobile",
+    {
+      slidesPerView: "auto",
+      direction: "vertical",
+      speed: 400,
+      centeredSlides: false,
+      spaceBetween: 0,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+    }
+  );
+}
+if (document.querySelector(".swiper-suggestion-mobile")) {
+  var swiperSuggestionMobile = new Swiper(".swiper-suggestion-mobile", {
+    slidesPerView: "auto",
+    direction: "vertical",
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 0,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+  });
+}
+if (document.querySelector(".swiper-suggestion")) {
+  var swiperSuggestion = new Swiper(".swiper-suggestion", {
+    slidesPerView: 3,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 8,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+  });
+}
+if (document.querySelector(".swiper-suggestion-landing")) {
+  var swiperSuggestionLanding = new Swiper(".swiper-suggestion-landing", {
+    slidesPerView: 3,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 8,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+  });
 }

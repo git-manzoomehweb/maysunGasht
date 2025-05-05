@@ -10,7 +10,7 @@
     </basis>
     <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
         <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="3"
-            size="395x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
+            size="264x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
         <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
     </basis>
     <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
@@ -47,41 +47,32 @@
             </face>
         </basis>
         <!-- pwa metatags -->
-        <basis core="call" file="pwa.inc" />
+        <basis core="call" file="pwa.inc" pageindex="[##cms.cms.pageindex##]" />
         <!-- common styles for all page -->
-        <basis core="call" file="style.inc" />
+        <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]" />
     </head>
-
+    
     <body class="landing-hotel">
-        <basis core="call" file="header.inc" />
+        <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
         <main>
-            <section class="relative -z-20 bg-hotelListBg bg-cover bg-center h-[378px]">
-
-                <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-56"></div>
-            </section>
-            <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl -mt-56">
-                <div class="search-banner">
-                    <div class="search-box-container">
-                        <div id="search-box" class="dir-rtl">
-                            <div class="flex justify-center"><span class="loader"></span></div>
+            <section class="relative bg-hotelListBg bg-cover bg-center pt-14 pb-10">
+                <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
+                    <div class="search-banner">
+                        <div class="search-box-container">
+                            <div id="search-box" class="dir-rtl">
+                                <div class="flex justify-center"><span class="loader"></span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <basis core="print" datamembername="db.dep_landing_tree">
-                        <face filter="Field = 'title'">
-                            <input type="hidden" class="dep-title-searched" value="@value" />
-                        </face>
-                    </basis>
-                    <input value="[##cms.query.hid##]" class="co-id FCDid1" type="hidden" name="from" />
-                </div>
+                <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-56"></div>
             </section>
-            <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-32">
+            <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-4">
                 <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center text-sm gap-1 mt-2">
                     <li class="inline-block font-normal" itemprop="itemListElement" itemscope
                         itemtype="https://schema.org/ListItem">
-                        <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item"
-                            href="/" aria-label="home"><span itemprop="name">صفحه اصلی</span>
+                        <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item" href="/"
+                            aria-label="home"><span itemprop="name">صفحه اصلی</span>
                             <meta itemprop="position" content="1" />
                         </a>
                     </li>
@@ -97,8 +88,8 @@
                         <face filter="link is null and parentcatid<>151136">
                             <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600"
-                                    itemprop="item" href="/hotel-list.bc?catid=@parentcatid" aria-label="@title"><span
+                                <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item"
+                                    href="/hotel-list.bc?catid=@parentcatid" aria-label="@title"><span
                                         itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
                                 </a>
@@ -108,8 +99,8 @@
                         <face filter="parentcatid<>151136">
                             <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
-                                <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600"
-                                    itemprop="item" href="@link" aria-label="@title"><span
+                                <a class="text-zinc-900 transition-all duration-300 hover:text-primary-600" itemprop="item"
+                                    href="@link" aria-label="@title"><span
                                         class="text-zinc-900  transition-all duration-300 hover:text-primary-600"
                                         itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
@@ -120,34 +111,29 @@
                     </basis>
                 </ul>
                 <basis core="print" datamembername="db.scalar">
-                    <layout>
-                        <div class="flex items-center justify-between mt-1">
-                            @child
-                        </div>
-                    </layout>
                     <face>
-                        <h2 class="text-zinc-900 font-bold text-2xl">@column1</h2>
+                        <h2 class="text-zinc-900 mt-1 font-medium">@column1</h2>
                     </face>
                 </basis>
+    
                 <basis core="list" datamembername="db.hotel-list">
                     <layout>
-                        <div class="grid grid-cols-3 gap-3 mt-8">
+                        <div class="flex flex-col gap-3 mt-4">
                             <!-- items -->
                             @child
                         </div>
                     </layout>
                     <face filter="link is null">
                         <a href="/hotel.bc?id=@id"
-                            class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp"
-                                    class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]"
                                     alt="@title" width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                                    <span class="flex flex-1 items-center gap-2 text-xs">
+                                    <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                         <svg width="20" height="20" class="flex-shrink-0">
                                             <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
                                         </svg>
@@ -155,25 +141,23 @@
                                     </span>
                                     <span class="h-6 w-px border border-zinc-200"></span>
                                     <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
-                                        <svg width="20" height="20" class="flex-shrink-0 star-hotel"
-                                            data-star="@prp_177442">
+                                        <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
                                             <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
                                         </svg>
                                         @prp_177442 ستاره
                                     </span>
                                     <span class="h-6 w-px border border-zinc-200"></span>
-                                    <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                    <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                         <svg width="20" height="20" class="flex-shrink-0">
                                             <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
                                         </svg>
                                         <span class="city-hotel">@prp_3087720</span>
                                     </span>
                                 </div>
-                                <span
-                                    class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                                <span class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg">مشاهده
                                     تور
-                                    <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
-                                        height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
                                             fill="#FD7523" />
@@ -184,42 +168,39 @@
                     </face>
                     <face>
                         <a href="@link"
-                            class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp"
-                                    class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                                <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]"
                                     alt="@title" width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                                    <span class="flex flex-1 items-center gap-2 text-xs">
-                                        <svg width="20" height="20" class="flex-shrink-0 star-hotel"
-                                            data-star="@prp_177442">
+                                    <span class="flex flex-1 items-center justify-center gap-2 text-xs">
+                                        <svg width="20" height="20" class="flex-shrink-0">
                                             <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
                                         </svg>
                                         امتیاز @prp_177441
                                     </span>
                                     <span class="h-6 w-px border border-zinc-200"></span>
                                     <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
-                                        <svg width="20" height="20" class="flex-shrink-0">
+                                        <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
                                             <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
                                         </svg>
                                         @prp_177442 ستاره
                                     </span>
                                     <span class="h-6 w-px border border-zinc-200"></span>
-                                    <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                    <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                         <svg width="20" height="20" class="flex-shrink-0">
                                             <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
                                         </svg>
                                         <span class="city-hotel">@prp_3087720</span>
                                     </span>
                                 </div>
-                                <span
-                                    class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                                <span class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg">مشاهده
                                     تور
-                                    <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
-                                        height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
                                             fill="#FD7523" />
@@ -229,7 +210,7 @@
                         </a>
                     </face>
                 </basis>
-
+    
                 <div id="paging" class="flex justify-center mt-12">
                     <ul class="flex items-center gap-1 cd-pagination no-space direction-ltr" id="wibpaging">
                         <basis core="print" datamembername="db.paging">
@@ -334,14 +315,14 @@
                     </section>
                 </layout>
                 <face filter="TypeID in (150)">
-                    <h2 class="font-bold text-xl text-zinc-900 mb-5">@text</h2>
+                    <h2 class="font-medium text-zinc-900 mb-5">@text</h2>
                 </face>
                 <face filter="TypeID in (129)">
                     <div class="text-zinc-900 text-sm text-justify leading-7 mb-6">@largetext</div>
                 </face>
             </basis>
         </main>
-        <basis core="call" file="footer.inc" />
+        <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     </body>
 
     </html>
