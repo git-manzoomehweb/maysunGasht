@@ -44,9 +44,9 @@
 <body>
     <basis core="call" file="header.inc" />
     <main>
-        <div class="relative mt-24">
+        <div class="relative mt-24 mb-6">
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-                <basis core="print" datamembername="db.info">
+                <basis core="print" datamembername="db.scalar">
                     <face>
                         <h1 class="text-zinc-900 font-bold text-[36px] mb-4 text-center">@column1</h1>
                     </face>
@@ -100,7 +100,7 @@
                             class="article-cat-search w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
                             name="" id="" placeholder="جستجوی مطلب">
                         <svg width="30" height="30" class="absolute right-4 top-4">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-search-tour"></use>
                         </svg>
                     </div>
                     <button class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-24 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
@@ -148,7 +148,7 @@
         </div>
         <basis core="print" datamembername="db.p-under">
             <layout>
-                <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-3 mb-14">
+                <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mb-14">
                     @child
                 </section>
             </layout>

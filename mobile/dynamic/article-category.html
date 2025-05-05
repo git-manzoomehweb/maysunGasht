@@ -1,0 +1,166 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="article">
+    <member name="cat" type="tree" request="cat" parentid="151251" order="ord">
+    </member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
+    <member name="p-under" type="view" size="" propertyid="" />
+  </basis>
+  <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+    <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <!-- Title & Description -->
+    <title>[##cms.seo.title|(خرید بلیط هواپیما - رزرو آنلاین پرواز داخلی و خارجی - میسان گشت)##]
+    </title>
+    <meta name="description"
+        content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
+    <!-- Title & Description -->
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]"/>
+</head>
+
+<body>
+    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <main>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
+            <basis core="print" datamembername="db.scalar">
+                <face>
+                    <h1 class="text-zinc-900 font-bold text-lg mb-3 text-center">@column1</h1>
+                </face>
+            </basis>
+
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList"
+                class="flex items-center justify-center text-sm gap-1 mb-6">
+                <li class="inline-block font-normal" itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a class="text-zinc-700 transition-all duration-300 hover:text-primary-600" itemprop="item" href="/"
+                        aria-label="home"><span itemprop="name">صفحه اصلی</span>
+                        <meta itemprop="position" content="1" />
+                    </a>
+                </li>
+                <span class="text-zinc-700"> > </span>
+                <basis core="print" datamembername="db.navigation">
+                    <face filter="RowNumber=max(RowNumber) and parentcatid<>151136">
+                        <li class="inline-block font-normal" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">@title</span>
+                            <meta itemprop="position" content="@rownumber" />
+                        </li>
+                    </face>
+                    <face filter="link is null and parentcatid<>151136">
+                        <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="text-zinc-700 transition-all duration-300 hover:text-primary-600" itemprop="item"
+                                href="/article-list.bc?catid=@parentcatid" aria-label="@title"><span
+                                    itemprop="name">@title</span>
+                                <meta itemprop="position" content="@rownumber" />
+                            </a>
+                            <span class="text-zinc-700"> > </span>
+                        </li>
+                    </face>
+                    <face filter="parentcatid<>151136">
+                        <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="text-zinc-700 transition-all duration-300 hover:text-primary-600" itemprop="item"
+                                href="@link" aria-label="@title"><span
+                                    class="text-zinc-700  transition-all duration-300 hover:text-primary-600"
+                                    itemprop="name">@title</span>
+                                <meta itemprop="position" content="@rownumber" />
+                            </a>
+                            <span class="text-zinc-700"> > </span>
+                        </li>
+                    </face>
+                </basis>
+            </ul>
+            <div class="flex flex-col justify-center items-center gap-2 mb-6">
+                <div class="relative w-full">
+                    <input aria-label="جستجوی مطلب" type="text"
+                        class="article-cat-search w-full h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
+                        name="" id="" placeholder="جستجوی مطلب">
+                    <svg width="30" height="30" class="absolute right-4 top-4">
+                        <use xlink:href="./images/sprite-icons.svg#icon-search-tour"></use>
+                    </svg>
+                </div>
+                <button
+                    class="flex items-center text-sm justify-center border border-primary-900 w-full h-14 text-white rounded-lg bg-primary-900">جستحو
+                </button>
+            </div>
+        </section>
+        <section class="relative mb-6">
+            <div class="mask-shape w-full h-[427px] absolute top-0"></div>
+            <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32">
+                <basis core="tree" datamembername="article.cat" idcol="catid" parentidcol="parentid" nullvalue="151251">
+                    <layout>
+                        <div class="flex flex-col gap-3 article-cat-container">
+                            <!-- item -->
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="link is null">
+                        <a href="/article-list.bc?catid=@catid"
+                            class="article-cat-item relative flex items-end justify-center rounded-xl overflow-hidden">
+                            <div class="bg-soft-black-bottom absolute inset-0 w-full"></div>
+                            <img src="@image" class="h-[303px] object-cover" alt="@title" width="100%"
+                                height="303" loading="lazy">
+                            <div class="absolute pb-7">
+                                <h2 class="text-2xl font-bold text-white mb-1 article-cat-title">@title</h2>
+                                <span class="flex text-primary-900 text-sm justify-center">مشاهده</span>
+                            </div>
+                        </a>
+                    </face>
+                    <face>
+                        <a href="@link"
+                            class="article-cat-item relative flex items-end justify-center rounded-xl overflow-hidden">
+                            <div class="bg-soft-black-bottom absolute inset-0 w-full"></div>
+                            <img src="@image" class="h-[303px] object-cover" alt="@title" width="100%"
+                                height="303" loading="lazy">
+                            <div class="absolute pb-7">
+                                <h2 class="text-2xl font-bold text-white mb-1 article-cat-title">@title</h2>
+                                <span class="flex text-primary-900 text-sm justify-center">مشاهده</span>
+                            </div>
+                        </a>
+                    </face>
+                </basis>
+
+            </div>
+        </section>
+        <basis core="print" datamembername="db.p-under">
+            <layout>
+                <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-3 mb-14">
+                    @child
+                </section>
+            </layout>
+            <face filter="TypeID in(150)">
+                <h2 class="font-bold text-xl text-zinc-900 mb-4">@text</h2>
+            </face>
+            <face filter="TypeID in(250)">
+                <div class="text-zinc-900 text-sm text-justify leading-7 mb-8">@largetext</div>
+            </face>
+        </basis>
+    </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+</body>
+
+</html>

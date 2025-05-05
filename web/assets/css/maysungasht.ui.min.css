@@ -110,6 +110,10 @@ body {
   z-index: -10;
 }
 
+.-z-20 {
+  z-index: -20;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -152,6 +156,14 @@ body {
 
 .-mt-5 {
   margin-top: -1.25rem;
+}
+
+.-mt-56 {
+  margin-top: -14rem /* -224px */;
+}
+
+.-mt-72 {
+  margin-top: -18rem /* -288px */;
 }
 
 .mb-1 {
@@ -404,6 +416,10 @@ body {
 
 .h-\[365px\] {
   height: 365px;
+}
+
+.h-\[378px\] {
+  height: 378px;
 }
 
 .h-\[419px\] {
@@ -1069,6 +1085,10 @@ body {
   padding-top: 10rem;
 }
 
+.pt-44 {
+  padding-top: 11rem /* 176px */;
+}
+
 .pt-48 {
   padding-top: 12rem;
 }
@@ -1101,6 +1121,10 @@ body {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-\[11rem\] {
+  font-size: 11rem /* 176px */;
 }
 
 .text-\[12rem\] {
@@ -1394,6 +1418,11 @@ body {
   clip: rect(0, 0, 0, 0);
 }
 
+select.select-star{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .soft-bounce {
   animation: softBounce 1s ease-in-out infinite;
 }
@@ -2227,7 +2256,15 @@ body {
 .landing-flight .hotel-btn.reserve-btn,
 .landing-flight .flighthotel-btn.reserve-btn,
 .landing-flight .tour-btn.reserve-btn,
-.landing-flight .insurance-btn.reserve-btn{
+.landing-flight .insurance-btn.reserve-btn,
+.landing-hotel .flight-btn.reserve-btn,
+.landing-hotel .hotel-btn.reserve-btn,
+.landing-hotel .flighthotel-btn.reserve-btn,
+.landing-hotel .tour-btn.reserve-btn,
+.landing-hotel .insurance-btn.reserve-btn,
+.landing-hotel .flighttype-field.flighttype-dropDown,
+.landing-hotel #flightSearch,
+.landing-hotel .search-nav{
   display: none !important;
 }
 
@@ -2235,6 +2272,10 @@ body {
   position: relative !important;
   left: 0;
   top: -1rem !important;
+}
+
+.landing-hotel #r-hotel{
+  display: block !important;
 }
 
 
@@ -2302,7 +2343,7 @@ body {
   padding: 16px 12px;
   font-weight: 400 !important;
   outline: none !important;
-  border-radius: 8px !important;
+  border-radius: 12px !important;
   border: none !important;
   font-size: 16px !important;
 }
@@ -2313,7 +2354,7 @@ body {
   padding: 16px 12px;
   font-weight: 400 !important;
   outline: none !important;
-  border-radius: 8px !important;
+  border-radius: 12px !important;
   border: none !important;
   font-size: 16px !important;
 }

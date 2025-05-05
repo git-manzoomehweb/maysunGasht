@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="3" size="395x237"
+    <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="3" size="264x237"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
 </basis>
@@ -37,28 +37,28 @@
         </face>
     </basis>
     <!-- pwa metatags -->
-    <basis core="call" file="pwa.inc" />
+    <basis core="call" file="pwa.inc" pageindex="[##cms.cms.pageindex##]" />
     <!-- common styles for all page -->
-    <basis core="call" file="style.inc" />
+    <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]" />
 </head>
 
 <body>
-    <basis core="call" file="header.inc" />
+    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]" />
     <main>
-        <section class="relative bg-hotelListBg bg-cover bg-center pt-16 h-[573px]">
+        <section class="relative bg-hotelListBg bg-cover bg-center pt-14 h-[670px]">
             <img src="[##cms.cms.cdn##]/images/tour-list-person.png"
-                class="absolute z-10 bottom-0 left-0 right-0 mx-auto h-[419px] object-cover" alt="person" width="300"
-                height="419" loading="lazy">
+                class="absolute z-10 top-32 left-0 right-0 mx-auto h-[308px] object-cover" alt="person" width="214"
+                height="308" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
-                <h2 class="text-shadow text-[11rem] leading-[12rem] font-bold text-center opacity-50">Dubai</h2>
-                <div class="relative z-20 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto rounded-xl mt-16">
-                    
+                <h2 class="text-white-shadow text-[4rem] leading-[4rem] font-bold text-center">Dubai</h2>
+                <div class="relative z-20 rounded-xl mt-52">
                     <basis core="print" datamembername="db.scalar">
                         <face>
-                            <h1 class="text-white text-center mb-5 font-bold text-3xl">@column1</h1>
+                            <h1 class="text-white text-center mb-5 font-bold text-2xl">@column1</h1>
                         </face>
                     </basis>
-                    <form class="search-content flex justify-center items-center gap-2 bg-zinc-200 p-4 rounded-xl" method="get" action="/search-content.bc">
+                    
+                    <form class="search-content flex flex-col justify-center items-center gap-2 bg-zinc-200 p-4 rounded-xl" method="get" action="/search-content.bc">
                         <input type="text" name="q"
                             class="w-full h-[60px] pr-4 bg-white rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
                             placeholder="نام هتل" />
@@ -76,9 +76,7 @@
                         </select>
                         <input type="hidden" name="t" value="hotel">
                         <button type="submit"
-                            class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-80 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
-                            <span
-                                class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                            class="flex items-center text-sm justify-center border border-primary-900 w-full h-14 text-white rounded-lg bg-primary-900">جستحو
                         </button>
                         <div class="clr absolute"></div>
                     </form>
@@ -130,35 +128,29 @@
                 </basis>
             </ul>
             <basis core="print" datamembername="db.scalar">
-                <layout>
-                    <div class="flex items-center justify-between mt-1">
-                        @child
-                    </div>
-                </layout>
                 <face>
-                    <h2 class="text-zinc-900 font-bold text-2xl">@column1</h2>
+                    <h2 class="text-zinc-900 mt-1 font-medium">@column1</h2>
                 </face>
             </basis>
 
             <basis core="list" datamembername="db.hotel-list">
                 <layout>
-                    <div class="grid grid-cols-3 gap-3 mt-8">
+                    <div class="flex flex-col gap-3 mt-4">
                         <!-- items -->
                         @child
                     </div>
                 </layout>
                 <face filter="link is null">
                     <a href="/hotel.bc?id=@id"
-                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp"
-                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                            <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]"
                                 alt="@title" width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-medium title-hotel">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                                <span class="flex flex-1 items-center gap-2 text-xs">
+                                <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
                                         <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
                                     </svg>
@@ -172,18 +164,17 @@
                                     @prp_177442 ستاره
                                 </span>
                                 <span class="h-6 w-px border border-zinc-200"></span>
-                                <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
                                         <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
                                     </svg>
                                     <span class="city-hotel">@prp_3087720</span>
                                 </span>
                             </div>
-                            <span
-                                class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                            <span class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg">مشاهده
                                 تور
-                                <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
-                                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
                                         fill="#FD7523" />
@@ -194,41 +185,39 @@
                 </face>
                 <face>
                     <a href="@link"
-                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp"
-                                class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
+                            <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]"
                                 alt="@title" width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-medium title-hotel">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
-                                <span class="flex flex-1 items-center gap-2 text-xs">
-                                    <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
+                                <span class="flex flex-1 items-center justify-center gap-2 text-xs">
+                                    <svg width="20" height="20" class="flex-shrink-0">
                                         <use xlink:href="./images/sprite-icons.svg#icon-rate"></use>
                                     </svg>
                                     امتیاز @prp_177441
                                 </span>
                                 <span class="h-6 w-px border border-zinc-200"></span>
                                 <span class="flex flex-1 items-center justify-center font-medium gap-2 text-xs">
-                                    <svg width="20" height="20" class="flex-shrink-0">
+                                    <svg width="20" height="20" class="flex-shrink-0 star-hotel" data-star="@prp_177442">
                                         <use xlink:href="./images/sprite-icons.svg#icon-hotel-star"></use>
                                     </svg>
                                     @prp_177442 ستاره
                                 </span>
                                 <span class="h-6 w-px border border-zinc-200"></span>
-                                <span class="flex flex-1 items-center justify-end gap-2 text-xs">
+                                <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
                                         <use xlink:href="./images/sprite-icons.svg#icon-pin"></use>
                                     </svg>
                                     <span class="city-hotel">@prp_3087720</span>
                                 </span>
                             </div>
-                            <span
-                                class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg group-hover:bg-primary-50">مشاهده
+                            <span class="flex items-center gap-2 justify-center h-10 text-primary-900 rounded-lg">مشاهده
                                 تور
-                                <svg class="transition-all duration-300 group-hover:translate-x-4" width="48"
-                                    height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M28.3128 30.9999L21.3127 23.9999L28.3128 16.9999L27.2521 15.9392L19.1914 23.9999L27.2521 32.0605L28.3128 30.9999Z"
                                         fill="#FD7523" />
@@ -343,14 +332,14 @@
                 </section>
             </layout>
             <face filter="TypeID in (150)">
-                <h2 class="font-bold text-xl text-zinc-900 mb-5">@text</h2>
+                <h2 class="font-medium text-zinc-900 mb-5">@text</h2>
             </face>
             <face filter="TypeID in (129)">
                 <div class="text-zinc-900 text-sm text-justify leading-7 mb-6">@largetext</div>
             </face>
         </basis>
     </main>
-    <basis core="call" file="footer.inc" />
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
 </body>
 
 </html>

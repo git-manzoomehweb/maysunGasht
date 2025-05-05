@@ -60,12 +60,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 ".des-title-searched"
               );
               let FCDid1 = document.querySelector(".co-id.FCDid1");
-              let FCDid2 = document.querySelector(".co-id.FCDid1");
+              let FCDid2 = document.querySelector(".co-id.FCDid2");
 
               departure1.value = depTitleSearched.value;
               destination1.value = desTitleSearched.value;
               depLocationId.value = FCDid1.value;
               desLocationId.value = FCDid2.value;
+            }
+            if (document.querySelector(".landing-hotel")) {
+              let departure2Hotel = document.querySelector(".formhotel .reserve-field.departure-route #departure2");
+              let depLocationIdHotel = document.querySelector(".locationId.from");
+              let depTitleSearchedHotel = document.querySelector(
+                ".dep-title-searched"
+              );
+              let FCDid1Hotel = document.querySelector(".co-id.FCDid1");
+
+              departure2Hotel.value = depTitleSearchedHotel.value;
+              depLocationIdHotel.value = FCDid1Hotel.value;
             }
           }
         };

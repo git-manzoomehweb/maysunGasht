@@ -1,5 +1,5 @@
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="hotel">
-    <member name="cat" type="tree" request="cat" parentid="214540" order="ord">
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="tour">
+    <member name="cat" type="tree" request="cat" parentid="151151" order="ord">
     </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
@@ -62,25 +62,25 @@
                     </li>
                     <span class="text-zinc-700"> > </span>
                     <basis core="print" datamembername="db.navigation">
-                        <face filter="RowNumber=max(RowNumber) and parentcatid<>151136">
+                        <face filter="RowNumber=max(RowNumber) and parentcatid<>151135">
                             <li class="inline-block font-normal" itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
                                 <span itemprop="name">@title</span>
                                 <meta itemprop="position" content="@rownumber" />
                             </li>
                         </face>
-                        <face filter="link is null and parentcatid<>151136">
+                        <face filter="link is null and parentcatid<>151135">
                             <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
                                 <a class="text-zinc-700 transition-all duration-300 hover:text-primary-600"
-                                    itemprop="item" href="/hotel-list.bc?catid=@parentcatid" aria-label="@title"><span
+                                    itemprop="item" href="/tour-list.bc?catid=@parentcatid" aria-label="@title"><span
                                         itemprop="name">@title</span>
                                     <meta itemprop="position" content="@rownumber" />
                                 </a>
                                 <span class="text-zinc-700"> > </span>
                             </li>
                         </face>
-                        <face filter="parentcatid<>151136">
+                        <face filter="parentcatid<>151135">
                             <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
                                 itemtype="https://schema.org/ListItem">
                                 <a class="text-zinc-700 transition-all duration-300 hover:text-primary-600"
@@ -97,10 +97,10 @@
                 <div class="relative z-10 rounded-xl flex justify-center items-center gap-1">
                     <div class="relative">
                         <input aria-label="جستجوی مطلب" type="text"
-                            class="hotel-cat-search w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
+                            class="tour-cat-search w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
                             name="" id="" placeholder="جستجوی مطلب">
                         <svg width="30" height="30" class="absolute right-4 top-4">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-search-tour"></use>
                         </svg>
                     </div>
                     <button class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-24 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
@@ -110,34 +110,34 @@
             </section>
             <div class="mask-shape w-full h-[773px] absolute top-0 mt-32"></div>
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32 mb-6">
-                <basis core="tree" datamembername="hotel.cat" idcol="catid" parentidcol="parentid"
-                nullvalue="214540">
+                <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid"
+                nullvalue="151151">
                     <layout>
-                        <div class="grid grid-cols-4 gap-3 hotel-cat-container">
+                        <div class="grid grid-cols-4 gap-3 tour-cat-container">
                             <!-- item -->
                             @child
                         </div>
                     </layout>
                     <face filter="link is null">
-                        <a href="/hotel-list.bc?catid=@catid"
-                            class="hotel-cat-item relative flex items-end justify-center rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:translate-x-px">
+                        <a href="/tour-list.bc?catid=@catid"
+                            class="tour-cat-item relative flex items-end justify-center rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:translate-x-px">
                             <div class="bg-soft-black-bottom absolute inset-0 w-full"></div>
                             <img src="@image" class="h-[303px] object-cover" alt="@title" width="100%"
                                 height="303" loading="lazy">
                             <div class="absolute pb-7">
-                                <h2 class="text-2xl font-bold text-white mb-1 hotel-cat-title">@title</h2>
+                                <h2 class="text-2xl font-bold text-white mb-1 tour-cat-title">@title</h2>
                                 <span class="flex text-primary-900 text-sm justify-center">مشاهده</span>
                             </div>
                         </a>
                     </face>
                     <face>
                         <a href="@link"
-                            class="hotel-cat-item relative flex items-end justify-center rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:translate-x-px">
+                            class="tour-cat-item relative flex items-end justify-center rounded-xl overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:translate-x-px">
                             <div class="bg-soft-black-bottom absolute inset-0 w-full"></div>
                             <img src="@image" class="h-[303px] object-cover" alt="@title" width="100%"
                                 height="303" loading="lazy">
                             <div class="absolute pb-7">
-                                <h2 class="text-2xl font-bold text-white mb-1 hotel-cat-title">@title</h2>
+                                <h2 class="text-2xl font-bold text-white mb-1 tour-cat-title">@title</h2>
                                 <span class="flex text-primary-900 text-sm justify-center">مشاهده</span>
                             </div>
                         </a>

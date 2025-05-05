@@ -3,7 +3,6 @@
 </basis>
 
 
-
 <basis core="print" datamembername="db.faq-list">
     <layout>
         <div class="flex flex-col gap-3">
@@ -11,10 +10,11 @@
         </div>
     </layout>
     <face filter="TypeID not in(150)">
-        <div class="faq-box transition-all duration-300 cursor-pointer rounded-xl border border-zinc-200 bg-white p-6">
+        <div
+            class="faq-box transition-all duration-300 cursor-pointer rounded-xl border-2 border-zinc-200 bg-white p-6">
             <h2 class="font-bold text-zinc-900">@text</h2>
             <div
-                class="faq-answer text-sm text-zinc-700 opacity-0 scale-y-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out origin-top">
+                class="faq-answer text-sm text-zinc-700 opacity-0 scale-y-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out origin-top leading-7">
                 @largetext
             </div>
         </div>
