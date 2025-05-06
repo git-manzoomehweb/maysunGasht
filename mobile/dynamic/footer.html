@@ -1,135 +1,81 @@
+<basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+    <member name="infofootersql" type="view" postsql="select * from [db.infofootersql] where TypeID in(240)" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+    <member name="infofooter" type="view" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="easy-way">
+    <member name="cat" type="tree" request="cat" parentid="214545" order="ord"></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="easy-way-hotel">
+    <member name="cat" type="tree" request="cat" parentid="214542" order="ord"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="10" lid="1">
+    <member name="offices" type="list" propertyid="8142" />
+</basis>
+
 <footer>
     <div class="relative">
         <div class="mask-shape w-full h-[519px] absolute top-0"></div>
         <div class="mask-image absolute top-6">
             <div class="bg-fade-white absolute inset-0 w-full h-full"></div>
-            <img src="[##cms.cms.cdn##]/images/footer-background.jpg" class="h-[519px] object-cover" alt="footer-background"
-                width="100%" height="800" loading="lazy">
+            <img src="[##cms.cms.cdn##]/images/footer-background.jpg" class="h-[519px] object-cover"
+                alt="footer-background" width="100%" height="800" loading="lazy">
         </div>
         <div class="relative flex items-center justify-center">
             <img src="[##cms.cms.cdn##]/images/footer-airplane.png" class="h-24 object-cover" alt="footer-airplane"
                 width="288" height="94" loading="lazy">
         </div>
         <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-                <div class="flex flex-row-reverse items-center gap-2 justify-between uppercase mt-3 text-xl font-bold text-primary-900">
-                    <span>m</span>
-                    <span>a</span>
-                    <span>y</span>
-                    <span>s</span>
-                    <span>u</span>
-                    <span>n</span>
-                    <span>g</span>
-                    <span>a</span>
-                    <span>s</span>
-                    <span>h</span>
-                    <span>t</span>
-                </div>
-                <basis core="print" datamembername="db.infofooter">
-                    <face filter="TypeID in(144)">
-                        <div class="text-justify text-zinc-900 text-sm leading-7">
-                            @largetext
-                        </div>
-                    </face>
-                </basis>
+            <div
+                class="flex flex-row-reverse items-center gap-2 justify-between uppercase mt-3 text-xl font-bold text-primary-900">
+                <span>m</span>
+                <span>a</span>
+                <span>y</span>
+                <span>s</span>
+                <span>u</span>
+                <span>n</span>
+                <span>g</span>
+                <span>a</span>
+                <span>s</span>
+                <span>h</span>
+                <span>t</span>
+            </div>
+            <basis core="print" datamembername="db.infofooter">
+                <face filter="TypeID in(144)">
+                    <div class="text-justify text-zinc-900 text-sm leading-7">
+                        @largetext
+                    </div>
+                </face>
+            </basis>
         </section>
         <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-3">
             <h2 class="text-2xl font-bold mb-7">دسترسی سریع</h2>
             <ul class="inline-flex items-center gap-2 bg-primary-200 p-1 rounded-lg mb-6">
-
-                <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
-                    data-id="@catid">
-                    اروپا</li>
-
-                <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-600 px-5 py-2 rounded-lg cursor-pointer"
-                    data-id="@catid">
-                    آسیا</li>
-
+                <basis core="print" datamembername="db.scalar-flight">
+                    <face>
+                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
+                            data-id="214545">
+                            @column1</li>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.scalar-hotel">
+                    <face>
+                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
+                            data-id="214540">
+                            @column1</li>
+                    </face>
+                </basis>
             </ul>
-            <div class="flex flex-col gap-10">
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-400 rounded-full transition-all duration-300 group-hover:bg-primary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران لندن با پگاسوس</h3>
-                    </div>
-                </a>
 
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران آمستردام</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران آتن</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران بارسلون</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران بازل</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران زوریخ</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران ورشو</h3>
-                    </div>
-                </a>
-
-                <a href="" class="group flex items-center justify-between relative custom-border-bottom">
-                    <div class="flex gap-3 items-center">
-                        <span
-                            class="w-[10px] h-[10px] bg-primary-100 rounded-full transition-all duration-300 group-hover:bg-secondary-900"></span>
-                        <h3
-                            class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-secondary-900">
-                            بلیط هواپیما تهران وین</h3>
-                    </div>
-                </a>
+            <div class="fetch-content-flight">
 
             </div>
+
         </section>
         <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-12">
             <div class="flex flex-col justify-between gap-3">
+
                 <div class="flex gap-2">
                     <span
                         class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
@@ -138,63 +84,94 @@
                         </svg>
                     </span>
                     <div>
-                        <a href="" class="text-sm group relative text-primary-900">
-                            مشاهده لوکیشن
-                        </a>
-                        <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">تهران-شهرک
-                            اکباتان-فاز1-بلوار
-                            نفیسی-نبش
-                            کوچه باریکانی-پلاک43-طبقه اول - واحد 2</div>
+                        <basis core="print" datamembername="db.offices">
+                            <face>
+                                <a href="@prp_8142" class="text-sm group relative text-primary-900">
+                                    مشاهده لوکیشن
+                                </a>
+                            </face>
+                        </basis>
+
+                        <basis core="print" datamembername="db.infofooter">
+                            <face filter="TypeID in(244)">
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
+                            </face>
+                        </basis>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2">
-                    <span
-                        class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                        <svg width="37" height="37">
-                            <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
-                        </svg>
-                    </span>
-                    <div class="flex-1">
-                        <a href="" class="text-sm group relative text-primary-900">
-                            پشتیبانی
-                        </a>
-                        <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">09190022879</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span
-                        class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                        <svg width="37" height="37">
-                            <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
-                        </svg>
-                    </span>
-                    <div class="flex-1">
-                        <a href="" class="text-sm group relative text-primary-900">
-                            تماس
-                        </a>
-                        <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">021-22222222</div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span
-                        class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                        <svg width="37" height="37">
-                            <use xlink:href="./images/sprite-icons.svg#icon-orange-mail"></use>
-                        </svg>
-                    </span>
-                    <div class="flex-1">
-                        <a href="mailto:" class="text-primary-900">
-                            ارسال ایمیل
-                        </a>
-                        <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">info@maysungasht.ir
+
+
+                <basis core="print" datamembername="db.infofooter">
+                    <layout>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                <svg width="37" height="37">
+                                    <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                </svg>
+                            </span>
+                            @child
                         </div>
-                    </div>
-                </div>
+                    </layout>
+                    <face filter="valueID in(333683232)">
+                        <div class="flex-1">
+                            <a href="tel:@text" class="text-sm group relative text-primary-900">
+                                پشتیبانی در ساعات غیر اداری و روزهای تعطیل
+                            </a>
+                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+                        </div>
+                    </face>
+                </basis>
+
+                <basis core="print" datamembername="db.infofooter">
+                    <layout>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                <svg width="37" height="37">
+                                    <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                </svg>
+                            </span>
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="valueID in(14991918)">
+                        <div class="flex-1">
+                            <a href="tel:@text" class="text-sm group relative text-primary-900">
+                                تماس
+                            </a>
+                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+                        </div>
+                    </face>
+                </basis>
+
+                <basis core="print" datamembername="db.infofooter">
+                    <layout>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="flex items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                                <svg width="37" height="37">
+                                    <use xlink:href="./images/sprite-icons.svg#icon-orange-mail"></use>
+                                </svg>
+                            </span>
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="TypeID in(242)">
+                        <div class="flex-1">
+                            <a href="mailto:@text" class="text-primary-900">
+                                ارسال ایمیل
+                            </a>
+                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text
+                            </div>
+                        </div>
+                    </face>
+                </basis>
+
             </div>
         </section>
-        <section
-            class="relative flex flex-col justify-between mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8">
+        <section class="relative flex flex-col justify-between mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8">
 
             <div class="flex flex-col gap-3">
                 <h2 class="text-xl font-medium">شبکه های اجتماعی ما</h2>
@@ -295,38 +272,37 @@
             </div>
             <div class="flex flex-col gap-2 mt-7">
                 <div class="flex items-center justify-between">
-                    <a href="https://www.cao.ir/paxrights"
-                        aria-label="pax"
+                    <a href="https://www.cao.ir/paxrights" aria-label="pax"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/images/pax.png" alt="pax" width="100%" height="53" loading="lazy"
+                        <img src="[##cms.cms.cdn##]/_images/pax.png" alt="pax" width="100%" height="53" loading="lazy"
                             rel="noopener">
                     </a>
                     <a href="https://www.mcth.ir/" aria-label="culture-organization"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/images/culture-organization.png" alt="culture-organization" width="100%"
-                            height="53" loading="lazy" rel="noopener">
+                        <img src="[##cms.cms.cdn##]/_images/culture-organization.png" alt="culture-organization"
+                            width="100%" height="53" loading="lazy" rel="noopener">
                     </a>
                     <a href="https://www.iata.org/" aria-label="lata"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/images/lata.jpg" alt="lata" width="100%" height="53" loading="lazy"
+                        <img src="[##cms.cms.cdn##]/_images/iata.png" alt="lata" width="100%" height="53" loading="lazy"
                             rel="noopener">
                     </a>
                 </div>
                 <div class="flex items-center justify-between">
-   <!-- <img id="nbqenbqewlaoesgtfukzjxlz" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=224061&amp;p=uiwkuiwkaodsobpdgvkarfth&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=224061&amp;p=odrfodrfshwllymawlbqnbpd"> -->
+                    <!-- <img id="nbqenbqewlaoesgtfukzjxlz" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=224061&amp;p=uiwkuiwkaodsobpdgvkarfth&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=224061&amp;p=odrfodrfshwllymawlbqnbpd"> -->
                     <!-- <img referrerpolicy="origin" id="jxlzfukzrgvjrgvjoeukwlao" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=163384&amp;p=rfthgvkaxlaoxlaomcsiaods&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=163384&amp;p=nbpdwlbqqftiqftiaqgwshwl"> -->
                     <a href="https://caa.gov.ir/" aria-label="plane-organization"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/images/plane-organization.png" alt="plane-organization" width="100%"
-                            height="53" loading="lazy" rel="noopener">
+                        <img src="[##cms.cms.cdn##]/_images/plane-organization.png" alt="plane-organization"
+                            width="100%" height="53" loading="lazy" rel="noopener">
                     </a>
                     <a class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600"
-                    referrerpolicy="origin" target="_blank"
-                    href="https://trustseal.enamad.ir/?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM"><img
-                        referrerpolicy="origin"
-                        src="https://trustseal.enamad.ir/logo.aspx?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM" alt=""
-                        style="cursor:pointer" code="4OPbVuj8QSDvwCRMQEpM"></a>
-                <!-- <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z" alt="" style="cursor:pointer" code="aYMnnQgwqOwpTTNiJH7Z"></a> -->
+                        referrerpolicy="origin" target="_blank"
+                        href="https://trustseal.enamad.ir/?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM"><img
+                            referrerpolicy="origin"
+                            src="https://trustseal.enamad.ir/logo.aspx?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM" alt=""
+                            style="cursor:pointer" code="4OPbVuj8QSDvwCRMQEpM"></a>
+                    <!-- <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z" alt="" style="cursor:pointer" code="aYMnnQgwqOwpTTNiJH7Z"></a> -->
                 </div>
 
 
@@ -334,16 +310,16 @@
             </div>
         </section>
         <section
-            class="relative flex flex-col items-center gap-2 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-7 mb-6">
+            class="relative flex flex-col items-center gap-2 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-7 mb-16">
             <a href="https://www.basisfly.com/" target="_blank"
                 class="flex text-sm text-zinc-500 text-center transition-all duration-300 hover:text-primary-600">طراحی
                 سایت آژانس مسافرتی و رزرواسیون
                 آنلاین توسط بیسیس فلای</a>
-            <div
-                class="mt-2 flex w-full items-center justify-between gap-2">
+            <div class="mt-2 flex w-full items-center justify-between gap-2">
                 <img src="[##cms.cms.cdn##]/images/basisfly-logo.png" alt="basisfly-logo" width="68" height="17"
-                loading="lazy">
-                <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" width="90" height="15" loading="lazy">
+                    loading="lazy">
+                <img src="[##cms.cms.cdn##]/images/trust-login.png" alt="trust-login" width="90" height="15"
+                    loading="lazy">
             </div>
         </section>
     </div>

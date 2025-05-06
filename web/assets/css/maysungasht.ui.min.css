@@ -338,6 +338,10 @@ body {
   min-height: 6rem /* 96px */;
 }
 
+.min-h-\[352px\] {
+  min-height: 352px;
+}
+
 .h-auto {
   height: auto;
 }
@@ -1438,6 +1442,60 @@ select.select-star{
   }
 }
 
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fd7523;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fd7523;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+  0% { transform: translate(-50%, -50%) scale(0) }
+  60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+}
+@keyframes pulse {
+  0% , 60% , 100%{ transform:  scale(1) }
+  80% { transform:  scale(1.2)}
+}
+
+
+.fetch-loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fd7523;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -1516,22 +1574,6 @@ select.select-star{
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.group\/leveltwo:hover .group-hover\/leveltwo\:visible {
-  visibility: visible;
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:invisible {
-  visibility: hidden;
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:block {
-  display: block;
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:hidden {
-  display: none;
-}
-
 .group:hover .group-hover\:w-full {
   width: 100%;
 }
@@ -1583,14 +1625,6 @@ select.select-star{
 
 .group:hover .group-hover\:text-primary-900 {
   color: var(--primary-900);
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:opacity-0 {
-  opacity: 0;
-}
-
-.group\/leveltwo:hover .group-hover\/leveltwo\:opacity-100 {
-  opacity: 1;
 }
 
 .group:hover .group-hover\:opacity-0 {

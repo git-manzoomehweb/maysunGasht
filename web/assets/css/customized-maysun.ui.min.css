@@ -665,6 +665,10 @@ body {
   margin-bottom: 1.75rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem /* 64px */;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -1567,6 +1571,30 @@ body {
 .group\/leveltwo:hover .group-hover\/leveltwo\:text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:visible {
+  visibility: visible;
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:invisible {
+  visibility: hidden;
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:block {
+  display: block;
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:hidden {
+  display: none;
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:opacity-0 {
+  opacity: 0;
+}
+
+.group\/leveltwo:hover .group-hover\/leveltwo\:opacity-100 {
+  opacity: 1;
 }
 
 .group\/levelthree:hover .group-hover\/levelthree\:text-white {

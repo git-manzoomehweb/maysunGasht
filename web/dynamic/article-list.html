@@ -8,7 +8,7 @@
         size="395x237" order="ord" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.oid##]">
-    <member name="first-article1" type="list" link="article.bc" propertyid="7244" perpage="1"
+    <member name="first-article" type="list" link="article.bc" propertyid="7244" perpage="1"
         size="690x355" order="ord" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
@@ -123,13 +123,13 @@
 
         <section class="relative -mt-5 min-h-24  mb-11">
             <div class="mask-gray-shape w-full h-[742px] absolute top-0"></div>
-            <basis core="print" datamembername="db.first-article">
+            <basis core="list" datamembername="db.first-article">
                 <layout>
                     <div class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-40 border-b border-solid border-zinc-300 pb-11">
                         @child
                     </div>
                 </layout>
-                <face filter="link is null">
+                <face filter="link is null and ord in('1')">
                     <article class="flex gap-16 group">
                         <div class="flex-[1.93] flex flex-col justify-between">
                             <div>
@@ -138,20 +138,20 @@
                                     @prp_7244
                                 </div>
                             </div>
-                            <a href="/article-list?id=@id"
+                            <a href="/article.bc?id=@id"
                                 class="relative z-20 w-24 group/leveltwo overflow-hidden border border-solid border-primary-900 flex items-center gap-3 justify-center h-10 text-white bg-primary-900 rounded-lg transition-all duration-300 hover:text-primary-900">مشاهده
                                 <span
                                     class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                             </a>
                         </div>
                         <div class="relative flex-[2.20]">
-                            <img src="@003648X00365prp"
+                            <img src="@00690X00355prp"
                                 class="h-[365px] object-cover rounded-xl transition-all duration-300 group-hover:grayscale"
-                                alt="@text" width="648" height="365" loading="lazy">
+                                alt="@title" width="648" height="365" loading="lazy">
                         </div>
                     </article>
                 </face>
-                <face>
+                <face filter="ord in('1')">
                     <article class="flex gap-16 group">
                         <div class="flex-[1.93] flex flex-col justify-between">
                             <div>
@@ -167,7 +167,7 @@
                             </a>
                         </div>
                         <div class="relative flex-[2.20]">
-                            <img src="@003648X00365prp"
+                            <img src="@00690X00355prp"
                                 class="h-[365px] object-cover rounded-xl transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="648" height="365" loading="lazy">
                         </div>

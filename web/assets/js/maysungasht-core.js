@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function firstContent() {
       const firstDataId = tourLi[0].getAttribute("data-id");
       fetchContentTour.innerHTML =
-        '<div class="flex justify-center"><span class="tour-loader"></span></div>';
+        '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
       try {
         const firstResponse = await fetch(
           `/tour-load-items.bc?catid=${firstDataId}`
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         async function secondContent() {
           fetchContentTour.innerHTML =
-            '<div class="flex justify-center"><span class="tour-loader"></span></div>';
+            '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
           try {
             const firstResponse = await fetch(
               `/tour-load-items.bc?catid=${cmsQuery}`
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const firstDataId = faqLi[0].getAttribute("data-id");
 
       fetchContentFaq.innerHTML =
-        '<div class="flex justify-center"><span class="faq-loader"></span></div>';
+        '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
 
       try {
         const firstResponse = await fetch(
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         async function secondContent() {
           fetchContentFaq.innerHTML =
-            '<div class="flex justify-center"><span class="faq-loader"></span></div>';
+            '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
           try {
             const firstResponse = await fetch(
               `/faq-load-items.bc?id=${cmsQuery}`
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function firstContent() {
       const firstDataId = flightLi[0].getAttribute("data-id");
       fetchContentFlight.innerHTML =
-        '<div class="flex justify-center"><span class="flight-loader"></span></div>';
+        '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
       try {
         const firstResponse = await fetch(
           `/flight-load-items.bc?catid=${firstDataId}`
@@ -429,7 +429,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         async function secondContent() {
           fetchContentFlight.innerHTML =
-            '<div class="flex justify-center"><span class="flight-loader"></span></div>';
+            '<div class="flex justify-center"><span class="fetch-loader"></span></div>';
           try {
             const firstResponse = await fetch(
               `/flight-load-items.bc?catid=${cmsQuery}`
