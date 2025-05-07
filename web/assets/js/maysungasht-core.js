@@ -205,6 +205,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", closePopup);
 });
 
+// article.bc offsetHeight
+document.querySelectorAll('.article-tag').forEach(tag => {
+  tag.addEventListener('click', function () {
+      setTimeout(() => {
+          window.scrollBy({ top: -80, behavior: 'smooth' });
+      }, 10); 
+  });
+});
+
 // fetch tour default
 document.addEventListener("DOMContentLoaded", function () {
   const fetchContentTour = document.querySelector(".fetch-content-tour");

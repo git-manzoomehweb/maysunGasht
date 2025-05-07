@@ -3,8 +3,8 @@
 </basis>
 <basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]">
     <member name="view" type="view" propertyid="7249" />
-    <member name="related-tour" type="list" blgid="221" link="tour.bc" propertyid="8077,8076,8181,10000504,3087727" perpage="3"
-    typeid="159" />
+    <member name="related-tour" type="list" blgid="221" link="tour.bc" propertyid="8077,8076,8181,10000504,3087727"
+        perpage="3" typeid="159" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
@@ -13,8 +13,7 @@
     <member name="comment" type="list" order="ord" request="listcomment" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid##]">
-    <member name="news" type="list" link="article.bc" propertyid="7244" perpage="4"
-        size="89x89" order="ord" />
+    <member name="news" type="list" link="article.bc" propertyid="7244" perpage="4" size="89x89" order="ord" />
 </basis>
 
 <!DOCTYPE html>
@@ -60,7 +59,7 @@
                             <h1 class="text-zinc-900 text-lg font-bold mb-10">@text</h1>
                         </face>
                     </basis>
-                    
+
                     <basis core="print" datamembername="db.view">
                         <layout>
                             <div class="mb-10">
@@ -91,13 +90,14 @@
                                 displaymode="new" button="[data-btn-uploadPov]" resultsourceid="upload.dataPov"
                                 OnRendered="RenderFormPov"></basis>
                             <basis core="api" if="{##cms.uploadPov.run|(false)##}" run="atclient"
-                                url="/schema/domainform/A8748549-3E85-48AF-BEE9-7B343F5FCCF0/fa/editobject" method="post"
+                                url="/schema/domainform/A8748549-3E85-48AF-BEE9-7B343F5FCCF0/fa/editobject"
+                                method="post"
                                 body="object_edit={##cms.uploadPov.value##}&captcha={##cms.uploadPov.captcha##}&captchaid={##cms.uploadPov.captchaid##}"
                                 content-type="application/x-www-form-urlencoded" triggers='cms.uploadPov'
                                 OnProcessed="OnProcessedEditObjectPov"></basis>
                             <basis core="callback" run="atclient" method="uploadDocumentPov" triggers="upload.dataPov">
                             </basis>
-            
+
                             <div class="captcha-button flex items-center justify-center">
                                 <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
                                     data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
@@ -124,23 +124,23 @@
                                     class="group relative z-10 overflow-hidden w-28 px-4 text-sm border border-primary-900 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-lg hover:text-primary-900"
                                     type="button" data-btn-uploadPov><span class="">ثبت دیدگاه</span>
                                     <span
-                                    class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                                        class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
                                 </button>
-        
+
                             </div>
                             <div
-                            class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
-                            <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
-                                <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                                <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                                class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                                <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                                    <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                                    <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                                </div>
                             </div>
-                        </div>
                             <div class="mt-4 text-center text-primary-600 message-api"></div>
                         </div>
                     </div>
@@ -185,7 +185,8 @@
                         </div>
                         <!-- Slider main container -->
                         <div class="swiper swiper-suggestion">
-                            <basis core="tree" datamembername="db.comment" idcol="id" parentidcol="parentid" nullvalue="0">
+                            <basis core="tree" datamembername="db.comment" idcol="id" parentidcol="parentid"
+                                nullvalue="0">
                                 <layout>
                                     <!-- Additional required wrapper -->
                                     <div class="swiper-wrapper">
@@ -230,7 +231,7 @@
                         </layout>
                         <face filter="TypeID in(150 , 250)">
                             <a href="#@valueID"
-                                class="flex items-center gap-3 text-sm text-zinc-900 transition-all duration-300 hover:text-primary-900">
+                                class="article-tag flex items-center gap-3 text-sm text-zinc-900 transition-all duration-300 hover:text-primary-900">
                                 <svg width="20" height="20">
                                     <use xlink:href="./images/sprite-icons.svg#icon-article-star"></use>
                                 </svg>
@@ -259,7 +260,7 @@
                                         @title</h3>
                                     <div
                                         class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
-                                    @prp_7244
+                                        @prp_7244
                                     </div>
                                 </div>
                             </a>
@@ -277,7 +278,7 @@
                                         @title</h3>
                                     <div
                                         class="text-sm text-justify text-zinc-900 line-clamp-3 transition-all duration-300 group-hover:text-primary-900">
-                                    @prp_7244
+                                        @prp_7244
                                     </div>
                                 </div>
                             </a>
@@ -347,7 +348,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -400,7 +401,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -415,8 +416,8 @@
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -455,7 +456,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -470,8 +471,8 @@
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -510,7 +511,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>

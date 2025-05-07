@@ -6,6 +6,10 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="tour-list-title">
+    <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"
+        postsql="select * from [tour-list-title.cat] where catid in([##cms.query.catid##])"></member>
+</basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
@@ -50,7 +54,11 @@
                 class="absolute z-10 top-32 left-0 right-0 mx-auto h-[308px] object-cover" alt="person" width="214"
                 height="308" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
-                <h2 class="text-shadow text-[5rem] leading-[5rem] font-bold text-center opacity-50">Istanbul</h2>
+                <basis core="print" datamembername="tour-list-title.cat">
+                    <face>
+                        <h2 class="text-shadow text-[5rem] leading-[5rem] font-bold text-center opacity-50">@urltitle</h2>
+                    </face>
+                </basis>
                 <div class="relative z-20 rounded-xl mt-52">
                     <basis core="print" datamembername="db.scalar">
                         <face>
@@ -142,7 +150,7 @@
                                 width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
-                            <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                            <h2 class="font-bold">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
                                 <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
@@ -190,7 +198,7 @@
                                 width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
-                            <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                            <h2 class="font-bold">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
                                 <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
@@ -240,7 +248,7 @@
                                 @prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
-                            <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                            <h2 class="font-bold">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
                                 <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">
@@ -290,7 +298,7 @@
                                 @prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
-                            <h2 class="font-bold">تور 10 روزه استانبول</h2>
+                            <h2 class="font-bold">@title</h2>
                             <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
                                 <span class="flex flex-1 items-center justify-center gap-2 text-xs">
                                     <svg width="20" height="20" class="flex-shrink-0">

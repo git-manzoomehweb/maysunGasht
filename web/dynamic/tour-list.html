@@ -1,20 +1,21 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
-    <member name="tour-list" type="list" link="tour.bc" propertyid="8077,8076,8181,10000504,3087727" perpage="6" size="395x237"
-        pageno="[##cms.query.pagenum|(1)##]" order="ord" />
+    <member name="tour-list" type="list" link="tour.bc" propertyid="8077,8076,8181,10000504,3087727" perpage="6"
+        size="395x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="tour-list" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="tour-list-title">
-    <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"></member>
+    <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"
+        postsql="select * from [tour-list-title.cat] where catid in([##cms.query.catid##])"></member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
     <member name="p-under" type="view" size="" propertyid="" />
-  </basis>
+</basis>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -22,9 +23,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
     <!-- Title & Description -->
-    <title>[##cms.seo.title|(هتل متل)##]
+    <title>[##cms.seo.title|(خرید بلیط هواپیما - رزرو آنلاین پرواز داخلی و خارجی - میسان گشت)##]
     </title>
-    <meta name="description" content="[##cms.seo.description|(هتل متل)##]">
+    <meta name="description"
+        content="[##cms.seo.description|(خرید آنلاین بلیط هواپیما داخلی و خارجی با بهترین قیمت. بلیط چارتر و سیستمی برای کیش، مشهد، ایروان ، مسقط . میسان گشت، آسان‌ترین راه رزرو پرواز با پشتیبانی ۲۴ ساعته.)##]">
     <!-- Title & Description -->
     <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
         <member type="list" name="list" request="taglist" preview=""></member>
@@ -51,7 +53,12 @@
                 class="absolute z-10 bottom-0 left-0 right-0 mx-auto h-[419px] object-cover" alt="person" width="300"
                 height="419" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
-                <h2 class="text-shadow text-[12rem] leading-[12rem] font-bold text-center opacity-50">Istanbul</h2>
+                <basis core="print" datamembername="tour-list-title.cat">
+                    <face>
+                        <h2 class="text-shadow text-[12rem] leading-[12rem] font-bold text-center opacity-50">@urltitle</h2>
+                    </face>
+                </basis>
+                
                 <div class="relative z-20 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto rounded-xl mt-10">
                     <basis core="print" datamembername="db.scalar">
                         <face>
@@ -183,7 +190,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -236,7 +243,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -251,8 +258,8 @@
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -291,7 +298,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -306,8 +313,8 @@
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -346,7 +353,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>

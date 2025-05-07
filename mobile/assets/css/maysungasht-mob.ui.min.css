@@ -102,6 +102,10 @@ body {
   top: 1rem;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -463,6 +467,10 @@ body {
 
 .min-h-\[576px\] {
   min-height: 576px;
+}
+
+.min-h-\[757px\] {
+  min-height: 757px;
 }
 
 .w-12 {
@@ -1775,7 +1783,7 @@ select.select-star{
 
 .Basis_Date.start_date,
 .Basis_Date.end_date {
-  padding: 0 160px 0 0 !important;
+  padding: 0 213px 0 0 !important;
 }
 
 .click-content label span {
@@ -2130,7 +2138,7 @@ select.select-star{
 .multicity-flight-form .FlightClass-text{
   display: flex;
   justify-content: end;
-  padding-left: 0.5rem;
+  padding-left: 1.5rem;
 }
 
 .multicity-flight-form .multiroute-fields > div:nth-child(2) {
@@ -2170,6 +2178,11 @@ select.select-star{
 .landing-hotel #r-hotel{
   display: block !important;
 }
+
+.bg-defaultBg .search-banner .Basis_Calendar_Box{
+  margin-top: 0 !important;
+}
+
 
 .contact-form
   [data-bc-schema-direction="rtl"]

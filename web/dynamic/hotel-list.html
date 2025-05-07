@@ -9,6 +9,10 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="hotel-list-title">
+    <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"
+        postsql="select * from [hotel-list-title.cat] where catid in([##cms.query.catid##])"></member>
+</basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
     <member name="p-under" type="view" size="" propertyid="" />
   </basis>
@@ -50,7 +54,11 @@
                 class="absolute z-10 bottom-0 left-0 right-0 mx-auto h-[419px] object-cover" alt="person" width="300"
                 height="419" loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl ">
-                <h2 class="text-shadow text-[11rem] leading-[12rem] font-bold text-center opacity-50">Dubai</h2>
+                <basis core="print" datamembername="hotel-list-title.cat">
+                    <face>
+                        <h2 class="text-shadow text-[11rem] leading-[12rem] font-bold text-center opacity-50">@urltitle</h2>
+                    </face>
+                </basis>
                 <div class="relative z-20 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto rounded-xl mt-16">
                     
                     <basis core="print" datamembername="db.scalar">
