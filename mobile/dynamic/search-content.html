@@ -39,7 +39,7 @@
             <div>
                 <basis core="list" datamembername="db.article-list">
                     <layout>
-                        <section class="relative z-10 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
+                        <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                             <h1 class="font-medium text-zinc-900 mb-7 text-center">مقاله ها</h1>
                             <div class="flex flex-col gap-7">
                                 @child
@@ -65,7 +65,7 @@
                                         </span>
                                     </div>
                                     <h3 class="font-bold text-white">@title</h3>
-                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7">
+                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7 h-15">
                                         @prp_7244
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@
                                         </span>
                                     </div>
                                     <h3 class="font-bold text-white">@title</h3>
-                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7">
+                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7 h-15">
                                         @prp_7244
                                     </div>
                                 </div>
@@ -209,7 +209,7 @@
             <div>
                 <basis core="list" datamembername="db.tour-list">
                     <layout>
-                        <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
+                        <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                             <h2 class="font-medium text-zinc-900 mb-7 text-center">تور ها</h2>
                             <div class="flex flex-col gap-3 mt-4">
                                 <!-- items -->
@@ -523,19 +523,17 @@
                     size="264x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
                 <member name="paging-hotel" type="list" request="paging" count="3" parentname="hotel-list" />
             </basis>
-            <div>
+            <section class="hotel-list-section relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                 <basis core="list" datamembername="db.hotel-list">
                     <layout>
-                        <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                             <input type="hidden" class="hotelname" value="[##cms.query.q##]" />
                             <input type="hidden" class="hotelcity" value="[##cms.query.q2##]" />
                             <input type="hidden" class="hotelstar" value="[##cms.query.q3##]" />
                             <h2 class="font-medium text-zinc-900 mb-7 text-center">هتل ها</h2>
-                            <div class="flex flex-col gap-3 mt-4">
+                            <div class="flex flex-col gap-3 mt-4 hotel-list-container">
                                 <!-- items -->
                                 @child
                             </div>
-                        </section>
                     </layout>
                     <face filter="link is null">
                         <a href="/hotel.bc?id=@id"
@@ -724,7 +722,7 @@
                         </basis>
                     </ul>
                 </div>
-            </div>
+            </section>
 
 
 
@@ -862,7 +860,7 @@
                     pageno="[##cms.query.pagenum|(1)##]" order="ord" />
                 <member name="paging" type="list" request="paging" count="3" parentname="article-list" />
             </basis>
-            <section class="relative z-10 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
+            <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                 <h1 class="font-medium text-zinc-900 mb-7 text-center">مقاله ها</h1>
                 <basis core="list" datamembername="db.article-list">
                     <layout>
@@ -882,14 +880,14 @@
                                 <div class="absolute flex flex-col gap-3 z-10 px-6 pb-4">
                                     <div class="flex items-center justify-between">
                                         <span
-                                            class="relative z-10 overflow-hidden  border border-primary-900 flex items-center justify-center w-24 h-10 text-white rounded-lg bg-primary-900 transition-all duration-300 group-hover:text-primary-900">
+                                            class="relative overflow-hidden border border-primary-900 flex items-center justify-center w-24 h-10 text-white rounded-lg bg-primary-900 transition-all duration-300 group-hover:text-primary-900">
                                             مشاهده
                                             <span
                                                 class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
                                         </span>
                                     </div>
                                     <h3 class="font-bold text-white">@title</h3>
-                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7">
+                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7 h-15">
                                         @prp_7244
                                     </div>
                                 </div>
@@ -915,7 +913,7 @@
                                         </span>
                                     </div>
                                     <h3 class="font-bold text-white">@title</h3>
-                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7">
+                                    <div class="text-sm text-justify text-white line-clamp-3 leading-7 h-15">
                                         @prp_7244
                                     </div>
                                 </div>
@@ -1029,7 +1027,7 @@
                     perpage="6" size="395x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
                 <member name="paging" type="list" request="paging" count="3" parentname="tour-list" />
             </basis>
-            <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
+            <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                 <h1 class="font-medium text-zinc-900 mb-7 text-center">تور ها</h1>
 
                 <basis core="list" datamembername="db.tour-list">
@@ -1346,7 +1344,7 @@
                     size="264x237" pageno="[##cms.query.pagenum|(1)##]" order="ord" />
                 <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
             </basis>
-            <section class="relative z-30 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
+            <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                 <h1 class="font-medium text-zinc-900 mb-7 text-center">هتل ها</h1>
 
                 <basis core="list" datamembername="db.hotel-list">

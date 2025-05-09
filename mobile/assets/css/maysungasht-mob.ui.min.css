@@ -1783,7 +1783,10 @@ select.select-star{
 
 .Basis_Date.start_date,
 .Basis_Date.end_date {
-  padding: 0 213px 0 0 !important;
+  padding: 0 !important;
+  left: 0;
+  right: auto !important;
+  width: 5.75rem !important;
 }
 
 .click-content label span {
