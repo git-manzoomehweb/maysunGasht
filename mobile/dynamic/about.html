@@ -7,6 +7,9 @@
 <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
     <member name="infoabout" type="view" />
 </basis>
+<basis core="dbsource" source="basiscore" name="db" mid="10" lid="1">
+    <member name="offices" type="list" propertyid="8142" />
+</basis>
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -44,8 +47,8 @@
             <div class="absolute z-10 inset-0 w-full bg-specialcolor-2"></div>
             <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-[516px]"></div>
             <div class="relative flex flex-col items-center z-10 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-                <img src="[##cms.cms.cdn##]/images/180.png" class="h-24 object-cover" alt="logo" width="100" height="100"
-                    loading="lazy">
+                <img src="[##cms.cms.cdn##]/images/custom_icon_180.png" class="h-24 object-cover" alt="logo" width="100"
+                    height="100" loading="lazy">
                 <div
                     class="flex w-full flex-row-reverse items-center gap-2 justify-between uppercase mt-1 text-2xl font-bold text-primary-900">
                     <span>m</span>
@@ -72,8 +75,8 @@
         <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-16 flex flex-col gap-7 justify-center">
             <h1 class="font-medium text-lg text-zinc-900 h1-tag">ارتباط با ما</h1>
             <div class="flex flex-col items-center gap-5">
-                <img src="[##cms.cms.cdn##]/images/person-contact.jpg" class="h-40 object-cover rounded-xl" alt="person-contact"
-                    width="100%" height="156" loading="lazy">
+                <img src="[##cms.cms.cdn##]/images/person-contact.jpg" class="h-40 object-cover rounded-xl"
+                    alt="person-contact" width="100%" height="156" loading="lazy">
                 <basis core="print" datamembername="db.infoabout">
                     <layout>
                         <div class="w-full">
@@ -89,27 +92,31 @@
 
             <div>
                 <div class="flex flex-col justify-between gap-3">
-                    <basis core="print" datamembername="db.infoabout">
-                        <layout>
-                            <div class="flex gap-2">
-                                <span
-                                    class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
-                                    <svg width="37" height="37">
-                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
-                                    </svg>
-                                </span>
-                                @child
-                            </div>
-                        </layout>
-                        <face filter="TypeID in(244)">
-                            <div class="flex-1">
-                                <a href="" class="text-sm group relative text-primary-900 text-blinking">
-                                    مشاهده لوکیشن
-                                </a>
-                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
-                            </div>
-                        </face>
-                    </basis>
+
+                    <div class="flex gap-2">
+                        <span
+                            class="flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-lg border border-solid border-primary-200 bg-primary-50">
+                            <svg width="37" height="37">
+                                <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
+                            </svg>
+                        </span>
+                        <div class="flex-1">
+                            <basis core="print" datamembername="db.offices">
+                                <face>
+                                    <a href="@prp_8142" target="_blank" class="text-sm text-blinking">
+                                        مشاهده لوکیشن
+                                    </a>
+                                </face>
+                            </basis>
+                            <basis core="print" datamembername="db.infoabout">
+                                <face filter="TypeID in(244)">
+                                    <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext
+                                    </div>
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+
 
                     <basis core="print" datamembername="db.infoabout">
                         <layout>
@@ -189,7 +196,7 @@
                         OnProcessed="OnProcessedEditObjectContact"></basis>
                     <basis core="callback" run="atclient" method="uploadDocumentContact" triggers="upload.dataContact">
                     </basis>
-    
+
                     <div class="captcha-button flex flex-col gap-4 items-center justify-center">
                         <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
                             data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
@@ -216,23 +223,23 @@
                             class="group relative z-10 overflow-hidden w-full px-4 text-sm border border-primary-900 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-lg hover:text-primary-900"
                             type="button" data-btn-uploadContact><span class="">ارسال</span>
                             <span
-                            class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                                class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
                         </button>
 
                     </div>
                     <div
-                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
-                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
-                        <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                        class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                        <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                            <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                        </div>
                     </div>
-                </div>
                     <div class="mt-4 text-center text-primary-600 message-api"></div>
                 </div>
             </div>
@@ -253,9 +260,9 @@
                             </layout>
                             <face>
                                 <li data-id="@id"
-                                class="faq-li flex items-center justify-center gap-2 cursor-pointer rounded-xl font-medium bg-primary-900 py-3 px-9 text-white">                                 
-                                @title
-                            </li>
+                                    class="faq-li flex items-center justify-center gap-2 cursor-pointer rounded-xl font-medium bg-primary-900 py-3 px-9 text-white">
+                                    @title
+                                </li>
                             </face>
                         </basis>
                     </div>

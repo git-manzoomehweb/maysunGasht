@@ -550,21 +550,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // search hotel,tour,article catlist with header
-function handleSearch(inputSelector, redirectUrl) {
+function handleSearch(inputSelector, buttonSelector, redirectUrl) {
   const headerInput = document.querySelector(inputSelector);
+  const searchButton = document.querySelector(buttonSelector);
 
-  headerInput.addEventListener("input", function () {
-    const searchText = headerInput.value.trim();
+  if (headerInput && searchButton) {
+    searchButton.addEventListener("click", function () {
+      const searchText = headerInput.value.trim();
 
-    if (searchText.length > 0) {
-      const url = new URL(window.location.href);
-      url.pathname = redirectUrl;
-      url.searchParams.set("t", "all");
-      url.searchParams.set("search-content-name", searchText);
-      window.location.href = url.toString();
-    }
-  });
+      if (searchText.length > 0) {
+        const url = new URL(window.location.href);
+        url.pathname = redirectUrl;
+        url.searchParams.set("t", "all");
+        url.searchParams.set("search-content-name", searchText);
+        window.location.href = url.toString();
+      }
+    });
+  }
 }
+
 function filterItemsOnSearch() {
   const urlParams = new URLSearchParams(window.location.search);
   const searchText = urlParams.get("search-content-name");
@@ -592,15 +596,17 @@ function filterItemsOnSearch() {
     });
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".header-input")) {
-    handleSearch(".header-input", "/search-content.bc");
+  if (document.querySelector(".header-input") && document.querySelector(".header-input-btn")) {
+    handleSearch(".header-input", ".header-input-btn", "/search-content.bc");
   }
 
   if (window.location.pathname === "/search-content.bc") {
     filterItemsOnSearch();
   }
 });
+
 
 //hotel with hotel word
 document.addEventListener("DOMContentLoaded", function () {

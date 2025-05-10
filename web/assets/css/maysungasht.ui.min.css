@@ -1314,7 +1314,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.direction-ltr{
+.direction-ltr {
   direction: ltr;
 }
 
@@ -1422,7 +1422,7 @@ body {
   clip: rect(0, 0, 0, 0);
 }
 
-select.select-star{
+select.select-star {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1453,7 +1453,7 @@ select.select-star{
   animation: pulse 1s linear infinite;
 }
 .loader:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 48px;
   height: 48px;
@@ -1468,14 +1468,24 @@ select.select-star{
 }
 
 @keyframes scaleUp {
-  0% { transform: translate(-50%, -50%) scale(0) }
-  60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 @keyframes pulse {
-  0% , 60% , 100%{ transform:  scale(1) }
-  80% { transform:  scale(1.2)}
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
 }
-
 
 .fetch-loader {
   width: 48px;
@@ -1495,7 +1505,7 @@ select.select-star{
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -1654,17 +1664,23 @@ select.select-star{
 
 .group:hover .group-hover\:drop-shadow-\[2px_4px_6px_black\] {
   --tw-drop-shadow: drop-shadow(2px 4px 6px black);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .group:hover .group-hover\:-translate-y-2 {
   --tw-translate-y: -0.5rem /* -8px */;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:translate-x-px {
   --tw-translate-x: 1px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media not all and (min-width: 1280px) {
@@ -1840,7 +1856,7 @@ select.select-star{
   flex: 1.85;
 }
 
-.multicity-flight-form .Flightclass-Passenger{
+.multicity-flight-form .Flightclass-Passenger {
   flex-direction: row;
   flex: 1;
   background-color: white;
@@ -1852,7 +1868,7 @@ select.select-star{
 .multicity-flight-form .reserve-field.destination-route,
 .multicity-flight-form .Basis_Date_Box,
 .multicity-flight-form .reserve-field.flightclass-field,
-.multicity-flight-form .reserve-field.passengers-field  {
+.multicity-flight-form .reserve-field.passengers-field {
   flex: 1;
 }
 
@@ -2049,7 +2065,7 @@ select.select-star{
 .search-flighthotel:hover,
 .search-tour:hover,
 .search-hotel:hover,
-.search-insurance:hover{
+.search-insurance:hover {
   border: 1px solid var(--primary-900);
   background-color: var(--primary-300) !important;
 }
@@ -2221,13 +2237,25 @@ select.select-star{
   display: none;
 }
 .multicity-flight-form .route-content:first-of-type div.route-minus-btn,
-.multicity-flight-form .route-content:nth-child(2) div.route-minus-btn {
+.multicity-flight-form .route-content:nth-child(2) div.route-minus-btn,
+.multicity-flight-form .route-minus-btn span {
   display: none !important;
 }
 
-.multicity-flight-form .exchangeRoute{
+.route-minus-btn {
+  position: absolute;
+  left: 0;
+  width: auto !important;
+  top: -29px;
+}
+.multicity-flight-form .exchangeRoute {
   left: 13px !important;
   top: 1px !important;
+}
+
+.multicity-flight-form .removeroute-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .multicity-flight-form .add-routs {
@@ -2244,49 +2272,65 @@ select.select-star{
   transition: all 300ms ease;
 }
 
-.multicity-flight-form .add-routs svg{
+.multicity-flight-form .add-routs svg {
   display: none;
 }
 
-.multicity-flight-form .search-flight{
+.multicity-flight-form .search-flight {
   width: 100% !important;
   flex-direction: row;
   height: 64px !important;
   margin: 0 !important ;
 }
 
-.multicity-flight-form .reserve-search{
+.multicity-flight-form .reserve-search {
   width: 277px !important;
 }
 
 .multicity-flight-form .reserve-field.flightclass-field,
 .multicity-flight-form .reserve-field.passengers-field {
-  background-color: #F4F4F5;
+  background-color: #f4f4f5;
   border-radius: 8px;
   height: 64px !important;
 }
 
-
-.multicity-flight-form .Flightclass-Passenger .reserve-field.flightclass-field > div:first-of-type,
-.multicity-flight-form .Flightclass-Passenger .reserve-field.passengers-field > div:first-of-type{
+.multicity-flight-form
+  .Flightclass-Passenger
+  .reserve-field.flightclass-field
+  > div:first-of-type,
+.multicity-flight-form
+  .Flightclass-Passenger
+  .reserve-field.passengers-field
+  > div:first-of-type {
   display: flex;
   align-items: center;
 }
 
-.multicity-flight-form .Flightclass-Passenger .reserve-field.flightclass-field > div:first-of-type label,
-.multicity-flight-form .Flightclass-Passenger .reserve-field.passengers-field > div:first-of-type label{
+.multicity-flight-form
+  .Flightclass-Passenger
+  .reserve-field.flightclass-field
+  > div:first-of-type
+  label,
+.multicity-flight-form
+  .Flightclass-Passenger
+  .reserve-field.passengers-field
+  > div:first-of-type
+  label {
   display: flex;
   align-items: center;
   flex: 1 !important;
 }
 
-.multicity-flight-form .reserve-field.passengers-field > div:first-of-type > div,
-.multicity-flight-form .FlightClass-text{
+.multicity-flight-form
+  .reserve-field.passengers-field
+  > div:first-of-type
+  > div,
+.multicity-flight-form .FlightClass-text {
   flex: 1;
   padding-right: 0 !important;
 }
 
-.multicity-flight-form .FlightClass-text{
+.multicity-flight-form .FlightClass-text {
   display: flex;
   justify-content: end;
   padding-left: 0.5rem;
@@ -2299,7 +2343,6 @@ select.select-star{
 .multicity-flight-form .add-routs:hover {
   border: 1px solid var(--primary-900);
   background-color: white !important;
-
 }
 .landing-flight .flight-btn.reserve-btn,
 .landing-flight .hotel-btn.reserve-btn,
@@ -2313,7 +2356,7 @@ select.select-star{
 .landing-hotel .insurance-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
-.landing-hotel .search-nav{
+.landing-hotel .search-nav {
   display: none !important;
 }
 
@@ -2323,10 +2366,9 @@ select.select-star{
   top: -1rem !important;
 }
 
-.landing-hotel #r-hotel{
+.landing-hotel #r-hotel {
   display: block !important;
 }
-
 
 .contact-form
   [data-bc-schema-direction="rtl"]
@@ -2335,8 +2377,8 @@ select.select-star{
   display: none !important;
 }
 .contact-form [data-bc-answer-container] input[type="text"] {
-  background-color: #F4F4F5 !important;
-  color: #A1A1AA !important;
+  background-color: #f4f4f5 !important;
+  color: #a1a1aa !important;
   height: 56px !important;
   padding: 16px 12px;
   font-weight: 400 !important;
@@ -2349,7 +2391,7 @@ select.select-star{
   width: 100%;
 }
 .contact-form [data-bc-answer-container] input[type="text"]::placeholder {
-  color: #A1A1AA !important;
+  color: #a1a1aa !important;
 }
 
 .contact-form [data-bc-answer-container] {
@@ -2372,12 +2414,9 @@ select.select-star{
   padding: 0 !important;
 }
 
-
 .contact-form [data-bc-part] {
   margin-bottom: 0 !important;
 }
-
-
 
 .pov-form
   [data-bc-schema-direction="rtl"]
@@ -2386,8 +2425,8 @@ select.select-star{
   display: none !important;
 }
 .pov-form [data-bc-answer-container] input[type="text"] {
-  background-color: #F4F4F5 !important;
-  color: #71717A !important;
+  background-color: #f4f4f5 !important;
+  color: #71717a !important;
   height: 56px !important;
   padding: 16px 12px;
   font-weight: 400 !important;
@@ -2397,8 +2436,8 @@ select.select-star{
   font-size: 16px !important;
 }
 .pov-form [data-bc-answer-container] textarea {
-  background-color: #F4F4F5 !important;
-  color: #71717A !important;
+  background-color: #f4f4f5 !important;
+  color: #71717a !important;
   height: 93px;
   padding: 16px 12px;
   font-weight: 400 !important;
@@ -2411,10 +2450,10 @@ select.select-star{
   width: 100%;
 }
 .pov-form [data-bc-answer-container] input[type="text"]::placeholder {
-  color: #A1A1AA !important;
+  color: #a1a1aa !important;
 }
 .pov-form [data-bc-answer-container] textarea::placeholder {
-  color: #A1A1AA !important;
+  color: #a1a1aa !important;
 }
 .pov-form [data-bc-answer-container] {
   width: 100% !important;
@@ -2428,11 +2467,11 @@ select.select-star{
   width: 100% !important;
 }
 
-.pov-form [data-bc-question]{
-  width: 49.50% !important;
+.pov-form [data-bc-question] {
+  width: 49.5% !important;
 }
 
-.pov-form .pov-form-message-question{
+.pov-form .pov-form-message-question {
   width: 100% !important;
 }
 .pov-form legend {

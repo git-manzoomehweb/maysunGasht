@@ -1,12 +1,14 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="214532">
-    <member name="faq" type="list" link="article.bc" propertyid="7244" perpage="2" size="364x292"
-        order="ord" />
+    <member name="faq" type="list" link="article.bc" propertyid="7244" perpage="2" size="364x292" order="ord" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="2316047">
     <member name="p-under" type="view" size="" propertyid="" />
-  </basis>
-  <basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
     <member name="infoabout" type="view" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="10" lid="1">
+    <member name="offices" type="list" propertyid="8142" />
 </basis>
 
 
@@ -46,8 +48,8 @@
             <div class="absolute z-10 inset-0 w-full bg-specialcolor-2"></div>
             <div class="absolute z-10 w-full bg-white-shadow bottom-0 h-96"></div>
             <div class="relative flex flex-col items-center z-10 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-                <img src="[##cms.cms.cdn##]/images/180.png" class="h-[180px] object-cover" alt="logo" width="180" height="180"
-                    loading="lazy">
+                <img src="[##cms.cms.cdn##]/images/custom_icon_180.png" class="h-[180px] object-cover" alt="logo"
+                    width="180" height="180" loading="lazy">
                 <h2 class="text-center tracking-[16px] text-3xl font-bold mt-16 text-primary-900">MAYSUNGASHT</h2>
                 <basis core="print" datamembername="db.p-under">
                     <face filter="TypeID not in(150)">
@@ -62,33 +64,54 @@
         <section class="flex gap-5 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-16 flex-wrap justify-center">
             <div class="flex-[1.94]">
                 <h1 class="font-bold text-2xl text-zinc-900 mb-8">ارتباط با ما</h1>
-
+                <div class="flex items-center gap-2">
+                    <span
+                        class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
+                        <svg width="37" height="37">
+                            <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
+                        </svg>
+                    </span>
+                    <div class="flex-1">
+                        <basis core="print" datamembername="db.offices">
+                            <face>
+                                <a href="@prp_8142" target="_blank" class="text-sm text-blinking">
+                                    مشاهده لوکیشن
+                                </a>
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.infoabout">
+                            <face filter="TypeID in(244)">
+                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
+                            </face>
+                        </basis>
+                    </div>
+                </div>
                 <basis core="print" datamembername="db.infoabout">
                     <layout>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 mt-4">
                             <span
-                            class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
-                            <svg width="37" height="37">
-                                <use xlink:href="./images/sprite-icons.svg#icon-orange-location"></use>
-                            </svg>
-                        </span>
+                                class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
+                                <svg width="37" height="37">
+                                    <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
+                                </svg>
+                            </span>
                             @child
                         </div>
                     </layout>
-                    <face filter="TypeID in(244)">
+                    <face filter="valueID in(333683232)">
                         <div class="flex-1">
-                            <a href="" class="text-sm text-blinking">
-                                مشاهده لوکیشن
+                            <a href="tel:@text" class="text-sm text-primary-900">
+                                پشتیبانی در ساعات غیر اداری و روزهای تعطیل
                             </a>
-                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@largetext</div>
-                    </div>
+                            <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
+
+                        </div>
                     </face>
                 </basis>
-                <div class="flex items-center justify-between mt-9 mb-8 border-b border-zinc-300 pb-8">
-                    
+                <div class="flex items-center justify-between mt-4 mb-8 border-b border-zinc-300 pb-8">
                     <basis core="print" datamembername="db.infoabout">
                         <layout>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 flex-1">
                                 <span
                                     class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
                                     <svg width="37" height="37">
@@ -99,40 +122,18 @@
                             </div>
                         </layout>
                         <face filter="TypeID in(242)">
-                            <div>
+                            <div class="flex-1">
                                 <a href="mailto:@text" class="text-sm text-primary-900">
                                     ارسال ایمیل
                                 </a>
                                 <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
-    
+
                             </div>
                         </face>
                     </basis>
                     <basis core="print" datamembername="db.infoabout">
                         <layout>
-                            <div class="flex items-center gap-2">
-                                <span
-                                    class="flex items-center justify-center w-16 h-16 rounded-lg border-solid border-primary-100 bg-primary-50">
-                                    <svg width="37" height="37">
-                                        <use xlink:href="./images/sprite-icons.svg#icon-orange-telephone"></use>
-                                    </svg>
-                                </span>
-                                @child
-                            </div>
-                        </layout>
-                        <face filter="valueID in(333683232)">
-                            <div>
-                                <a href="tel:@text" class="text-sm text-primary-900">
-                                    پشتیبانی در ساعات غیر اداری و روزهای تعطیل
-                                </a>
-                                <div class="border-t border-solid border-zinc-200 pt-2 mt-2 text-sm">@text</div>
-    
-                            </div>
-                        </face>
-                    </basis>
-                    <basis core="print" datamembername="db.infoabout">
-                        <layout>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-2 flex-1">
                                 <span
                                     class="flex items-center justify-center w-16 h-16 rounded-lg border border-solid border-primary-200 bg-primary-50">
                                     <svg width="37" height="37">
@@ -143,7 +144,7 @@
                             </div>
                         </layout>
                         <face filter="valueID in(14991918)">
-                            <div>
+                            <div class="flex-1">
                                 <a href="tel:@text" class="text-sm text-primary-900">
                                     تماس
                                 </a>
@@ -165,7 +166,7 @@
                         OnProcessed="OnProcessedEditObjectContact"></basis>
                     <basis core="callback" run="atclient" method="uploadDocumentContact" triggers="upload.dataContact">
                     </basis>
-    
+
                     <div class="captcha-button flex items-center justify-center">
                         <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
                             data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
@@ -192,37 +193,37 @@
                             class="group relative z-10 overflow-hidden w-20 px-4 text-sm border border-primary-900 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-lg hover:text-primary-900"
                             type="button" data-btn-uploadContact><span class="">ارسال</span>
                             <span
-                            class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
+                                class="absolute w-full inset-0 transition-transform duration-300 h-14 rounded-lg origin-right scale-x-0 -z-10 bg-white group-hover:scale-x-100"></span>
                         </button>
 
                     </div>
                     <div
-                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
-                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
-                        <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                        <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                        class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                        <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                            <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                        </div>
                     </div>
-                </div>
                     <div class="mt-4 text-center text-primary-600 message-api"></div>
                 </div>
             </div>
             <div class="flex items-center gap-5 w-[600px]">
                 <basis core="print" datamembername="db.infoabout">
-                    <layout>    
+                    <layout>
                         <div class="w-1/2">
                             @child
                         </div>
                     </layout>
-                        <face filter="prpID=91462"><iframe defer title="maysungasht-location"
-                            class="h-[430px] object-cover rounded-xl" width="290" height="430"
-                              loading="lazy" target="_blank" allowfullscreen
-                              src="https://maps.google.com/maps?q=@largetext,@text&z=14&output=embed"></iframe></face>
+                    <face filter="prpID=91462"><iframe defer title="maysungasht-location"
+                            class="h-[430px] object-cover rounded-xl" width="290" height="430" loading="lazy"
+                            target="_blank" allowfullscreen
+                            src="https://maps.google.com/maps?q=@largetext,@text&z=14&output=embed"></iframe></face>
                 </basis>
                 <img src="[##cms.cms.cdn##]/images/person-contact.jpg" class="h-[430px] object-cover rounded-xl"
                     alt="person-contact" width="290" height="430" loading="lazy">
@@ -230,8 +231,9 @@
         </section>
         <section class="relative mt-4 mb-52">
             <div class="mask-gray-shape w-full h-[773px] absolute top-0"></div>
-            <img src="[##cms.cms.cdn##]/images/orange-pattern.png" class="absolute top-20 h-[600px] object-cover opacity-40"
-                alt="" width="100%" height="576" loading="lazy">
+            <img src="[##cms.cms.cdn##]/images/orange-pattern.png"
+                class="absolute top-20 h-[600px] object-cover opacity-40" alt="" width="100%" height="576"
+                loading="lazy">
             <div class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-56">
                 <div class="relative flex gap-6">
                     <div>
@@ -244,9 +246,9 @@
                             </layout>
                             <face>
                                 <li data-id="@id"
-                                class="faq-li group flex items-center justify-center cursor-pointer text-zinc-500 border-4 border-solid border-zinc-100 gap-2 rounded-xl font-medium bg-white w-52 h-14 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 hover:text-white">                                 
-                                @title
-                            </li>
+                                    class="faq-li group flex items-center justify-center cursor-pointer text-zinc-500 border-4 border-solid border-zinc-100 gap-2 rounded-xl font-medium bg-white w-52 h-14 transition-all duration-300 hover:bg-primary-900 hover:border-primary-900 hover:text-white">
+                                    @title
+                                </li>
                             </face>
                         </basis>
                     </div>
