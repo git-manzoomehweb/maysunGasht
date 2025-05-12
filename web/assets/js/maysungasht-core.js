@@ -49,10 +49,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 .parentNode.removeChild(scriptTag);
             }
             if (document.querySelector(".landing-flight")) {
-              let departure1 = document.querySelector(".departure");
-              let destination1 = document.getElementById("destination1");
-              let depLocationId = document.querySelector(".locationId.from");
-              let desLocationId = document.querySelector(".locationId.to");
+              let departure1 = document.querySelector(
+                ".formflight #departure1"
+              );
+              let destination1 = document.querySelector(
+                ".formflight #destination1"
+              );
+              let depLocationId = document.querySelector(
+                ".formflight .locationId.from"
+              );
+              let desLocationId = document.querySelector(
+                ".formflight .locationId.to"
+              );
               let depTitleSearched = document.querySelector(
                 ".dep-title-searched"
               );
@@ -71,8 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
               let departure2Hotel = document.querySelector(
                 ".formhotel .reserve-field.departure-route #departure2"
               );
-              let depLocationIdHotel =
-                document.querySelector(".locationId.from");
+              let depLocationIdHotel = document.querySelector(
+                ".formhotel .locationId.from"
+              );
               let depTitleSearchedHotel = document.querySelector(
                 ".dep-title-searched"
               );
@@ -80,6 +89,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
               departure2Hotel.value = depTitleSearchedHotel.value;
               depLocationIdHotel.value = FCDid1Hotel.value;
+            }
+
+            if (document.querySelector(".landing-hotel-view")) {
+              let departure2HotelView = document.querySelector(
+                ".formhotel .reserve-field.departure-route #departure2"
+              );
+              let depLocationIdHotelView = document.querySelector(
+                ".formhotel .locationId.from"
+              );
+              let depTitleSearchedHotelView = document.querySelector(
+                ".dep-title-searched"
+              );
+              let FCDid1HotelView = document.querySelector(".co-id.FCDid1");
+
+              departure2HotelView.value = depTitleSearchedHotelView.value;
+              depLocationIdHotelView.value = FCDid1HotelView.value;
             }
           }
         };
@@ -206,11 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // article.bc offsetHeight
-document.querySelectorAll('.article-tag').forEach(tag => {
-  tag.addEventListener('click', function () {
-      setTimeout(() => {
-          window.scrollBy({ top: -80, behavior: 'smooth' });
-      }, 10); 
+document.querySelectorAll(".article-tag").forEach((tag) => {
+  tag.addEventListener("click", function () {
+    setTimeout(() => {
+      window.scrollBy({ top: -80, behavior: "smooth" });
+    }, 10);
   });
 });
 
@@ -598,7 +623,10 @@ function filterItemsOnSearch() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".header-input") && document.querySelector(".header-input-btn")) {
+  if (
+    document.querySelector(".header-input") &&
+    document.querySelector(".header-input-btn")
+  ) {
     handleSearch(".header-input", ".header-input-btn", "/search-content.bc");
   }
 
@@ -606,7 +634,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filterItemsOnSearch();
   }
 });
-
 
 //hotel with hotel word
 document.addEventListener("DOMContentLoaded", function () {
@@ -836,6 +863,26 @@ if (document.querySelector(".swiper-suggestion-landing")) {
     navigation: {
       nextEl: ".swiper-button-next-custom",
       prevEl: ".swiper-button-prev-custom",
+    },
+  });
+}
+if (document.querySelector(".mySwiper")) {
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+}
+if (document.querySelector(".mySwiper2")) {
+  var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
     },
   });
 }

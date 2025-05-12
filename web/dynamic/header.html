@@ -11,6 +11,9 @@
     <basis core="dbsource" source="basiscore" lid="1" mid="1" name="news">
         <member name="cat" type="tree" request="cat" parentid="151251" order="ord"></member>
     </basis>
+    <basis core="dbsource" source="basiscore" lid="1" mid="1" name="hotel">
+        <member name="cat" type="tree" request="cat" parentid="151535" order="ord"></member>
+    </basis>
     <header>
         <section class="relative z-30 bg-white mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
             <div class="flex items-center justify-between">
@@ -232,12 +235,137 @@
                                             سفارت</a>
                                     </div>
                                 </li>
-                                <li class="flex items-center h-full">
-                                    <div class="border-l border-solid pl-6">
-                                        <a href="/Hotel"
-                                            class="flex items-center transition-all duration-300 text-zinc-900 hover:text-primary-900 xl:flex-shrink-0">هتل</a>
-                                    </div>
-                                </li>
+                                <basis core="tree" datamembername="hotel.cat" idcol="catid" parentidcol="parentid"
+                                    nullvalue="151535">
+                                    <layout>
+                                        <li class="relative flex items-center h-full group">
+                                            <div class="border-l border-solid pl-6">
+                                                <a href="/Hotel"
+                                                    class="flex items-center gap-4 transition-all duration-300 h-full group text-zinc-900 hover:text-primary-900 xl:flex-shrink-0">
+                                                    هتل 
+                                                    <svg width="25" height="24"
+                                                        class="transition-all duration-300 group-hover:rotate-180"
+                                                        viewBox="0 0 25 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" class="group-hover:fill-primary-900"
+                                                            clip-rule="evenodd"
+                                                            d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                            fill="#222222" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <!-- submenu -->
+                                            <ul
+                                                class="absolute z-30 flex flex-col invisible w-64 gap-2 p-2 font-medium transition-all duration-100 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
+                                                @child
+                                            </ul>
+                                            <!-- submenu end -->
+                                        </li>
+                                    </layout>
+                                    <face level="end" filter="link is null">
+                                        <li
+                                            class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+                                            <a href="/hotel-list.bc?catid=@catid"
+                                                class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                        </li>
+                                    </face>
+                                    <face level="end">
+                                        <li
+                                            class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+                                            <a href="@link"
+                                                class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                        </li>
+                                    </face>
+                                    <face level="1" filter="link is null">
+                                        <li
+                                            class="relative py-1 px-2 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+                                            <div
+                                                class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/leveltwo:text-white">
+                                                <a href="/landing-hotel.bc?catid=@catid"
+                                                    class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                    class="transition-all duration-300 group-hover/leveltwo:rotate-90"
+                                                    viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" class="group-hover/leveltwo:fill-white"
+                                                        clip-rule="evenodd"
+                                                        d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                        fill="#222222" />
+                                                </svg>
+                                            </div>
+                                            <ul
+                                                class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                                                @child
+                                            </ul>
+                                        </li>
+                                    </face>
+                                    <face level="1">
+                                        <li
+                                            class="relative py-1 px-2 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+                                            <div
+                                                class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/leveltwo:text-white">
+                                                <a href="@link"
+                                                    class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                    class="transition-all duration-300 group-hover/leveltwo:rotate-90"
+                                                    viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" class="group-hover/leveltwo:fill-white"
+                                                        clip-rule="evenodd"
+                                                        d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                        fill="#222222" />
+                                                </svg>
+                                            </div>
+                                            <ul
+                                                class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                                                @child
+                                            </ul>
+                                        </li>
+                                    </face>
+                                    <face level="2" filter="link is null">
+                                        <li
+                                            class="relative py-1 px-2 transition-all duration-300 rounded-md group/levelthree hover:bg-primary-800">
+                                            <div
+                                                class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/levelthree:text-white">
+                                                <a href="/landing-hotel.bc?catid=@catid"
+                                                    class="transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                    class="transition-all duration-300 group-hover/levelthree:rotate-90"
+                                                    viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" class="group-hover/levelthree:fill-white"
+                                                        clip-rule="evenodd"
+                                                        d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                        fill="#222222" />
+                                                </svg>
+                                            </div>
+                                            <ul
+                                                class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/levelthree:visible group-hover/levelthree:opacity-100">
+                                                @child
+                                            </ul>
+                                        </li>
+                                    </face>
+                                    <face level="2">
+                                        <li
+                                            class="relative py-1 px-2 transition-all duration-300 rounded-md group/levelthree hover:bg-primary-800">
+                                            <div
+                                                class="flex justify-between items-center cursor-pointer text-zinc-900 group-hover/levelthree:text-white">
+                                                <a href="@link"
+                                                    class="transition-all duration-300 text-zinc-900 group-hover/levelfour:text-white">@title</a>
+                                                <svg width="25" height="24"
+                                                    class="transition-all duration-300 group-hover/levelthree:rotate-90"
+                                                    viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" class="group-hover/levelthree:fill-white"
+                                                        clip-rule="evenodd"
+                                                        d="M19.0018 7.4392L12.0018 14.4392L5.00183 7.4392L3.94113 8.4999L12.0018 16.5605L20.0625 8.4999L19.0018 7.4392Z"
+                                                        fill="#222222" />
+                                                </svg>
+                                            </div>
+                                            <ul
+                                                class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-100 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/levelthree:visible group-hover/levelthree:opacity-100">
+                                                @child
+                                            </ul>
+                                        </li>
+                                    </face>
+
+                                </basis>
                                 <basis core="tree" datamembername="news.cat" idcol="catid" parentidcol="parentid"
                                     nullvalue="151251">
                                     <layout>

@@ -2168,7 +2168,15 @@ select.select-star{
 .landing-hotel .insurance-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
-.landing-hotel .search-nav{
+.landing-hotel .search-nav,
+.landing-hotel-view .flight-btn.reserve-btn,
+.landing-hotel-view .hotel-btn.reserve-btn,
+.landing-hotel-view .flighthotel-btn.reserve-btn,
+.landing-hotel-view .tour-btn.reserve-btn,
+.landing-hotel-view .insurance-btn.reserve-btn,
+.landing-hotel-view .flighttype-field.flighttype-dropDown,
+.landing-hotel-view #flightSearch,
+.landing-hotel-view .search-nav{
   display: none !important;
 }
 
@@ -2178,7 +2186,8 @@ select.select-star{
   margin-bottom: 0 !important;
 }
 
-.landing-hotel #r-hotel{
+.landing-hotel #r-hotel,
+.landing-hotel-view #r-hotel {
   display: block !important;
 }
 

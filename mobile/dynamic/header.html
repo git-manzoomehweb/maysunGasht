@@ -7,6 +7,9 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="news">
     <member name="cat" type="tree" request="cat" parentid="151251" order="ord"></member>
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="hotel">
+    <member name="cat" type="tree" request="cat" parentid="151535" order="ord"></member>
+</basis>
 <header class="right-0">
     <basis core="print" datamembername="db.info">
         <layout>
@@ -203,15 +206,12 @@
                         <li class="flex items-center py-3 ">
                             <a href="خدمات-سفارت-ویزا" class="w-full text-zinc-900">خدمات سفارت</a>
                         </li>
-                        <li class="flex items-center py-3 ">
-                            <a href="/Hotel" class="w-full text-zinc-900">هتل</a>
-                        </li>
-                        <basis core="tree" datamembername="news.cat" idcol="catid" parentidcol="parentid"
-                            nullvalue="151251">
+                        <basis core="tree" datamembername="hotel.cat" idcol="catid" parentidcol="parentid"
+                            nullvalue="151535">
                             <layout>
                                 <li class="">
                                     <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
-                                        <span class="text-zinc-900">اخبار گردشگری</span>
+                                        <span class="text-zinc-900">هتل ها</span>
                                         <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
                                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
@@ -229,7 +229,7 @@
 
                             <face level="end" filter="link is null">
                                 <li class="py-4 px-4">
-                                    <a href="/tour-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                    <a href="/hotel-list.bc?catid=@catid" class="text-zinc-900">@title</a>
                                 </li>
                             </face>
 
@@ -242,7 +242,7 @@
                             <face level="1" filter="link is null">
                                 <li class="px-2">
                                     <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
-                                        <a href="/tour-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                        <a href="/landing-hotel.bc?catid=@catid" class="text-zinc-900">@title</a>
                                         <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
                                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
@@ -281,7 +281,119 @@
                             <face level="2" filter="link is null">
                                 <li class="px-4">
                                     <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
-                                        <a href="/tour-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                        <a href="/landing-hotel.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                        <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
+                                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul
+                                        class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 header-nested-menu submenu divide-primary-50 max-h-0">
+                                        @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                </li>
+                            </face>
+
+                            <face level="2">
+                                <li class="px-4">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                        <a href="@link" class="text-zinc-900">@title</a>
+                                        <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
+                                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul
+                                        class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 header-nested-menu submenu divide-primary-50 max-h-0">
+                                        @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                </li>
+                            </face>
+
+
+                        </basis>
+                        <basis core="tree" datamembername="news.cat" idcol="catid" parentidcol="parentid"
+                            nullvalue="151251">
+                            <layout>
+                                <li class="">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                        <span class="text-zinc-900">اخبار گردشگری</span>
+                                        <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
+                                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <!-- submenu -->
+                                    <ul
+                                        class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 submenu divide-primary-50 max-h-0">
+                                        @child
+                                    </ul>
+                                    <!-- submenu end -->
+                                </li>
+                            </layout>
+
+                            <face level="end" filter="link is null">
+                                <li class="py-4 px-4">
+                                    <a href="/article-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                </li>
+                            </face>
+
+                            <face level="end">
+                                <li class="py-4 px-4">
+                                    <a href="@link" class="text-zinc-900">@title</a>
+                                </li>
+                            </face>
+
+                            <face level="1" filter="link is null">
+                                <li class="px-2">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                        <a href="/article-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                        <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
+                                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul
+                                        class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 header-nested-menu submenu divide-primary-50 max-h-0">
+                                        @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                </li>
+                            </face>
+
+                            <face level="1">
+                                <li class="px-2">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                        <a href="@link" class="text-zinc-900">@title</a>
+                                        <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
+                                            viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul
+                                        class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 header-nested-menu submenu divide-primary-50 max-h-0">
+                                        @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                </li>
+                            </face>
+
+
+                            <face level="2" filter="link is null">
+                                <li class="px-4">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                        <a href="/article-list.bc?catid=@catid" class="text-zinc-900">@title</a>
                                         <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
                                             viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M31 20.5L24 27.5L17 20.5" stroke="#000" stroke-width="2"

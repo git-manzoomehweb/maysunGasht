@@ -50,6 +50,10 @@ body {
   position: fixed;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .absolute {
   position: absolute;
 }
@@ -342,8 +346,20 @@ body {
   min-height: 352px;
 }
 
+.h-fit {
+  height: fit-content;
+}
+
 .h-auto {
   height: auto;
+}
+
+.h-1\/5 {
+  height: 20%;
+}
+
+.h-4\/5 {
+  height: 80%;
 }
 
 .h-10 {
@@ -492,6 +508,10 @@ body {
 
 .w-0 {
   width: 0px;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-1\/2 {
@@ -744,6 +764,10 @@ body {
 
 .divide-x-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-x-reverse: 1;
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .self-center {
@@ -1485,6 +1509,21 @@ select.select-star {
   80% {
     transform: scale(1.2);
   }
+}
+
+.mySwiper {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+}
+
+.mySwiper2 .swiper-slide {
+  width: 25%;
+  height: 100%;
 }
 
 .fetch-loader {
@@ -2356,7 +2395,15 @@ select.select-star {
 .landing-hotel .insurance-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
-.landing-hotel .search-nav {
+.landing-hotel .search-nav,
+.landing-hotel-view .flight-btn.reserve-btn,
+.landing-hotel-view .hotel-btn.reserve-btn,
+.landing-hotel-view .flighthotel-btn.reserve-btn,
+.landing-hotel-view .tour-btn.reserve-btn,
+.landing-hotel-view .insurance-btn.reserve-btn,
+.landing-hotel-view .flighttype-field.flighttype-dropDown,
+.landing-hotel-view #flightSearch,
+.landing-hotel-view .search-nav{
   display: none !important;
 }
 
@@ -2366,7 +2413,8 @@ select.select-star {
   top: -1rem !important;
 }
 
-.landing-hotel #r-hotel {
+.landing-hotel #r-hotel,
+.landing-hotel-view #r-hotel {
   display: block !important;
 }
 
