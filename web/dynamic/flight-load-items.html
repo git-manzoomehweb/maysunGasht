@@ -49,3 +49,29 @@
 </basis>
 
 
+<basis core="group" if="'[##cms.query.catid##]' = '154048'">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="easy-way-tour" type="list" link="tour.bc" propertyid="" perpage="11"
+        order="ord" />
+</basis>
+    <basis core="list" datamembername="db.easy-way-tour">
+        <layout>
+            <div class="flex flex-wrap gap-10">
+                @child
+            </div>
+        </layout>
+        <face>
+            <a href="@link" class="group flex items-center justify-between relative">
+                <div class="flex gap-3 items-center">
+                    <span
+                        class="w-[10px] h-[10px] bg-primary-400 rounded-full transition-all duration-300 group-hover:bg-primary-900"></span>
+                    <h3
+                        class="text-zinc-900 text-sm transition-all duration-300 group-hover:text-primary-900">
+                        @title</h3>
+                </div>
+            </a>
+        </face>
+    </basis>
+</basis>
+
+

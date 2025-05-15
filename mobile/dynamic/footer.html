@@ -10,6 +10,9 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="214540">
     <member name="scalar-hotel" type="scalar" typeid="150" />
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="154048">
+    <member name="scalar-tour" type="scalar" typeid="150" />
+</basis>
 <basis core="dbsource" source="basiscore" name="db" mid="10" lid="1">
     <member name="offices" type="list" propertyid="8142" />
 </basis>
@@ -51,18 +54,25 @@
         </section>
         <section class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-3">
             <h2 class="text-2xl font-bold mb-7">دسترسی سریع</h2>
-            <ul class="inline-flex items-center gap-2 bg-primary-200 p-1 rounded-lg mb-6">
+            <ul class="flex items-center justify-between bg-primary-200 p-1 rounded-lg mb-6">
                 <basis core="print" datamembername="db.scalar-flight">
                     <face>
-                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
+                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-4 py-2 rounded-lg cursor-pointer"
                             data-id="214545">
                             @column1</li>
                     </face>
                 </basis>
                 <basis core="print" datamembername="db.scalar-hotel">
                     <face>
-                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-5 py-2 rounded-lg cursor-pointer"
+                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-4 py-2 rounded-lg cursor-pointer"
                             data-id="151535">
+                            @column1</li>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.scalar-tour">
+                    <face>
+                        <li class="text-zinc-900 flight-li transition-all duration-300 hover:bg-primary-900 hover:text-white px-4 py-2 rounded-lg cursor-pointer"
+                            data-id="154048">
                             @column1</li>
                     </face>
                 </basis>
@@ -272,40 +282,57 @@
             </div>
             <div class="flex flex-col gap-2 mt-7">
                 <div class="flex items-center justify-between">
-                    <!-- <a href="https://www.cao.ir/paxrights" aria-label="pax"
+                    <a href="https://www.cao.ir/paxrights" aria-label="pax"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/_images/pax.png" alt="pax" width="100%" height="53" loading="lazy"
-                            rel="noopener">
+                        <img src="[##cms.cms.cdn##]/_images/pax.png" class="h-auto" alt="pax" width="100%" height="53"
+                            loading="lazy" rel="noopener">
                     </a>
                     <a href="https://www.mcth.ir/" aria-label="culture-organization"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/_images/culture-organization.png" alt="culture-organization"
-                            width="100%" height="53" loading="lazy" rel="noopener">
+                        <img src="[##cms.cms.cdn##]/_images/culture-organization.png" class="h-auto"
+                            alt="culture-organization" width="100%" height="53" loading="lazy" rel="noopener">
                     </a>
                     <a href="https://www.iata.org/" aria-label="lata"
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/_images/iata.png" alt="lata" width="100%" height="53" loading="lazy"
-                            rel="noopener">
-                    </a> -->
+                        <img src="[##cms.cms.cdn##]/_images/iata.png" class="h-auto" alt="lata" width="100%" height="53"
+                            loading="lazy" rel="noopener">
+                    </a>
                 </div>
                 <div class="flex items-center justify-between">
-                    <!-- <img id="nbqenbqewlaoesgtfukzjxlz" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=224061&amp;p=uiwkuiwkaodsobpdgvkarfth&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=224061&amp;p=odrfodrfshwllymawlbqnbpd"> -->
-                    <!-- <img referrerpolicy="origin" id="jxlzfukzrgvjrgvjoeukwlao" style="cursor:pointer" onclick="window.open(&quot;https://logo.samandehi.ir/Verify.aspx?id=163384&amp;p=rfthgvkaxlaoxlaomcsiaods&quot;, &quot;Popup&quot;,&quot;toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30&quot;)" alt="logo-samandehi" src="https://logo.samandehi.ir/logo.aspx?id=163384&amp;p=nbpdwlbqqftiqftiaqgwshwl"> -->
-                    <!-- <a href="https://caa.gov.ir/" aria-label="plane-organization"
+                    <span
                         class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
-                        <img src="[##cms.cms.cdn##]/_images/plane-organization.png" alt="plane-organization"
-                            width="100%" height="53" loading="lazy" rel="noopener">
+                        <img id='nbqenbqewlaoesgtfukzjxlz' style='cursor:pointer' class="h-auto"
+                            onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=224061&p=uiwkuiwkaodsobpdgvkarfth", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+                            alt='logo-samandehi'
+                            src='https://logo.samandehi.ir/logo.aspx?id=224061&p=odrfodrfshwllymawlbqnbpd' />
+                    </span>
+                    <span
+                        class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
+                        <img referrerpolicy="origin" id='jxlzfukzrgvjrgvjoeukwlao' style='cursor:pointer' class="h-auto"
+                            onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=163384&p=rfthgvkaxlaoxlaomcsiaods", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+                            alt='logo-samandehi'
+                            src='https://logo.samandehi.ir/logo.aspx?id=163384&p=nbpdwlbqqftiqftiaqgwshwl' />
+                    </span>
+                    <a href="https://caa.gov.ir/" aria-label="plane-organization"
+                        class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600">
+                        <img src="[##cms.cms.cdn##]/_images/plane-organization.png" class="h-auto"
+                            alt="plane-organization" width="100%" height="53" loading="lazy" rel="noopener">
                     </a>
+                </div>
+
+                <div class="flex items-center justify-between">
                     <a class="flex items-center justify-center border border-zinc-300 p-2 bg-white w-16 h-16 rounded-[10px] overflow-hidden transition-all duration-300 hover:border-primary-600"
                         referrerpolicy="origin" target="_blank"
                         href="https://trustseal.enamad.ir/?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM"><img
-                            referrerpolicy="origin"
+                            referrerpolicy="origin" class="h-auto"
                             src="https://trustseal.enamad.ir/logo.aspx?id=140667&amp;Code=4OPbVuj8QSDvwCRMQEpM" alt=""
-                            style="cursor:pointer" code="4OPbVuj8QSDvwCRMQEpM"></a> -->
-                    <!-- <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z" alt="" style="cursor:pointer" code="aYMnnQgwqOwpTTNiJH7Z"></a> -->
+                            style="cursor:pointer" code="4OPbVuj8QSDvwCRMQEpM"></a>
+                    <a referrerpolicy="origin" target="_blank"
+                        href="https://trustseal.enamad.ir/?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z"><img
+                            referrerpolicy="origin" class="h-auto"
+                            src="https://trustseal.enamad.ir/logo.aspx?id=205619&amp;Code=aYMnnQgwqOwpTTNiJH7Z" alt=""
+                            style="cursor:pointer" code="aYMnnQgwqOwpTTNiJH7Z"></a>
                 </div>
-
-
 
             </div>
         </section>

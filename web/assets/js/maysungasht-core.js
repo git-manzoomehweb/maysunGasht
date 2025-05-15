@@ -813,11 +813,11 @@ if (document.querySelector(".swiper-suggestion-landing-mobile")) {
 }
 if (document.querySelector(".swiper-suggestion-mobile")) {
   var swiperSuggestionMobile = new Swiper(".swiper-suggestion-mobile", {
-    slidesPerView: "auto",
+    slidesPerView: 3,
     direction: "vertical",
     speed: 400,
     centeredSlides: false,
-    spaceBetween: 0,
+    spaceBetween: 8,
     grabCursor: true,
     autoplay: {
       delay: 3000,

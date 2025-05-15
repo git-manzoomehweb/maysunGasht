@@ -5,7 +5,7 @@
     </basis>
     <basis core="list" datamembername="db.easy-way-flight">
         <layout>
-            <div class="flex flex-wrap gap-10">
+            <div class="flex flex-col gap-6">
                 @child
             </div>
         </layout>
@@ -25,12 +25,37 @@
 
 <basis core="group" if=" '[##cms.query.catid##]' = '151535' ">
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="easy-way-hotel" type="list" link="landing-hotel.bc" propertyid="" perpage="11"
+    <member name="easy-way-hotel" type="list" link="hotel.bc" propertyid="" perpage="11"
         order="ord" />
 </basis>
     <basis core="list" datamembername="db.easy-way-hotel">
         <layout>
-            <div class="flex flex-wrap gap-10">
+            <div class="flex flex-col gap-6">
+                @child
+            </div>
+        </layout>
+        <face>
+            <a href="@link" class="group flex items-center justify-between relative">
+                <div class="flex gap-3 items-center">
+                    <span
+                        class="w-[10px] h-[10px] bg-primary-400 rounded-full"></span>
+                    <h3
+                        class="text-zinc-900 text-sm">
+                        @title</h3>
+                </div>
+            </a>
+        </face>
+    </basis>
+</basis>
+
+<basis core="group" if=" '[##cms.query.catid##]' = '154048' ">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="easy-way-tour" type="list" link="tour.bc" propertyid="" perpage="11"
+        order="ord" />
+</basis>
+    <basis core="list" datamembername="db.easy-way-tour">
+        <layout>
+            <div class="flex flex-col gap-6">
                 @child
             </div>
         </layout>

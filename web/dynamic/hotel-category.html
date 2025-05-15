@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="hotel">
-    <member name="cat" type="tree" request="cat" parentid="214540" order="ord">
+    <member name="catlist" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord">
     </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
@@ -100,7 +100,7 @@
                             class="hotel-cat-search w-[594px] h-[60px] pr-12 bg-zinc-100 rounded-lg outline-none text-zinc-500 placeholder-zinc-500"
                             name="" id="" placeholder="جستجوی مطلب">
                         <svg width="30" height="30" class="absolute right-4 top-4">
-                            <use xlink:href="../assets/images/sprite-icons.svg#icon-search-tour"></use>
+                            <use xlink:href="./images/sprite-icons.svg#icon-search-tour"></use>
                         </svg>
                     </div>
                     <button class="relative group z-10 overflow-hidden flex items-center text-sm justify-center border border-primary-900 w-24 h-14 text-white rounded-lg bg-primary-900 transition-all duration-300 hover:text-primary-900">جستحو
@@ -110,8 +110,8 @@
             </section>
             <div class="mask-shape w-full h-[773px] absolute top-0 mt-32"></div>
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32 mb-6">
-                <basis core="tree" datamembername="hotel.cat" idcol="catid" parentidcol="parentid"
-                nullvalue="214540">
+                <basis core="tree" datamembername="hotel.catlist" idcol="catid" parentidcol="parentid"
+                nullvalue="[##cms.query.catid##]">
                     <layout>
                         <div class="grid grid-cols-4 gap-3 hotel-cat-container">
                             <!-- item -->

@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="article">
-    <member name="cat" type="tree" request="cat" parentid="151251" order="ord">
+    <member name="catlist" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord">
     </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
@@ -110,8 +110,8 @@
             </section>
             <div class="mask-shape w-full h-[773px] absolute top-0 mt-32"></div>
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32">
-                <basis core="tree" datamembername="article.cat" idcol="catid" parentidcol="parentid"
-                nullvalue="151251">
+                <basis core="tree" datamembername="article.catlist" idcol="catid" parentidcol="parentid"
+                nullvalue="[##cms.query.catid##]">
                     <layout>
                         <div class="grid grid-cols-4 gap-3 article-cat-container">
                             <!-- item -->

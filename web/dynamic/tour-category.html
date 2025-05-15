@@ -1,11 +1,11 @@
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="tour">
-    <member name="cat" type="tree" request="cat" parentid="151151" order="ord">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="tour">
+    <member name="catlist" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord">
     </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="[##cms.query.aid##]">
     <member name="p-under" type="view" size="" propertyid="" />
   </basis>
-  <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
@@ -110,8 +110,8 @@
             </section>
             <div class="mask-shape w-full h-[773px] absolute top-0 mt-32"></div>
             <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-32 mb-6">
-                <basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid"
-                nullvalue="151151">
+                <basis core="tree" datamembername="tour.catlist" idcol="catid" parentidcol="parentid"
+                nullvalue="[##cms.query.catid##]">
                     <layout>
                         <div class="grid grid-cols-4 gap-3 tour-cat-container">
                             <!-- item -->
