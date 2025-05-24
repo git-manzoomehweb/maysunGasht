@@ -28,7 +28,7 @@
     <basis core="dbsource" source="userbehavior" name="db" usedforid="[##cms.query.id##]">
         <member name="comment" type="list" order="ord" request="listcomment" />
     </basis>
-    <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid##]">
+    <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid|(0)##]">
         <member name="news" type="list" link="article.bc" propertyid="7244" perpage="4" size="89x89" order="ord" />
     </basis>
     <!DOCTYPE html>
@@ -83,7 +83,7 @@
                         </face>
                     </basis>
                     <input value="[##cms.query.aid##]" class="co-id FCDid1" type="hidden" name="from" />
-    
+
                     <basis core="print" datamembername="db.des_landing_tree">
                         <face filter="Field = 'title'">
                             <input type="hidden" class="des-title-searched" value="@value" />
@@ -191,81 +191,83 @@
                         </div>
                     </section>
                     <section class="mt-4 mx-auto">
-                        <div class="border border-zinc-200 rounded-[10px] p-3">
-                            <div class="flex items-center justify-between mb-3">
-                                <h2 class="text-zinc-900 font-medium text-xl">نظر کاربران</h2>
-                                <div class="flex items-center gap-2">
-                                    <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev-custom">
-                                        <div
-                                            class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
-                                            <svg width="48" height="48" class="-scale-x-100" viewBox="0 0 48 48"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path class="transition-all duration-300 group-hover:stroke-white"
-                                                    d="M16.25 24.2744L31.25 24.2744" stroke="#71717A" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path class="transition-all duration-300 group-hover:stroke-white"
-                                                    d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498"
-                                                    stroke="#71717A" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
+                        <basis core="tree" datamembername="db.comment" idcol="id" parentidcol="parentid" nullvalue="0">
+                            <layout>
+                                <div class="border border-zinc-200 rounded-[10px] p-3">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <h2 class="text-zinc-900 font-medium text-xl">نظر کاربران</h2>
+                                        <div class="flex items-center gap-2">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev-custom">
+                                                <div
+                                                    class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                                    <svg width="48" height="48" class="-scale-x-100" viewBox="0 0 48 48"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="transition-all duration-300 group-hover:stroke-white"
+                                                            d="M16.25 24.2744L31.25 24.2744" stroke="#71717A"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                        </path>
+                                                        <path
+                                                            class="transition-all duration-300 group-hover:stroke-white"
+                                                            d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498"
+                                                            stroke="#71717A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
 
-                                    </div>
-                                    <div class="swiper-button-next-custom">
-                                        <div
-                                            class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
-                                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path class="transition-all duration-300 group-hover:stroke-white"
-                                                    d="M16.25 24.2739L31.25 24.2739" stroke="#71717A" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                                <path class="transition-all duration-300 group-hover:stroke-white"
-                                                    d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
-                                                    stroke="#71717A" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round"></path>
-                                            </svg>
-                                        </div>
+                                            </div>
+                                            <div class="swiper-button-next-custom">
+                                                <div
+                                                    class="rounded-xl bg-zinc-200 group transition-all duration-300 hover:bg-primary-600">
+                                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            class="transition-all duration-300 group-hover:stroke-white"
+                                                            d="M16.25 24.2739L31.25 24.2739" stroke="#71717A"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                        </path>
+                                                        <path
+                                                            class="transition-all duration-300 group-hover:stroke-white"
+                                                            d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                                                            stroke="#71717A" stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
 
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Slider main container -->
-                            <div class="swiper swiper-suggestion-landing">
-                                <basis core="tree" datamembername="db.comment" idcol="id" parentidcol="parentid"
-                                    nullvalue="0">
-                                    <layout>
+                                    <div class="swiper swiper-suggestion">
                                         <!-- Additional required wrapper -->
                                         <div class="swiper-wrapper">
                                             <!-- Slides -->
                                             @child
                                         </div>
-                                    </layout>
-                                    <face level="1">
-                                        <div class="swiper-slide">
-                                            <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
-                                                <div class="user-opinion-txt flex items-center gap-2">
-                                                    <svg width="36" height="36">
-                                                        <use xlink:href="./images/sprite-icons.svg#icon-suggestion">
-                                                        </use>
-                                                    </svg>
-                                                    <div class="flex flex-col gap-0.5">
-                                                        <h3 class="text-zinc-800 text-xs">کاربر : @username</h3>
-                                                        <span class="text-xs text-zinc-500">@createdate</span>
-                                                    </div>
-                                                </div>
-                                                <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
-                                                    @comment
-                                                </div>
+                                    </div>
+                                </div>
+                            </layout>
+                            <face level="1">
+                                <div class="swiper-slide">
+                                    <div class="bg-zinc-100 rounded-[10px] px-2 py-3">
+                                        <div class="user-opinion-txt flex items-center gap-2">
+                                            <svg width="36" height="36">
+                                                <use xlink:href="./images/sprite-icons.svg#icon-suggestion"></use>
+                                            </svg>
+                                            <div class="flex flex-col gap-0.5">
+                                                <h3 class="text-zinc-800 text-xs">کاربر : @username</h3>
+                                                <span class="text-xs text-zinc-500">@createdate</span>
                                             </div>
                                         </div>
-                                    </face>
-                                </basis>
-
-
-                            </div>
-
-                        </div>
+                                        <div class="text-xs text-zinc-800 mt-2 line-clamp-2">
+                                            @comment
+                                        </div>
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
                     </section>
                 </div>
                 <aside class="w-[413px]">
@@ -353,7 +355,7 @@
                     </layout>
                     <face filter="link is null and prp_3087727 is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                             <div class="relative">
                                 <img src="@00395X00237prp"
                                     class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
@@ -392,11 +394,12 @@
                                         تور
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                            <path
+                                                class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
                                                 d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                                 fill="#fff" />
                                         </svg>
-    
+
                                         <span
                                             class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                     </span>
@@ -406,7 +409,7 @@
                     </face>
                     <face filter="prp_3087727 is null">
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                             <div class="relative">
                                 <img src="@00395X00237prp"
                                     class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
@@ -445,11 +448,12 @@
                                         تور
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                            <path
+                                                class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
                                                 d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                                 fill="#fff" />
                                         </svg>
-    
+
                                         <span
                                             class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                     </span>
@@ -459,12 +463,13 @@
                     </face>
                     <face filter="link is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                             <div class="relative">
                                 <img src="@00395X00237prp"
                                     class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                     alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                <div
+                                    class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                     @prp_3087727</div>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -500,11 +505,12 @@
                                         تور
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                            <path
+                                                class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
                                                 d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                                 fill="#fff" />
                                         </svg>
-    
+
                                         <span
                                             class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                     </span>
@@ -514,12 +520,13 @@
                     </face>
                     <face>
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                             <div class="relative">
                                 <img src="@00395X00237prp"
                                     class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                     alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                <div
+                                    class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                     @prp_3087727</div>
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -555,11 +562,12 @@
                                         تور
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
+                                            <path
+                                                class="transition-all duration-300 group-hover/leveltwo:fill-primary-900"
                                                 d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                                 fill="#fff" />
                                         </svg>
-    
+
                                         <span
                                             class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                     </span>
@@ -568,7 +576,7 @@
                         </a>
                     </face>
                 </basis>
-    
+
             </section>
         </main>
         <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js"></script>

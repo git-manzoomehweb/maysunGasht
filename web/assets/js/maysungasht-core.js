@@ -106,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
               departure2HotelView.value = depTitleSearchedHotelView.value;
               depLocationIdHotelView.value = FCDid1HotelView.value;
             }
+            if (window.location.pathname === "/") {
+              document.querySelector("#r-hotel #departure2").value = "ایروان - Yerevan"
+            }
           }
         };
       } catch (error) {
@@ -378,19 +381,27 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!box) return;
 
       const answer = box.querySelector(".faq-answer");
+      const icon = box.querySelector(".faq-btn");
 
       document.querySelectorAll(".faq-box").forEach((otherBox) => {
         if (otherBox !== box) {
           const otherAnswer = otherBox.querySelector(".faq-answer");
-          if (!otherAnswer) return;
+          const otherIcon = otherBox.querySelector(".faq-btn");
 
-          otherAnswer.classList.remove(
-            "opacity-100",
-            "scale-y-100",
-            "max-h-96",
-            "mt-2"
-          );
-          otherAnswer.classList.add("opacity-0", "scale-y-0", "max-h-0");
+          if (otherAnswer) {
+            otherAnswer.classList.remove(
+              "opacity-100",
+              "scale-y-100",
+              "max-h-96",
+              "mt-2"
+            );
+            otherAnswer.classList.add("opacity-0", "scale-y-0", "max-h-0");
+          }
+
+          if (otherIcon) {
+            otherIcon.classList.remove("rotate-180");
+          }
+
           otherBox.style.backgroundColor = "";
           otherBox.style.border = "";
         }
@@ -403,6 +414,10 @@ document.addEventListener("DOMContentLoaded", function () {
         answer.classList.add("opacity-100", "scale-y-100", "max-h-96", "mt-2");
         box.style.backgroundColor = "#FFF8E3";
         box.style.border = "2px solid #FFE189";
+
+        if (icon) {
+          icon.classList.add("rotate-180");
+        }
       } else {
         answer.classList.remove(
           "opacity-100",
@@ -413,6 +428,10 @@ document.addEventListener("DOMContentLoaded", function () {
         answer.classList.add("opacity-0", "scale-y-0", "max-h-0");
         box.style.backgroundColor = "";
         box.style.border = "";
+
+        if (icon) {
+          icon.classList.remove("rotate-180");
+        }
       }
     });
   }

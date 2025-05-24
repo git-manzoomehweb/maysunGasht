@@ -220,9 +220,9 @@
                     </layout>
                     <face filter="link is null and prp_3087727 is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -268,9 +268,9 @@
                     </face>
                     <face filter="prp_3087727 is null">
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -316,9 +316,9 @@
                     </face>
                     <face filter="link is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                                 <div
                                     class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -367,9 +367,9 @@
                     </face>
                     <face>
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                                 <div
                                     class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -526,22 +526,21 @@
             <section class="hotel-list-section relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-11 mb-14">
                 <basis core="list" datamembername="db.hotel-list">
                     <layout>
-                            <input type="hidden" class="hotelname" value="[##cms.query.q##]" />
-                            <input type="hidden" class="hotelcity" value="[##cms.query.q2##]" />
-                            <input type="hidden" class="hotelstar" value="[##cms.query.q3##]" />
-                            <h2 class="font-medium text-zinc-900 mb-7 text-center">هتل ها</h2>
-                            <div class="flex flex-col gap-3 mt-4 hotel-list-container">
-                                <!-- items -->
-                                @child
-                            </div>
+                        <input type="hidden" class="hotelname" value="[##cms.query.q##]" />
+                        <input type="hidden" class="hotelcity" value="[##cms.query.q2##]" />
+                        <input type="hidden" class="hotelstar" value="[##cms.query.q3##]" />
+                        <h2 class="font-medium text-zinc-900 mb-7 text-center">هتل ها</h2>
+                        <div class="flex flex-col gap-3 mt-4 hotel-list-container">
+                            <!-- items -->
+                            @child
+                        </div>
                     </layout>
                     <face filter="link is null">
                         <a href="/hotel.bc?id=@id"
                             class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
-                            <div class="relative">
+
                                 <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
-                            </div>
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
@@ -583,10 +582,9 @@
                     <face>
                         <a href="@link"
                             class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
-                            <div class="relative">
+
                                 <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
-                            </div>
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
@@ -1039,9 +1037,9 @@
                     </layout>
                     <face filter="link is null and prp_3087727 is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -1087,9 +1085,9 @@
                     </face>
                     <face filter="prp_3087727 is null">
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                             </div>
                             <div class="flex flex-col gap-2 mt-4">
@@ -1135,9 +1133,9 @@
                     </face>
                     <face filter="link is null">
                         <a href="/tour.bc?id=@id"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                                 <div
                                     class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -1186,9 +1184,9 @@
                     </face>
                     <face>
                         <a href="@link"
-                            class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
+                            class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                             <div class="relative">
-                                <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title"
                                     width="100%" height="240" loading="lazy">
                                 <div
                                     class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
@@ -1357,10 +1355,9 @@
                     <face filter="link is null">
                         <a href="/hotel.bc?id=@id"
                             class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
-                            <div class="relative">
-                                <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
-                                    width="100%" height="240" loading="lazy">
-                            </div>
+
+                            <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">
@@ -1402,10 +1399,9 @@
                     <face>
                         <a href="@link"
                             class="hotel-list-search flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
-                            <div class="relative">
-                                <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
-                                    width="100%" height="240" loading="lazy">
-                            </div>
+
+                            <img src="@00264X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                             <div class="flex flex-col gap-2 mt-4">
                                 <h2 class="font-medium title-hotel">@title</h2>
                                 <div class="flex items-center gap-2 border border-solid rounded-xl px-3 py-2">

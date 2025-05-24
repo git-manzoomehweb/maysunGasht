@@ -8,8 +8,8 @@
         size="395x237" order="ord" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.oid##]">
-    <member name="first-article" type="list" link="article.bc" propertyid="7244" perpage="1"
-        size="648x365" order="ord" />
+    <member name="first-article" type="list" link="article.bc" propertyid="7244" perpage="1" size="648x365"
+        order="ord" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
@@ -125,7 +125,8 @@
             <div class="mask-gray-shape w-full h-[742px] absolute top-0"></div>
             <basis core="list" datamembername="db.first-article">
                 <layout>
-                    <div class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-40 border-b border-solid border-zinc-300 pb-11">
+                    <div
+                        class="relative mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl pt-40 border-b border-solid border-zinc-300 pb-11">
                         @child
                     </div>
                 </layout>
@@ -349,7 +350,7 @@
                 </layout>
                 <face filter="link is null and prp_3087727 is null">
                     <a href="/tour.bc?id=@id"
-                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                         <div class="relative">
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
@@ -392,7 +393,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -402,7 +403,7 @@
                 </face>
                 <face filter="prp_3087727 is null">
                     <a href="@link"
-                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                         <div class="relative">
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
@@ -445,7 +446,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -455,13 +456,13 @@
                 </face>
                 <face filter="link is null">
                     <a href="/tour.bc?id=@id"
-                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                         <div class="relative">
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    @prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                @prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -500,7 +501,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>
@@ -510,13 +511,13 @@
                 </face>
                 <face>
                     <a href="@link"
-                        class="flex flex-col group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
+                        class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3 transition-all duration-300 hover:border-primary-600">
                         <div class="relative">
                             <img src="@00395X00237prp"
                                 class="h-60 object-cover rounded-t-[40px] transition-all duration-300 group-hover:grayscale"
                                 alt="@title" width="100%" height="240" loading="lazy">
-                                <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
-                                    @prp_3087727</div>
+                            <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
+                                @prp_3087727</div>
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -555,7 +556,7 @@
                                             d="M4.64645 9.64645C4.45118 9.84171 4.45118 10.1583 4.64645 10.3536L7.82843 13.5355C8.02369 13.7308 8.34027 13.7308 8.53553 13.5355C8.7308 13.3403 8.7308 13.0237 8.53553 12.8284L5.70711 10L8.53553 7.17157C8.7308 6.97631 8.7308 6.65973 8.53553 6.46447C8.34027 6.2692 8.02369 6.2692 7.82843 6.46447L4.64645 9.64645ZM15 10V9.5L5 9.5V10V10.5L15 10.5V10Z"
                                             fill="#fff" />
                                     </svg>
-    
+
                                     <span
                                         class="absolute w-full inset-0 transition-transform duration-300 h-10 origin-right scale-x-0 -z-10 bg-zinc-50 group-hover/leveltwo:scale-x-100"></span>
                                 </span>

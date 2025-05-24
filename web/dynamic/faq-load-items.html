@@ -12,7 +12,14 @@
     </layout>
     <face filter="TypeID not in(150)">
         <div class="faq-box transition-all duration-300 cursor-pointer rounded-xl border border-zinc-200 bg-white p-6">
-            <h2 class="font-bold text-zinc-900">@text</h2>
+            <div class="flex items-center justify-between">
+                <h2 class="font-bold text-zinc-900">@text</h2>
+                <svg width="48" height="48" class="flex-shrink-0 faq-btn transition-all duration-300"
+                    viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M31 20.5L24 27.5L17 20.5" stroke="#71717A" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+            </div>
             <div
                 class="faq-answer text-sm text-zinc-700 opacity-0 scale-y-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out origin-top">
                 @largetext
