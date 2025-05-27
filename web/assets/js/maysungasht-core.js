@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             if (window.location.pathname === "/") {
               document.querySelector("#r-hotel #departure2").value = "ایروان - Yerevan"
+              document.querySelector("#r-hotel .locationId.from").value = 1192689
             }
           }
         };

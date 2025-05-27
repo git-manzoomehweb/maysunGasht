@@ -1,4 +1,4 @@
-@import url(./customized-maysun.ui.min.css);
+@import url(./customized.ui.min.css);
 
 body {
   font-family: "DanaFaNum";
@@ -88,10 +88,6 @@ body {
 
 .right-4 {
   right: 1rem;
-}
-
-.right-60 {
-  right: 15rem /* 240px */;
 }
 
 .top-0 {
@@ -196,10 +192,6 @@ body {
 
 .mb-3 {
   margin-bottom: 0.75rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mb-44 {
@@ -619,8 +611,10 @@ body {
 }
 
 .rotate-0 {
-    --tw-rotate: 0deg;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-rotate: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .rotate-180 {
@@ -1745,6 +1739,18 @@ select.select-star {
   }
 }
 
+.h1-default {
+  position: absolute;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
 .Basis_Calendar .selected_date {
   background: var(--primary) !important;
 }
@@ -2052,6 +2058,11 @@ select.select-star {
   border: 4px solid #f4f4f5;
   border-radius: 12px;
   background: white;
+}
+
+.flighttype-field.flighttype-dropDown::selection {
+  background: transparent;
+  color: inherit;
 }
 
 .click-content p,
@@ -2393,6 +2404,7 @@ select.select-star {
 .landing-flight .flighthotel-btn.reserve-btn,
 .landing-flight .tour-btn.reserve-btn,
 .landing-flight .insurance-btn.reserve-btn,
+.landing-flight .searchHistory-content.fa-lang.flight-searchHistory,
 .landing-hotel .flight-btn.reserve-btn,
 .landing-hotel .hotel-btn.reserve-btn,
 .landing-hotel .flighthotel-btn.reserve-btn,
@@ -2401,6 +2413,7 @@ select.select-star {
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
 .landing-hotel .search-nav,
+.landing-hotel .searchHistory-content.fa-lang.flight-searchHistory,
 .landing-hotel-view .flight-btn.reserve-btn,
 .landing-hotel-view .hotel-btn.reserve-btn,
 .landing-hotel-view .flighthotel-btn.reserve-btn,
@@ -2408,7 +2421,8 @@ select.select-star {
 .landing-hotel-view .insurance-btn.reserve-btn,
 .landing-hotel-view .flighttype-field.flighttype-dropDown,
 .landing-hotel-view #flightSearch,
-.landing-hotel-view .search-nav{
+.landing-hotel-view .search-nav,
+.landing-hotel-view .searchHistory-content.fa-lang.flight-searchHistory {
   display: none !important;
 }
 

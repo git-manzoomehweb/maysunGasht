@@ -612,6 +612,10 @@ body {
   right: 1rem;
 }
 
+.right-60 {
+  right: 15rem /* 240px */;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -655,6 +659,10 @@ body {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mb-6 {
@@ -1298,6 +1306,9 @@ body {
   --primary-800: #ff9326;
   --primary-900: #fd7523;
   --primary-950: #f46007;
+
+  --secondary: #fd7523;
+
   --special-1: #ff5050cc;
   --special-2: #db934b33;
   ---bg: url("");
