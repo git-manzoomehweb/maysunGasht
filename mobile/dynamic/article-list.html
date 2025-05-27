@@ -1,6 +1,6 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
     <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="3" size="288x292"
-        pageno="[##cms.query.pagenum|(1)##]" order="ord" />
+        pageno="[##cms.query.pagenum|(1)##]" order="ord" typeid="159"/>
     <member name="paging" type="list" request="paging" count="3" parentname="article-list" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.tid##]">
@@ -9,7 +9,7 @@
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.oid##]">
     <member name="first-article" type="list" link="article.bc" propertyid="7244" perpage="1" size="288x176"
-        order="ord" />
+        order="ord" typeid="159"/>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
     <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
@@ -132,7 +132,7 @@
                 <face filter="link is null and ord in('1')">
                     <article class="flex flex-col gap-5 group">
                         <div class="relative">
-                            <img src="@00288X00176prp" class="h-44 object-cover rounded-xl" alt="@title" width="100%"
+                            <img src="@type_159" class="h-44 object-cover rounded-xl" alt="@title" width="100%"
                                 height="176" loading="lazy">
                         </div>
                         <div class="flex flex-col justify-between">
@@ -151,7 +151,7 @@
                 <face filter="ord in('1')">
                     <article class="flex flex-col gap-5 group">
                         <div class="relative">
-                            <img src="@00288X00176prp" class="h-44 object-cover rounded-xl" alt="@title" width="100%"
+                            <img src="@type_159" class="h-44 object-cover rounded-xl" alt="@title" width="100%"
                                 height="176" loading="lazy">
                         </div>
                         <div class="flex flex-col justify-between">
@@ -181,7 +181,7 @@
                     <article>
                         <a href="/article.bc?id=@id"
                             class="group relative flex flex-col justify-end overflow-hidden rounded-xl ">
-                            <img src="@00288X00292prp" width="100%" height="292" alt="@title" loading="lazy"
+                            <img src="@type_159" width="100%" height="292" alt="@title" loading="lazy"
                                 class="h-72 object-cover">
                             <div
                                 class="absolute inset-0 w-full h-full bg-fade-black transition-all duration-300 group-hover:opacity-0">
@@ -206,7 +206,7 @@
                 <face>
                     <article>
                         <a href="@link" class="group relative flex flex-col justify-end overflow-hidden rounded-xl ">
-                            <img src="@00288X00292prp" width="100%" height="292" alt="@title" loading="lazy"
+                            <img src="@type_159" width="100%" height="292" alt="@title" loading="lazy"
                                 class="h-72 object-cover">
                             <div
                                 class="absolute inset-0 w-full h-full bg-fade-black transition-all duration-300 group-hover:opacity-0">
@@ -343,7 +343,7 @@
                     <a href="/tour.bc?id=@id"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
                                 height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
@@ -391,7 +391,7 @@
                     <a href="@link"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
                                 height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
@@ -439,7 +439,7 @@
                     <a href="/tour.bc?id=@id"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
                                 height="240" loading="lazy">
                             <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                 @prp_3087727</div>
@@ -489,7 +489,7 @@
                     <a href="@link"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@type_159" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
                                 height="240" loading="lazy">
                             <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                 @prp_3087727</div>
