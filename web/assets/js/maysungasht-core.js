@@ -107,8 +107,23 @@ document.addEventListener("DOMContentLoaded", function () {
               depLocationIdHotelView.value = FCDid1HotelView.value;
             }
             if (window.location.pathname === "/") {
-              document.querySelector("#r-hotel #departure2").value = "ایروان - Yerevan"
-              document.querySelector("#r-hotel .locationId.from").value = 1192689
+              document.querySelector("#r-hotel #departure2").value =
+                "ایروان - Yerevan";
+              document.querySelector(
+                "#r-hotel .locationId.from"
+              ).value = 1192689;
+
+              document.querySelector("#r-flight #destination1").value =
+                "ایروان - Yerevan - همه فرودگاه ها";
+              document.querySelector(
+                "#r-flight .locationId.to"
+              ).value = 1192689;
+
+              document.querySelector("#r-flighthotel #destination3").value =
+                "ایروان - Yerevan - همه فرودگاه ها";
+              document.querySelector(
+                "#r-flighthotel .locationId.to"
+              ).value = 1192689;
             }
           }
         };
@@ -242,6 +257,42 @@ document.querySelectorAll(".article-tag").forEach((tag) => {
     }, 10);
   });
 });
+
+// Form submit handler
+document.querySelectorAll(".pov-form").forEach(function (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const loading = form.closest("form").querySelector(".Loading_Form");
+    const message = form.closest("form").querySelector(".Message-Form");
+    loading.classList.remove("hidden");
+
+    const formData = new FormData(form);
+    fetch(form.getAttribute("action"), {
+      method: form.getAttribute("method"),
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        loading.classList.add("hidden");
+        message.innerHTML = data;
+        loading.classList.remove("hidden");
+
+        form
+          .querySelectorAll("textarea, input")
+          .forEach((el) => (el.value = ""));
+      });
+  });
+});
+function refresh_captcha(element, event) {
+  const form = element.closest("form");
+  const captchaContainer = form.querySelector(".load-captcha");
+
+  fetch("/Client_Captcha.bc")
+    .then((response) => response.text())
+    .then((data) => {
+      captchaContainer.innerHTML = data;
+    });
+}
 
 // fetch tour default
 document.addEventListener("DOMContentLoaded", function () {

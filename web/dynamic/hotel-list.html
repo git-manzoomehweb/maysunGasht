@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-    <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="3" size="395x237"
+    <member name="hotel-list" type="list" link="hotel.bc" propertyid="177441,177442,3087720" perpage="9" size="395x237"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="hotel-list" />
 </basis>
@@ -9,7 +9,7 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
-<basis core="dbsource" source="basiscore" lid="1" mid="20" name="hotel-list-title">
+<basis core="dbsource" source="gmgmasiscore" lid="1" mid="20" name="hotel-list-title">
     <member name="cat" type="tree" request="cat" parentid="[##cms.query.catid##]" order="ord"
         postsql="select * from [hotel-list-title.cat] where catid in([##cms.query.catid##])"></member>
 </basis>

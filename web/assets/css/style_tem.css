@@ -408,14 +408,18 @@ fieldset hr {
 .loading-img {
   margin-top: 1em;
 }
-.has-select-input::before{
+.has-select-input::before {
   top: 2.2em !important;
 }
-.has-select::before{
+.has-select::before {
   top: 0.6em;
 }
-.coupon-content{
+.coupon-content {
   flex-wrap: nowrap;
+}
+.after-btn,
+.before-btn {
+  padding: 0.5em 0.75rem;
 }
 /*<!--------------------------------END CSS LIST TEMPLATE 3-------------------------------*/
 /*<!--------------------------------START CSS VIEW TEMPLATE 3-------------------------------*/
@@ -566,4 +570,3 @@ i[class^="flaticon-"]:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
