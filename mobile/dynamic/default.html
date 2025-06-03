@@ -7,7 +7,7 @@
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="151143">
     <member name="tourism-magazine" type="list" link="article.bc" propertyid="7244" perpage="2" size="288x292"
-        order="ord" typeid="159"/>
+        order="ord" typeid="159" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="tours">
     <member name="cat" type="tree" request="cat" parentid="151156" order="ord"></member>
@@ -113,16 +113,19 @@
                                 </span>
                                 @title
                             </span>
-                            <a href="/article.bc?id=@id"
-                                class="flex items-center justify-center bg-primary-900 rounded-xl">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.25 24.2739L31.25 24.2739" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="white"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </a>
+                            <div onclick="CheckAuthentication(this)">
+                                <a id="CheckUserPanel"
+                                    class="flex items-center justify-center bg-primary-900 rounded-xl">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.25 24.2739L31.25 24.2739" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="white"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
                         </div>
                         <div
                             class="p-3 text-sm text-zinc-700 border border-solid border-zinc-200 rounded-xl leading-7 text-justify">
@@ -141,15 +144,18 @@
                                 </span>
                                 @title
                             </span>
-                            <a href="@link" class="flex items-center justify-center bg-primary-900 rounded-xl">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.25 24.2739L31.25 24.2739" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="white"
-                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </a>
+                            <div onclick="CheckAuthentication(this)">
+                                <a id="CheckUserPanel"
+                                    class="flex items-center justify-center bg-primary-900 rounded-xl">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.25 24.2739L31.25 24.2739" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495" stroke="white"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <div
                             class="p-3 text-sm text-zinc-700 border border-solid border-zinc-200 rounded-xl leading-7 text-justify">
@@ -285,8 +291,8 @@
                     <a href="/tour.bc?id=@id"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
-                                height="240" loading="lazy">
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -333,8 +339,8 @@
                     <a href="@link"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
-                                height="240" loading="lazy">
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                         </div>
                         <div class="flex flex-col gap-2 mt-4">
                             <h2 class="font-bold">@title</h2>
@@ -381,8 +387,8 @@
                     <a href="/tour.bc?id=@id"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
-                                height="240" loading="lazy">
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                             <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                 @prp_3087727</div>
                         </div>
@@ -431,8 +437,8 @@
                     <a href="@link"
                         class="flex flex-col justify-end group border-[3px] border-solid border-zinc-200 bg-white rounded-t-[50px] p-3">
                         <div class="relative">
-                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title" width="100%"
-                                height="240" loading="lazy">
+                            <img src="@00395X00237prp" class="h-60 object-cover rounded-t-[40px]" alt="@title"
+                                width="100%" height="240" loading="lazy">
                             <div class="absolute bottom-0 left-0 rounded-tr-3xl bg-specialcolor-1 py-3 px-4 text-white">
                                 @prp_3087727</div>
                         </div>

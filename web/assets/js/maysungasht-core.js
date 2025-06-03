@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
               );
               let FCDid1HotelView = document.querySelector(".co-id.FCDid1");
 
+              depLocationIdHotelView.name = "hotelid";
               departure2HotelView.value = depTitleSearchedHotelView.value;
               depLocationIdHotelView.value = FCDid1HotelView.value;
             }
@@ -222,6 +223,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+  async function CheckAuthentication(element) {
+    const response = await fetch("Client_CheckAuthentication.inc");
+    if (!response.ok) {
+      throw new Error(
+        "متاسفانه مشکلی به وجود آمده است لطفا بعدا مجددا تلاش فرمایید."
+      );
+    } else {
+      let CheckAuthentication = await response.text();
+      if (CheckAuthentication === "true") {
+        element
+          .querySelector("#CheckUserPanel")
+          .setAttribute("href", "/Panel-Dashboard.bc");
+        window.location.href = element
+          .querySelector("#CheckUserPanel")
+          .getAttribute("href");
+      } else {
+        element.querySelector("#CheckUserPanel").removeAttribute("href");
+        element.addEventListener("click", showLoginContainer());
+      }
+    }
+  }
 
 // form header
 document.addEventListener("DOMContentLoaded", function () {
