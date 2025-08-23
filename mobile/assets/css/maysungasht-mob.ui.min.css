@@ -1747,6 +1747,18 @@ select.select-star {
   top: 34px !important;
 }
 
+.confirm-passenger {
+  width: 100%;
+  height: 48px !important;
+  margin-top: 2rem;
+  background: var(--primary-900);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+}
+
 .flight-routes,
 .reserve-field.departure-route {
   flex: 1.42;
@@ -1917,9 +1929,18 @@ select.select-star {
 }
 
 .passengerbox.hidden-box {
-  position: absolute !important;
-  top: 100%;
-  z-index: 30;
+  z-index: 60 !important;
+}
+
+.close-passenger-box {
+  margin-bottom: 4rem !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.close-passenger-box svg {
+  width: 48px !important;
+  height: 48px !important;
 }
 
 .flighttype-field-icon {
@@ -1945,7 +1966,7 @@ select.select-star {
   border: 1px solid #737373;
   background-color: #fff;
   width: 100%;
-  z-index: 30;
+  z-index: 60 !important;
 }
 .FlightClass.hidden-box li {
   line-height: 2rem;
@@ -1958,6 +1979,10 @@ select.select-star {
 }
 .FlightClass.hidden-box li label {
   align-items: center;
+}
+.FlightClass.hidden-box ul{
+  clear: both;
+  padding: 0 24px;
 }
 .search-box-container .active-r-btn span,
 .active-FlightClass span {
@@ -2004,8 +2029,13 @@ select.select-star {
 }
 
 .searchList {
-  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  z-index: 60 !important;
+}
+
+.close-searchList {
+  width: auto !important;
+  height: auto !important;
 }
 
 .passenger-item.child-passenger-item ul,
@@ -2025,7 +2055,11 @@ select.select-star {
 .passenger-item.room-passenger-item,
 .passengerbox.hidden-box .passenger-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.passenger-item .clr {
+  position: absolute;
 }
 
 .plus-count span {
@@ -2054,11 +2088,6 @@ select.select-star {
   font-size: 18px;
   padding-top: 0.25rem;
   color: white;
-}
-
-.close-passenger-box svg {
-  width: 24px !important;
-  height: 24px !important;
 }
 
 .passengers-field .birthdate-dates {
@@ -2202,12 +2231,14 @@ select.select-star {
 .landing-flight .flighthotel-btn.reserve-btn,
 .landing-flight .tour-btn.reserve-btn,
 .landing-flight .insurance-btn.reserve-btn,
+.landing-flight .visa-btn.reserve-btn,
 .landing-flight .searchHistory-content.fa-lang.flight-searchHistory,
 .landing-hotel .flight-btn.reserve-btn,
 .landing-hotel .hotel-btn.reserve-btn,
 .landing-hotel .flighthotel-btn.reserve-btn,
 .landing-hotel .tour-btn.reserve-btn,
 .landing-hotel .insurance-btn.reserve-btn,
+.landing-hotel .visa-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
 .landing-hotel .search-nav,
@@ -2233,6 +2264,22 @@ select.select-star {
 .landing-hotel #r-hotel,
 .landing-hotel-view #r-hotel {
   display: block !important;
+}
+
+.search-box-container.mobile-search-box .Basis_Calendar .year{
+  padding-top: 60px !important;
+}
+
+.Basis_Calendar {
+  position: fixed !important;
+  height: 100vh !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  overflow-y: auto;
+  width: 100%;
 }
 
 .bg-defaultBg .search-banner .Basis_Calendar_Box {

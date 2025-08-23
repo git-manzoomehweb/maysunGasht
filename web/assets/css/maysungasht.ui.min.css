@@ -2015,7 +2015,7 @@ select.select-star {
 
 .Basis_Date.start_date,
 .Basis_Date.end_date {
-  padding: 0 160px 0 0 !important;
+  padding: 0 152px 0 0 !important;
 }
 
 .click-content label span {
@@ -2406,12 +2406,14 @@ select.select-star {
 .landing-flight .flighthotel-btn.reserve-btn,
 .landing-flight .tour-btn.reserve-btn,
 .landing-flight .insurance-btn.reserve-btn,
+.landing-flight .visa-btn.reserve-btn,
 .landing-flight .searchHistory-content.fa-lang.flight-searchHistory,
 .landing-hotel .flight-btn.reserve-btn,
 .landing-hotel .hotel-btn.reserve-btn,
 .landing-hotel .flighthotel-btn.reserve-btn,
 .landing-hotel .tour-btn.reserve-btn,
 .landing-hotel .insurance-btn.reserve-btn,
+.landing-hotel .visa-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
 .landing-hotel .search-nav,

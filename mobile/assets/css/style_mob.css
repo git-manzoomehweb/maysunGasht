@@ -40,6 +40,19 @@
 .EnNum {
   font-family: "IRANSansWebEnNum";
 }
+.fa,
+.fas {
+  font-family: "fontawesome";
+  font-weight: 900;
+}
+.fab {
+  font-family: "fontawesome";
+  font-weight: 400;
+}
+.far {
+  font-family: "fontawesome";
+  font-weight: 400;
+}
 .font-color_1 {
   color: var(--primary);
 }
