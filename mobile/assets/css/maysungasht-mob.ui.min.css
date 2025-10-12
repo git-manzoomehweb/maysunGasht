@@ -275,6 +275,12 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
 
 .line-clamp-3 {
   overflow: hidden;
@@ -1980,7 +1986,7 @@ select.select-star {
 .FlightClass.hidden-box li label {
   align-items: center;
 }
-.FlightClass.hidden-box ul{
+.FlightClass.hidden-box ul {
   clear: both;
   padding: 0 24px;
 }
@@ -2266,7 +2272,7 @@ select.select-star {
   display: block !important;
 }
 
-.search-box-container.mobile-search-box .Basis_Calendar .year{
+.search-box-container.mobile-search-box .Basis_Calendar .year {
   padding-top: 60px !important;
 }
 
