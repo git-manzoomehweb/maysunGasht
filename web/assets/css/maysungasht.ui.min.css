@@ -1162,7 +1162,15 @@ body {
 .text-\[12rem\] {
   font-size: 12rem;
 }
-
+.text-\[7rem\] {
+  font-size: 7rem;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
 .text-\[36px\] {
   font-size: 36px;
 }

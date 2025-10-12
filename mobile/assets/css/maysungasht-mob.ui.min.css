@@ -2426,3 +2426,12 @@ select.select-star {
   height: 48px !important;
   transform: scale(0.65) !important;
 }
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
