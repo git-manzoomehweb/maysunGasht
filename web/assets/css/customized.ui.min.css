@@ -1308,6 +1308,17 @@ body {
   --primary-950: #f46007;
 
   --secondary: #fd7523;
+  --secondary-50: #fff4f2;
+  --secondary-100: #ffe9e5;
+  --secondary-200: #fed3c9;
+  --secondary-300: #febdac;
+  --secondary-400: #fda58b;
+  --secondary-500: #fd9169;
+  --secondary-600: #fd7523;
+  --secondary-700: #bf550f;
+  --secondary-800: #7e3606;
+  --secondary-900: #461b02;
+  --secondary-950: #2d0e01;
 
   --special-1: #ff5050cc;
   --special-2: #db934b33;
