@@ -298,7 +298,7 @@ document.querySelectorAll(".pov-form").forEach(function (form) {
       .then((data) => {
         loading.classList.add("hidden");
         message.innerHTML = data;
-        loading.classList.remove("hidden");
+        // loading.classList.remove("hidden");
 
         form
           .querySelectorAll("textarea, input")
