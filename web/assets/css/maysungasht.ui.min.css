@@ -296,7 +296,12 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -1157,7 +1162,15 @@ body {
 .text-\[12rem\] {
   font-size: 12rem;
 }
-
+.text-\[7rem\] {
+  font-size: 7rem;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
 .text-\[36px\] {
   font-size: 36px;
 }
@@ -2015,7 +2028,7 @@ select.select-star {
 
 .Basis_Date.start_date,
 .Basis_Date.end_date {
-  padding: 0 160px 0 0 !important;
+  padding: 0 152px 0 0 !important;
 }
 
 .click-content label span {
@@ -2107,7 +2120,8 @@ select.select-star {
 .search-flighthotel,
 .search-tour,
 .search-hotel,
-.search-insurance {
+.search-insurance,
+.search-visa {
   width: 93px !important;
   background-color: var(--primary-900) !important;
   border-radius: 8px;
@@ -2118,6 +2132,7 @@ select.select-star {
 
 .search-flight:hover,
 .search-flighthotel:hover,
+.search-visa:hover,
 .search-tour:hover,
 .search-hotel:hover,
 .search-insurance:hover {
@@ -2404,12 +2419,14 @@ select.select-star {
 .landing-flight .flighthotel-btn.reserve-btn,
 .landing-flight .tour-btn.reserve-btn,
 .landing-flight .insurance-btn.reserve-btn,
+.landing-flight .visa-btn.reserve-btn,
 .landing-flight .searchHistory-content.fa-lang.flight-searchHistory,
 .landing-hotel .flight-btn.reserve-btn,
 .landing-hotel .hotel-btn.reserve-btn,
 .landing-hotel .flighthotel-btn.reserve-btn,
 .landing-hotel .tour-btn.reserve-btn,
 .landing-hotel .insurance-btn.reserve-btn,
+.landing-hotel .visa-btn.reserve-btn,
 .landing-hotel .flighttype-field.flighttype-dropDown,
 .landing-hotel #flightSearch,
 .landing-hotel .search-nav,
@@ -2552,4 +2569,32 @@ select.select-star {
 
 .pov-form [data-bc-part] {
   margin-bottom: 0 !important;
+}
+#r-visa .click-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+#r-visa .departure-route {
+  border-radius: 10px !important;
+  height: 128px;
+}
+#r-visa .ul-list ul li:first-of-type {
+  background-color: transparent !important;
+  color: var(--textColor) !important;
+}
+#r-visa .ul-list ul li:first-of-type:hover {
+  background-color: #fd7523 !important;
+  color: white !important;
+}
+.visa-btn.reserve-btn svg {
+  width: 48px !important;
+  height: 48px !important;
+  transform: scale(0.65) !important;
+}
+@media (min-width: 1024px) {
+  #r-visa .searchList {
+    min-width: 50% !important;
+  }
 }

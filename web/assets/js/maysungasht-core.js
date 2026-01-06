@@ -187,7 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   let placeholder = null;
   const headerHeight = header.offsetHeight;
-
   window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
       header.classList.add(
@@ -199,7 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "bg-white"
       );
       header.classList.add("shadow-lg");
-
       if (!placeholder) {
         placeholder = document.createElement("div");
         placeholder.style.height = headerHeight + "px";
@@ -215,7 +213,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "bg-white"
       );
       header.classList.remove("shadow-lg");
-
       if (placeholder) {
         placeholder.remove();
         placeholder = null;
@@ -224,27 +221,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-  async function CheckAuthentication(element) {
-    const response = await fetch("Client_CheckAuthentication.inc");
-    if (!response.ok) {
-      throw new Error(
-        "متاسفانه مشکلی به وجود آمده است لطفا بعدا مجددا تلاش فرمایید."
-      );
+async function CheckAuthentication(element) {
+  const response = await fetch("Client_CheckAuthentication.inc");
+  console.log(response);
+  console.log(element);
+  if (!response.ok) {
+    throw new Error(
+      "متاسفانه مشکلی به وجود آمده است لطفا بعدا مجددا تلاش فرمایید."
+    );
+  } else {
+    let CheckAuthentication = await response.text();
+    console.log(CheckAuthentication);
+    if (CheckAuthentication === "true") {
+      element
+        .querySelector("#CheckUserPanel")
+        .setAttribute("href", "/Panel-Dashboard.bc");
+      window.location.href = element
+        .querySelector("#CheckUserPanel")
+        .getAttribute("href");
     } else {
-      let CheckAuthentication = await response.text();
-      if (CheckAuthentication === "true") {
-        element
-          .querySelector("#CheckUserPanel")
-          .setAttribute("href", "/Panel-Dashboard.bc");
-        window.location.href = element
-          .querySelector("#CheckUserPanel")
-          .getAttribute("href");
-      } else {
-        element.querySelector("#CheckUserPanel").removeAttribute("href");
-        element.addEventListener("click", showLoginContainer());
-      }
+      element.querySelector("#CheckUserPanel").removeAttribute("href");
+      element.addEventListener("click", showLoginContainer());
     }
   }
+}
 
 // form header
 document.addEventListener("DOMContentLoaded", function () {
@@ -298,7 +298,7 @@ document.querySelectorAll(".pov-form").forEach(function (form) {
       .then((data) => {
         loading.classList.add("hidden");
         message.innerHTML = data;
-        loading.classList.remove("hidden");
+        // loading.classList.remove("hidden");
 
         form
           .querySelectorAll("textarea, input")
@@ -978,5 +978,62 @@ if (document.querySelector(".mySwiper2")) {
     thumbs: {
       swiper: swiper,
     },
+  });
+}
+
+if (document.querySelector(".tour-faq")) {
+  const fetchContentFaq = document.querySelector(".tour-faq");
+  fetchContentFaq.addEventListener("click", function (event) {
+    const box = event.target.closest(".faq-box");
+    if (!box) return;
+
+    const answer = box.querySelector(".faq-answer");
+    const icon = box.querySelector(".faq-btn");
+
+    document.querySelectorAll(".faq-box").forEach((otherBox) => {
+      if (otherBox !== box) {
+        const otherAnswer = otherBox.querySelector(".faq-answer");
+        const otherIcon = otherBox.querySelector(".faq-btn");
+
+        if (otherAnswer) {
+          otherAnswer.classList.remove(
+            "opacity-100",
+            "scale-y-100",
+            "max-h-96",
+            "mt-2"
+          );
+          otherAnswer.classList.add("opacity-0", "scale-y-0", "max-h-0");
+        }
+
+        if (otherIcon) {
+          otherIcon.classList.remove("rotate-180");
+        }
+
+        otherBox.style.backgroundColor = "";
+        otherBox.style.border = "";
+      }
+    });
+
+    const isOpen = answer.classList.contains("scale-y-100");
+
+    if (!isOpen) {
+      answer.classList.remove("opacity-0", "scale-y-0", "max-h-0");
+      answer.classList.add("opacity-100", "scale-y-100", "max-h-96", "mt-2");
+      box.style.backgroundColor = "#FFF8E3";
+      box.style.border = "2px solid #FFE189";
+
+      if (icon) {
+        icon.classList.add("rotate-180");
+      }
+    } else {
+      answer.classList.remove("opacity-100", "scale-y-100", "max-h-96", "mt-2");
+      answer.classList.add("opacity-0", "scale-y-0", "max-h-0");
+      box.style.backgroundColor = "";
+      box.style.border = "";
+
+      if (icon) {
+        icon.classList.remove("rotate-180");
+      }
+    }
   });
 }

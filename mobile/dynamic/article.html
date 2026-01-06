@@ -1,7 +1,7 @@
 <basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
     <member request="json-ld" type="scalar" name="json" />
 </basis>
-<basis core='dbsource' name='captcha' source='trust_login'>
+<basis core='dbsource' name='captcha' source='trust_login8'>
     <member name='code' type='scalar' request='captcha'></member>
 </basis>
 <basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]">
@@ -12,8 +12,8 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
     <member name="scalar" type="scalar" typeid="150" />
 </basis>
-<basis core="dbsource" source="userbehavior" name="db" usedforid="[##cms.query.id##]">
-    <member name="comment" type="list" order="ord" request="listcomment" />
+<basis core="dbsource" source="userbehavior" mid="1" name="db" usedforid="[##cms.query.id##]">
+    <member name="comment"   type="list" order="ord" request="listcomment" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.nid|(0)##]">
     <member name="news" type="list" link="article.bc" propertyid="7244" perpage="4" size="89x89" order="ord" />
@@ -108,8 +108,8 @@
                                 <input class="w-full bg-zinc-100 text-zinc-500 h-14 px-3 py-4 outline-none rounded-xl"
                                     type="text" name="_root.Phone" placeholder="شماره تماس" required>
                             </div>
-                            <textarea class="w-full bg-zinc-100 text-zinc-500 h-24 px-3 py-4 outline-none rounded-xl"
-                                required name="OpinionMessage" placeholder="توضیحات" cols="30" rows="7"></textarea>
+                            <_textarea class="w-full bg-zinc-100 text-zinc-500 h-24 px-3 py-4 outline-none rounded-xl"
+                                required name="OpinionMessage" placeholder="توضیحات" cols="30" rows="7"></_textarea>
 
                             <input name="productid" value="[##cms.query.id##]" type="hidden">
                             <input name="mid" value="1" type="hidden">
